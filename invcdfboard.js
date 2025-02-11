@@ -1,6 +1,6 @@
 var Hi = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {};
-function M7(Ve) {
-  return Ve && Ve.__esModule && Object.prototype.hasOwnProperty.call(Ve, "default") ? Ve.default : Ve;
+function M7(Se) {
+  return Se && Se.__esModule && Object.prototype.hasOwnProperty.call(Se, "default") ? Se.default : Se;
 }
 var k7 = { exports: {} };
 /*!
@@ -30,9 +30,9 @@ var k7 = { exports: {} };
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-(function(Ve, He) {
+(function(Se, Le) {
   (function(ge, E) {
-    Ve.exports = E();
+    Se.exports = E();
   })(Hi, function() {
     return (
       /******/
@@ -2681,9 +2681,9 @@ var My = k7.exports;
 const Cr = /* @__PURE__ */ M7(My);
 var T7 = { exports: {} };
 /* @license Apache-2.0 */
-(function(Ve, He) {
+(function(Se, Le) {
   (function(_) {
-    Ve.exports = _();
+    Se.exports = _();
   })(function() {
     var _ = typeof Object.defineProperty == "function" ? Object.defineProperty : null, ge = function() {
       try {
@@ -2915,13 +2915,13 @@ var T7 = { exports: {} };
     }, Rv = 2220446049250313e-31, Lv = 2148532223, i0 = [0, 0], a0 = [0, 0], ir = function(e, n) {
       var r, a;
       return e === 0 || i(e) || Yn(e) ? e : (Av(i0, e), e = i0[0], n += i0[1], (n += Bv(e)) < Vv ? Rn(0, e) : n > Ev ? e < 0 ? j : H : (n <= Pv ? (n += 52, a = Rv) : a = 1, _r(a0, e), r = a0[0], r &= Lv, a * n0(r |= n + ur << 20, a0[1])));
-    }, Oe = 0.6931471805599453, qv = function(e) {
+    }, De = 0.6931471805599453, qv = function(e) {
       return e === 0 ? 0.16666666666666602 : 0.16666666666666602 + e * (e * (6613756321437934e-20 + e * (41381367970572385e-24 * e - 16533902205465252e-22)) - 0.0027777777777015593);
     }, Fv = function(e) {
       return e === 0 ? 0.16666666666666602 : 0.16666666666666602 + e * (e * (6613756321437934e-20 + e * (41381367970572385e-24 * e - 16533902205465252e-22)) - 0.0027777777777015593);
     }, kt = 2147483647, Tt = 1048575, Et = 1048576, Ov = 1071644672, wi = 20, Dv = 0.6931471824645996, Uv = -1904654299957768e-24, Hv = function(e, n, r) {
       var a, s, u, p, k, b, C, O, B;
-      return B = ((O = e & kt | 0) >> wi) - ur | 0, C = 0, O > Ov && (s = Xn(0, ((C = e + (Et >> B + 1) >>> 0) & ~(Tt >> (B = ((C & kt) >> wi) - ur | 0))) >>> 0), C = (C & Tt | Et) >> wi - B >>> 0, e < 0 && (C = -C), n -= s), k = (p = (r - ((s = _n(s = r + n, 0)) - n)) * Oe + s * Uv) - ((b = (u = s * Dv) + p) - u), a = b - (s = b * b) * Fv(s), e = Ke(b = 1 - (b * a / (a - 2) - (k + b * k) - b)), e = e0(e), b = (e += C << wi >>> 0) >> wi <= 0 ? ir(b, C) : Xn(b, e);
+      return B = ((O = e & kt | 0) >> wi) - ur | 0, C = 0, O > Ov && (s = Xn(0, ((C = e + (Et >> B + 1) >>> 0) & ~(Tt >> (B = ((C & kt) >> wi) - ur | 0))) >>> 0), C = (C & Tt | Et) >> wi - B >>> 0, e < 0 && (C = -C), n -= s), k = (p = (r - ((s = _n(s = r + n, 0)) - n)) * De + s * Uv) - ((b = (u = s * Dv) + p) - u), a = b - (s = b * b) * Fv(s), e = Ke(b = 1 - (b * a / (a - 2) - (k + b * k) - b)), e = e0(e), b = (e += C << wi >>> 0) >> wi <= 0 ? ir(b, C) : Xn(b, e);
     }, t0 = 2147483647, Wv = 1072693247, Gv = 1105199104, zv = 1139802112, Pt = 1083179008, jv = 1072693248, Kv = 1083231232, Qv = 3230714880, Vt = 31, Ar = 1e300, Ir = 1e-300, $v = 8008566259537294e-32, hr = [0, 0], Ct = [0, 0], V = function e(n, r) {
       var a, s, u, p, k, b, C, O, B, A, W, z, K, $;
       if (i(n) || i(r))
@@ -2977,11 +2977,11 @@ var T7 = { exports: {} };
     }, At = function(e, n) {
       return e >= n ? NaN : 0.125 * V(n - e, 2);
     }, ei = 1.1447298858494002, It = function(e, n, r) {
-      return i(e) || i(n) || i(r) || n >= r ? NaN : e < n ? j : e >= r ? 0 : Oe - ei + M(x(c((e - n) / (r - n))));
+      return i(e) || i(n) || i(r) || n >= r ? NaN : e < n ? j : e >= r ? 0 : De - ei + M(x(c((e - n) / (r - n))));
     };
     o(It, "factory", function(e, n) {
       return i(e) || i(n) || e >= n ? N(NaN) : function(r) {
-        return i(r) ? NaN : r < e ? j : r >= n ? 0 : Oe - ei + M(x(c((r - e) / (n - e))));
+        return i(r) ? NaN : r < e ? j : r >= n ? 0 : De - ei + M(x(c((r - e) / (n - e))));
       };
     });
     var Bt = It, Rt = function(e, n, r) {
@@ -3029,8 +3029,8 @@ var T7 = { exports: {} };
         Ht[b] = s;
       }
       return function B(A, W, z, K, $, ae, Q, fe, le) {
-        var se, te, xe, Fe, he, De, en, Re, ne;
-        for (Fe = ae, ne = K[z], Re = z, he = 0; Re > 0; he++)
+        var se, te, xe, Oe, he, Ue, en, Re, ne;
+        for (Oe = ae, ne = K[z], Re = z, he = 0; Re > 0; he++)
           te = s0 * ne | 0, pn[he] = ne - o0 * te | 0, ne = K[Re - 1] + te, Re -= 1;
         if (ne = ir(ne, $), ne -= 8 * ye(0.125 * ne), ne -= en = 0 | ne, xe = 0, $ > 0 ? (en += he = pn[z - 1] >> 24 - $, pn[z - 1] -= he << 24 - $, xe = pn[z - 1] >> 23 - $) : $ === 0 ? xe = pn[z - 1] >> 23 : ne >= 0.5 && (xe = 2), xe > 0) {
           for (en += 1, se = 0, he = 0; he < z; he++)
@@ -3049,14 +3049,14 @@ var T7 = { exports: {} };
           for (Re = 0, he = z - 1; he >= ae; he--)
             Re |= pn[he];
           if (Re === 0) {
-            for (De = 1; pn[ae - De] === 0; De++)
+            for (Ue = 1; pn[ae - Ue] === 0; Ue++)
               ;
-            for (he = z + 1; he <= z + De; he++) {
+            for (he = z + 1; he <= z + Ue; he++) {
               for (le[fe + he] = Ut[Q + he], te = 0, Re = 0; Re <= fe; Re++)
                 te += A[Re] * le[fe + (he - Re)];
               K[he] = te;
             }
-            return B(A, W, z += De, K, $, ae, Q, fe, le);
+            return B(A, W, z += Ue, K, $, ae, Q, fe, le);
           }
         }
         if (ne === 0)
@@ -3067,8 +3067,8 @@ var T7 = { exports: {} };
         for (te = ir(1, $), he = z; he >= 0; he--)
           K[he] = te * pn[he], te *= s0;
         for (he = z; he >= 0; he--) {
-          for (te = 0, De = 0; De <= Fe && De <= z - he; De++)
-            te += a8[De] * K[he + De];
+          for (te = 0, Ue = 0; Ue <= Oe && Ue <= z - he; Ue++)
+            te += a8[Ue] * K[he + Ue];
           Yi[z - he] = te;
         }
         for (te = 0, he = z; he >= 0; he--)
@@ -3292,7 +3292,7 @@ var T7 = { exports: {} };
     });
     var U8 = Mn, H8 = 0.34657359027997264, W8 = function(e) {
       return e === 0 ? -0.03333333333333313 : e * (0.0015873015872548146 + e * (e * (4008217827329362e-21 + -20109921818362437e-23 * e) - 793650757867488e-19)) - 0.03333333333333313;
-    }, G8 = 709.782712893384, l0 = 0.6931471803691238, v0 = 19082149292705877e-26, vo = 1.4426950408889634, z8 = 38.816242111356935, j8 = 1.0397207708399179, Le = function(e) {
+    }, G8 = 709.782712893384, l0 = 0.6931471803691238, v0 = 19082149292705877e-26, vo = 1.4426950408889634, z8 = 38.816242111356935, j8 = 1.0397207708399179, qe = function(e) {
       var n, r, a, s, u, p, k, b, C, O, B, A;
       if (e === H || i(e))
         return e;
@@ -3333,12 +3333,12 @@ var T7 = { exports: {} };
     }, Kn = 2.718281828459045, kn = 2220446049250313e-31, h0 = function(e) {
       var n, r;
       return e === 0 ? 1 / 0 : ((e < 0 ? -e : e) <= 1 ? (n = 709811.662581658 + e * (679979.8474157227 + e * (293136.7857211597 + e * (74887.54032914672 + e * (12555.290582413863 + e * (1443.4299244417066 + e * (115.24194596137347 + e * (6.309239205732627 + e * (0.22668404630224365 + e * (0.004826466289237662 + 4624429436045379e-20 * e))))))))), r = 0 + e * (362880 + e * (1026576 + e * (1172700 + e * (723680 + e * (269325 + e * (63273 + e * (9450 + e * (870 + e * (45 + 1 * e)))))))))) : (n = 4624429436045379e-20 + (e = 1 / e) * (0.004826466289237662 + e * (0.22668404630224365 + e * (6.309239205732627 + e * (115.24194596137347 + e * (1443.4299244417066 + e * (12555.290582413863 + e * (74887.54032914672 + e * (293136.7857211597 + e * (679979.8474157227 + 709811.662581658 * e))))))))), r = 1 + e * (45 + e * (870 + e * (9450 + e * (63273 + e * (269325 + e * (723680 + e * (1172700 + e * (1026576 + e * (362880 + 0 * e)))))))))), n / r);
-    }, d0 = 10.900511, Me = function(e, n) {
+    }, d0 = 10.900511, ke = function(e, n) {
       var r, a, s, u, p, k, b;
       return i(e) || i(n) ? NaN : e < 0 || n < 0 ? NaN : n === 1 ? 1 / e : e === 1 ? 1 / n : (b = e + n) < kn ? (p = b / e, p /= n) : b === e && n < kn ? 1 / n : b === n && e < kn ? 1 / e : (e < n && (k = n, n = e, e = k), a = e + d0 - 0.5, s = n + d0 - 0.5, u = b + d0 - 0.5, p = h0(e) * (h0(n) / h0(b)), J(n * (r = e - 0.5 - n)) < 100 * u && e > 100 ? p *= R(r * oe(-n / u)) : p *= V(a / u, r), p *= V(u > 1e10 ? a / u * (s / u) : a * s / (u * u), n), p *= c(Kn / s));
     }, po = function(e) {
       return e === 0 && 1 / e === H;
-    }, Ee = function(e, n) {
+    }, Pe = function(e, n) {
       var r, a, s, u;
       if ((r = arguments.length) === 2)
         return i(e) || i(n) ? NaN : e === H || n === H ? H : e === n && e === 0 ? po(e) ? e : n : e > n ? e : n;
@@ -3350,7 +3350,7 @@ var T7 = { exports: {} };
       return a;
     }, g0 = function(e) {
       return e === 0 && 1 / e === j;
-    }, Se = function(e, n) {
+    }, Me = function(e, n) {
       var r, a, s, u;
       if ((r = arguments.length) === 2)
         return i(e) || i(n) ? NaN : e === j || n === j ? j : e === n && e === 0 ? g0(e) ? e : n : e < n ? e : n;
@@ -3400,9 +3400,9 @@ var T7 = { exports: {} };
     }, go = function(e) {
       var n, r;
       return e === 0 ? 1 / 0 : ((e < 0 ? -e : e) <= 1 ? (n = 3847467039331777e-5 + e * (3685766504351951e-5 + e * (1588920245372942e-5 + e * (4059208354298835e-6 + e * (6805476611834733e-7 + e * (7823975500312005e-8 + e * (6246580776401795e-9 + e * (341986.3488721347 + e * (12287.194511824551 + e * (261.61404416416684 + 2.5066282746310007 * e))))))))), r = 0 + e * (362880 + e * (1026576 + e * (1172700 + e * (723680 + e * (269325 + e * (63273 + e * (9450 + e * (870 + e * (45 + 1 * e)))))))))) : (n = 2.5066282746310007 + (e = 1 / e) * (261.61404416416684 + e * (12287.194511824551 + e * (341986.3488721347 + e * (6246580776401795e-9 + e * (7823975500312005e-8 + e * (6805476611834733e-7 + e * (4059208354298835e-6 + e * (1588920245372942e-5 + e * (3685766504351951e-5 + 3847467039331777e-5 * e))))))))), r = 1 + e * (45 + e * (870 + e * (9450 + e * (63273 + e * (269325 + e * (723680 + e * (1172700 + e * (1026576 + e * (362880 + 0 * e)))))))))), n / r);
-    }, qe = 10.900511, No = 170, t9 = 4269068009004705e289, o9 = function e(n, r) {
+    }, Fe = 10.900511, No = 170, t9 = 4269068009004705e289, o9 = function e(n, r) {
       var a, s, u;
-      return n < kn ? r > No ? (s = e(r, No - r), s *= n, 1 / (s *= t9)) : 1 / (n * ve(n + r)) : (u = n + qe - 0.5, n + r === n ? a = J(r) < 10 ? R((0.5 - n) * oe(r / u)) : 1 : (a = J(r) < 10 ? R((0.5 - n) * oe(r / u)) : V(u / (u + r), n - 0.5), a *= go(n) / go(n + r)), a *= V(Kn / (u + r), r));
+      return n < kn ? r > No ? (s = e(r, No - r), s *= n, 1 / (s *= t9)) : 1 / (n * ve(n + r)) : (u = n + Fe - 0.5, n + r === n ? a = J(r) < 10 ? R((0.5 - n) * oe(r / u)) : 1 : (a = J(r) < 10 ? R((0.5 - n) * oe(r / u)) : V(u / (u + r), n - 0.5), a *= go(n) / go(n + r)), a *= V(Kn / (u + r), r));
     }, yo = 170, N0 = function(e, n) {
       var r, a, s;
       if (e <= 0 || e + n <= 0)
@@ -3463,7 +3463,7 @@ var T7 = { exports: {} };
       return e === 0 ? 2.4559779371304113 : 2.4559779371304113 + e * (2.128489763798934 + e * (0.7692851504566728 + e * (0.10422264559336913 + 0.003217092422824239 * e)));
     }, b9 = function(e) {
       return e === 0 ? 0.08333333333333297 : 0.08333333333333297 + e * (e * (7936505586430196e-19 + e * (e * (8363399189962821e-19 + -0.0016309293409657527 * e) - 59518755745034e-17)) - 0.0027777777772877554);
-    }, w9 = 0.07721566490153287, x9 = 0.3224670334241136, S9 = 1, M9 = -0.07721566490153287, k9 = 0.48383612272381005, T9 = -0.1475877229945939, E9 = 0.06462494023913339, P9 = -0.07721566490153287, V9 = 1, C9 = 0.4189385332046727, ua = 1.4616321449683622, A9 = 4503599627370496, I9 = 288230376151711740, B9 = 8470329472543003e-37, bo = 1.4616321449683622, R9 = -0.12148629053584961, L9 = -3638676997039505e-33, ke = function(e) {
+    }, w9 = 0.07721566490153287, x9 = 0.3224670334241136, S9 = 1, M9 = -0.07721566490153287, k9 = 0.48383612272381005, T9 = -0.1475877229945939, E9 = 0.06462494023913339, P9 = -0.07721566490153287, V9 = 1, C9 = 0.4189385332046727, ua = 1.4616321449683622, A9 = 4503599627370496, I9 = 288230376151711740, B9 = 8470329472543003e-37, bo = 1.4616321449683622, R9 = -0.12148629053584961, L9 = -3638676997039505e-33, Te = function(e) {
       var n, r, a, s, u, p, k, b, C, O, B;
       if (i(e) || Yn(e))
         return e;
@@ -3667,7 +3667,7 @@ var T7 = { exports: {} };
       return e === 0 ? 1 / 0 : ((e < 0 ? -e : e) <= 1 ? (n = 709811.662581658 + e * (679979.8474157227 + e * (293136.7857211597 + e * (74887.54032914672 + e * (12555.290582413863 + e * (1443.4299244417066 + e * (115.24194596137347 + e * (6.309239205732627 + e * (0.22668404630224365 + e * (0.004826466289237662 + 4624429436045379e-20 * e))))))))), r = 0 + e * (362880 + e * (1026576 + e * (1172700 + e * (723680 + e * (269325 + e * (63273 + e * (9450 + e * (870 + e * (45 + 1 * e)))))))))) : (n = 4624429436045379e-20 + (e = 1 / e) * (0.004826466289237662 + e * (0.22668404630224365 + e * (6.309239205732627 + e * (115.24194596137347 + e * (1443.4299244417066 + e * (12555.290582413863 + e * (74887.54032914672 + e * (293136.7857211597 + e * (679979.8474157227 + 709811.662581658 * e))))))))), r = 1 + e * (45 + e * (870 + e * (9450 + e * (63273 + e * (269325 + e * (723680 + e * (1172700 + e * (1026576 + e * (362880 + 0 * e)))))))))), n / r);
     }, ko = function(e, n) {
       var r, a, s, u, p, k, b;
-      return b = (n - e - qe + 0.5) / (s = e + qe - 0.5), e < 1 ? n <= de ? R(e * M(n) - n - ke(e)) : V(n, e) * R(-n) / ve(e) : (J(b * b * e) <= 100 && e > 150 ? (r = e * (oe(b) - b) + n * (0.5 - qe) / s, r = R(r)) : (u = e * M(n / s), Se(u, p = e - n) <= de || Ee(u, p) >= ce ? (a = p / e, Se(u, p) / 2 > de && Ee(u, p) / 2 < ce ? r = (k = V(n / s, e / 2) * R(p / 2)) * k : Se(u, p) / 4 > de && Ee(u, p) / 4 < ce && n > e ? (r = (k = V(n / s, e / 4) * R(p / 4)) * k, r *= r) : r = a > de && a < ce ? V(n * R(a) / s, e) : R(u + p)) : r = V(n / s, e) * R(p)), r *= c(s / Kn) / _e(e));
+      return b = (n - e - Fe + 0.5) / (s = e + Fe - 0.5), e < 1 ? n <= de ? R(e * M(n) - n - Te(e)) : V(n, e) * R(-n) / ve(e) : (J(b * b * e) <= 100 && e > 150 ? (r = e * (oe(b) - b) + n * (0.5 - Fe) / s, r = R(r)) : (u = e * M(n / s), Me(u, p = e - n) <= de || Pe(u, p) >= ce ? (a = p / e, Me(u, p) / 2 > de && Pe(u, p) / 2 < ce ? r = (k = V(n / s, e / 2) * R(p / 2)) * k : Me(u, p) / 4 > de && Pe(u, p) / 4 < ce && n > e ? (r = (k = V(n / s, e / 4) * R(p / 4)) * k, r *= r) : r = a > de && a < ce ? V(n * R(a) / s, e) : R(u + p)) : r = V(n / s, e) * R(p)), r *= c(s / Kn) / _e(e));
     }, kp = function(e, n) {
       var r;
       if (i(e) || i(n))
@@ -3678,7 +3678,7 @@ var T7 = { exports: {} };
         return -1;
       if (e < 0 && n % 2 == 0 && (e = -e), e > 0) {
         if ((J(n * (e - 1)) < 0.5 || J(n) < 0.2) && (r = M(e) * n) < 0.5)
-          return Le(r);
+          return qe(r);
       } else if (Ti(n) !== n)
         return NaN;
       return V(e, n) - 1;
@@ -3708,7 +3708,7 @@ var T7 = { exports: {} };
       }
       return e < 1 && (s += -M(e), r = n, n = e, e += 1), e <= 1.5 ? (u = Ep(n), s += (a = n * r) * Cp + a * u) : (u = r * n, p = Pp(-r), s += u * Ap + u * p);
     }, Ip = function(e) {
-      return i(e) ? NaN : e < 0 ? e < -0.5 ? ve(1 + e) - 1 : Le(-oe(e) + To(e + 2, e + 1, e)) : e < 2 ? Le(To(e + 1, e, e - 1)) : ve(1 + e) - 1;
+      return i(e) ? NaN : e < 0 ? e < -0.5 ? ve(1 + e) - 1 : qe(-oe(e) + To(e + 2, e + 1, e)) : e < 2 ? qe(To(e + 1, e, e - 1)) : ve(1 + e) - 1;
     }, Bp = function(e, n) {
       var r, a, s, u;
       return r = -n, n = -n, a = e + 1, s = 1, function() {
@@ -3772,7 +3772,7 @@ var T7 = { exports: {} };
       if (n < 0 || r <= 0)
         return NaN;
       if (p = a === void 0 || a, B = s, A = 0, r >= Up && !p)
-        return B && 4 * r < n ? (A = r * M(n) - n, A += M(Po(r, n))) : !B && r > 4 * n ? (A = r * M(n) - n, A += M(b0(r, n, b = 0) / r)) : (A = e(r, n, !0, B)) === 0 ? B ? (A = M(A = 1 + 1 / (12 * r) + 1 / (288 * r * r)) - r + (r - 0.5) * M(r), A += M(Ei)) : (A = r * M(n) - n, A += M(b0(r, n, b = 0) / r)) : A = M(A) + ke(r), A > ce ? H : R(A);
+        return B && 4 * r < n ? (A = r * M(n) - n, A += M(Po(r, n))) : !B && r > 4 * n ? (A = r * M(n) - n, A += M(b0(r, n, b = 0) / r)) : (A = e(r, n, !0, B)) === 0 ? B ? (A = M(A = 1 + 1 / (12 * r) + 1 / (288 * r * r)) - r + (r - 0.5) * M(r), A += M(Ei)) : (A = r * M(n) - n, A += M(b0(r, n, b = 0) / r)) : A = M(A) + Te(r), A > ce ? H : R(A);
       switch (r < 30 && r <= n + 1 && n < ce ? C = !(W = ($ = ye(r)) === r) && J($ - r) === 0.5 : W = C = !1, W && n > 0.6 ? (B = !B, k = 0) : C && n > 0.2 ? (B = !B, k = 1) : n < wo && r > 1 ? k = 6 : n < 0.5 ? k = -0.4 / M(n) < r ? 2 : 3 : n < 1.1 ? k = 0.75 * n < r ? 2 : 3 : (O = !1, p && r > 20 && (z = J((n - r) / r), r > 200 ? 20 / r > z * z && (O = !0) : z < 0.4 && (O = !0)), O ? k = 5 : n - 1 / (3 * n) < r ? k = 2 : (k = 4, B = !B)), k) {
         case 0:
           A = q9(r, n), p === !1 && (A *= ve(r));
@@ -3801,15 +3801,15 @@ var T7 = { exports: {} };
       return r = e * M(n), n >= 1 ? r < ce && -n > de ? V(n, e) * R(-n) : e >= 1 ? V(n / R(n / e), e) : R(r - n) : r > de ? V(n, e) * R(-n) : n / e < ce ? V(n / R(n / e), e) : R(r - n);
     }, Wp = function(e, n) {
       var r, a, s, u, p, k, b;
-      return b = (n - e - qe + 0.5) / (s = e + qe - 0.5), e < 1 ? n <= de ? R(e * M(n) - n - ke(e)) : V(n, e) * R(-n) / ve(e) : (J(b * b * e) <= 100 && e > 150 ? (r = e * (oe(b) - b) + n * (0.5 - qe) / s, r = R(r)) : (u = e * M(n / s), Se(u, p = e - n) <= de || Ee(u, p) >= ce ? (a = p / e, Se(u, p) / 2 > de && Ee(u, p) / 2 < ce ? r = (k = V(n / s, e / 2) * R(p / 2)) * k : Se(u, p) / 4 > de && Ee(u, p) / 4 < ce && n > e ? (r = (k = V(n / s, e / 4) * R(p / 4)) * k, r *= r) : r = a > de && a < ce ? V(n * R(a) / s, e) : R(u + p)) : r = V(n / s, e) * R(p)), r *= c(s / Kn) / _e(e));
+      return b = (n - e - Fe + 0.5) / (s = e + Fe - 0.5), e < 1 ? n <= de ? R(e * M(n) - n - Te(e)) : V(n, e) * R(-n) / ve(e) : (J(b * b * e) <= 100 && e > 150 ? (r = e * (oe(b) - b) + n * (0.5 - Fe) / s, r = R(r)) : (u = e * M(n / s), Me(u, p = e - n) <= de || Pe(u, p) >= ce ? (a = p / e, Me(u, p) / 2 > de && Pe(u, p) / 2 < ce ? r = (k = V(n / s, e / 2) * R(p / 2)) * k : Me(u, p) / 4 > de && Pe(u, p) / 4 < ce && n > e ? (r = (k = V(n / s, e / 4) * R(p / 4)) * k, r *= r) : r = a > de && a < ce ? V(n * R(a) / s, e) : R(u + p)) : r = V(n / s, e) * R(p)), r *= c(s / Kn) / _e(e));
     }, Fr = new Array(30), Or = function(e, n, r, a, s, u, p) {
-      var k, b, C, O, B, A, W, z, K, $, ae, Q, fe, le, se, te, xe, Fe;
-      if (xe = e + (A = n - 1) / 2, $ = a < 0.35 ? oe(-a) : M(r), (Q = Wp(n, Fe = -xe * $)) <= er)
+      var k, b, C, O, B, A, W, z, K, $, ae, Q, fe, le, se, te, xe, Oe;
+      if (xe = e + (A = n - 1) / 2, $ = a < 0.35 ? oe(-a) : M(r), (Q = Wp(n, Oe = -xe * $)) <= er)
         return s;
-      for (p ? (k = Q / N0(e, n), k /= V(xe, n)) : k = Hp(n, Fe) / V(xe, n), k *= u, Fr[0] = 1, fe = fr(Fe, n, !0, !0), O = s + k * (fe /= Q), C = 1, W = $ / 2, W *= W, z = 1, ae = 4 * xe * xe, B = n, se = 1; se < Fr.length; ++se) {
+      for (p ? (k = Q / N0(e, n), k /= V(xe, n)) : k = Hp(n, Oe) / V(xe, n), k *= u, Fr[0] = 1, fe = fr(Oe, n, !0, !0), O = s + k * (fe /= Q), C = 1, W = $ / 2, W *= W, z = 1, ae = 4 * xe * xe, B = n, se = 1; se < Fr.length; ++se) {
         for (C += 2, Fr[se] = 0, K = n - se, b = 3, le = 1; le < se; ++le)
           K = le * n - se, Fr[se] += K * Fr[se - le] / Pi(b), b += 2;
-        if (Fr[se] /= se, Fr[se] += A / Pi(C), fe = (B * (B + 1) * fe + (Fe + B + 1) * z) / ae, z *= W, B += 2, O += te = k * Fr[se] * fe, te > 1) {
+        if (Fr[se] /= se, Fr[se] += A / Pi(C), fe = (B * (B + 1) * fe + (Oe + B + 1) * z) / ae, z *= W, B += 2, O += te = k * Fr[se] * fe, te > 1) {
           if (J(te) < J(kn * O))
             break;
         } else if (J(te / kn) < J(O))
@@ -3828,28 +3828,28 @@ var T7 = { exports: {} };
       if ((r = arguments.length) === 0)
         return H;
       if (r === 2)
-        return Ee(J(e), J(n));
+        return Pe(J(e), J(n));
       for (a = [], s = 0; s < r; s++)
         a.push(J(arguments[s]));
-      return Ee.apply(null, a);
+      return Pe.apply(null, a);
     }, zp = function(e, n) {
       var r, a, s;
       if ((r = arguments.length) === 0)
         return H;
       if (r === 2)
-        return Se(J(e), J(n));
+        return Me(J(e), J(n));
       for (a = [], s = 0; s < r; s++)
         a.push(J(arguments[s]));
-      return Se.apply(null, a);
+      return Me.apply(null, a);
     }, x0 = function(e, n, r, a, s) {
       var u, p, k, b, C, O, B, A, W, z, K, $, ae, Q;
       if (!s)
         return V(r, e) * V(a, n);
-      if (b = e + qe - 0.5, C = n + qe - 0.5, O = (ae = e + n) + qe - 0.5, u = _e(ae), u /= _e(e) * _e(n), u *= c(C / Kn), u *= c(b / O), zp(B = (r * n - a * b) / b, A = (a * e - r * C) / C) < 0.2)
-        if (B * A > 0 || Se(e, n) < 1)
+      if (b = e + Fe - 0.5, C = n + Fe - 0.5, O = (ae = e + n) + Fe - 0.5, u = _e(ae), u /= _e(e) * _e(n), u *= c(C / Kn), u *= c(b / O), zp(B = (r * n - a * b) / b, A = (a * e - r * C) / C) < 0.2)
+        if (B * A > 0 || Me(e, n) < 1)
           J(B) < 0.1 ? u *= R(e * oe(B)) : u *= V(r * O / b, e), J(A) < 0.1 ? u *= R(n * oe(A)) : u *= V(a * O / C, n);
         else if (Gp(B, A) < 0.5)
-          k = n / e, (p = e < n) && k * A < 0.1 || !p && B / k > 0.1 ? (W = Le(k * oe(A)), W = e * oe(W = B + W + W * B), u *= R(W)) : (W = Le(oe(B) / k), W = n * oe(W = A + W + W * A), u *= R(W));
+          k = n / e, (p = e < n) && k * A < 0.1 || !p && B / k > 0.1 ? (W = qe(k * oe(A)), W = e * oe(W = B + W + W * B), u *= R(W)) : (W = qe(oe(B) / k), W = n * oe(W = A + W + W * A), u *= R(W));
         else if (J(B) < J(A))
           if ((Q = e * oe(B) + n * M(a * O / C)) <= de || Q >= ce) {
             if ((Q += M(u)) >= ce)
@@ -3934,7 +3934,7 @@ var T7 = { exports: {} };
       return k *= C;
     }, Ao = { maxTerms: 100 }, cr = function(e, n, r, a, s, u, p) {
       var k, b, C, O, B, A, W, z;
-      return s ? (b = e + qe - 0.5, C = n + qe - 0.5, O = (W = e + n) + qe - 0.5, k = _e(W) / (_e(e) * _e(n)), B = M(O / C) * (n - 0.5), A = M(r * O / b) * e, B > de && B < ce && A > de && A < ce ? (k *= e * n < 10 * C ? R((n - 0.5) * oe(e / C)) : V(O / C, n - 0.5), k *= V(r * O / b, e), k *= c(b / Kn), u && (u[1] = k * V(p, n))) : (k = M(k) + B + A + (M(b) - 1) / 2, u && (u[1] = R(k + n * M(p))), k = R(k))) : k = V(r, e), k < er ? a : (z = function(K, $, ae, Q) {
+      return s ? (b = e + Fe - 0.5, C = n + Fe - 0.5, O = (W = e + n) + Fe - 0.5, k = _e(W) / (_e(e) * _e(n)), B = M(O / C) * (n - 0.5), A = M(r * O / b) * e, B > de && B < ce && A > de && A < ce ? (k *= e * n < 10 * C ? R((n - 0.5) * oe(e / C)) : V(O / C, n - 0.5), k *= V(r * O / b, e), k *= c(b / Kn), u && (u[1] = k * V(p, n))) : (k = M(k) + B + A + (M(b) - 1) / 2, u && (u[1] = R(k + n * M(p))), k = R(k))) : k = V(r, e), k < er ? a : (z = function(K, $, ae, Q) {
         var fe = 1 - $, le = 1;
         return function() {
           var se = Q / K;
@@ -3957,7 +3957,7 @@ var T7 = { exports: {} };
           return u[W] = s ? 1 : 0, u;
       } else if (n <= 0 || r <= 0)
         return u[W] = NaN, u[z] = NaN, u;
-      return e === 0 ? (u[z] = n === 1 ? 1 : n < 1 ? Tn / 2 : 2 * er, s ? (u[W] = a ? 1 : Me(n, r), u) : (u[W] = 0, u)) : e === 1 ? (u[z] = r === 1 ? 1 : r < 1 ? Tn / 2 : 2 * er, u[W] = s ? 0 : a ? 1 : Me(n, r), u) : n === 0.5 && r === 0.5 ? (u[z] = Qp * c(Q * e), ae = x(c(s ? Q : e)), ae /= gr, a || (ae *= T), u[W] = ae, u) : (n === 1 && (A = r, r = n, n = A, A = Q, Q = e, e = A, s = !s), r === 1 ? n === 1 ? (u[W] = s ? Q : e, u[z] = 1, u) : (u[z] = n * V(e, n - 1), ae = Q < 0.5 ? s ? -Le(n * oe(-Q)) : R(n * oe(-Q)) : s ? -(V(e, n) - 1) : V(e, n), a || (ae /= n), u[W] = ae, u) : (Se(n, r) <= 1 ? (e > 0.5 && (A = r, r = n, n = A, A = Q, Q = e, e = A, s = !s), Ee(n, r) <= 1 ? n >= Se(0.2, r) || V(e, n) <= 0.9 ? s ? (C = -(a ? 1 : Me(n, r)), s = !1, C = -cr(n, r, e, C, a, u, Q)) : C = cr(n, r, e, 0, a, u, Q) : (A = r, r = n, n = A, A = Q, Q = e, e = A, s = !s, Q >= 0.3 ? s ? (C = -(a ? 1 : Me(n, r)), s = !1, C = -cr(n, r, e, C, a, u, Q)) : C = cr(n, r, e, 0, a, u, Q) : (b = a ? 1 : w0(n + r, n, 20), C = Vi(n, r, e, Q, 20, a, u), s ? (C -= a ? 1 : Me(n, r), s = !1, C = -Or(n + 20, r, e, Q, C, b, a)) : C = Or(n + 20, r, e, Q, C, b, a))) : r <= 1 || e < 0.1 && V(r * e, n) <= 0.7 ? s ? (C = -(a ? 1 : Me(n, r)), s = !1, C = -cr(n, r, e, C, a, u, Q)) : C = cr(n, r, e, 0, a, u, Q) : (A = r, r = n, n = A, A = Q, Q = e, e = A, s = !s, Q >= 0.3 ? s ? (C = -(a ? 1 : Me(n, r)), s = !1, C = -cr(n, r, e, C, a, u, Q)) : C = cr(n, r, e, 0, a, u, Q) : n >= 15 ? s ? (C = -(a ? 1 : Me(n, r)), s = !1, C = -Or(n, r, e, Q, C, 1, a)) : C = Or(n, r, e, Q, 0, 1, a) : (b = a ? 1 : w0(n + r, n, 20), C = Vi(n, r, e, Q, 20, a, u), s ? (C -= a ? 1 : Me(n, r), s = !1, C = -Or(n + 20, r, e, Q, C, b, a)) : C = Or(n + 20, r, e, Q, C, b, a)))) : ((n < r ? n - (n + r) * e : (n + r) * Q - r) < 0 && (A = r, r = n, n = A, A = Q, Q = e, e = A, s = !s), r < 40 ? ye(n) === n && ye(r) === r && n < _8 - 100 ? (C = Kp($ = r + (K = n - 1), K, e, Q), a || (C *= Me(n, r))) : r * e <= 0.7 ? s ? (C = -(a ? 1 : Me(n, r)), s = !1, C = -cr(n, r, e, C, a, u, Q)) : C = cr(n, r, e, 0, a, u, Q) : n > 15 ? (($ = ye(r)) === r && ($ -= 1), O = r - $, b = a ? 1 : w0(n + O, O, $), C = Vi(O, n, Q, e, $, a), C = Or(n, O, e, Q, C, 1, a), C /= b) : a ? ((O = r - ($ = ye(r))) <= 0 && ($ -= 1, O += 1), C = Vi(O, n, Q, e, $, a), C += Vi(n, O, e, Q, 20, a), s && (C -= 1), C = Or(n + 20, O, e, Q, C, 1, a), s && (C = -C, s = !1)) : C = Vo(n, r, e, Q, a, u) : C = Vo(n, r, e, Q, a, u)), u[z] < 0 && (u[z] = x0(n, r, e, Q, !0)), B = Q * e, u[z] !== 0 && (Tn * B < u[z] ? u[z] = Tn / 2 : u[z] /= B), u[W] = s ? (a ? 1 : Me(n, r)) - C : C, u));
+      return e === 0 ? (u[z] = n === 1 ? 1 : n < 1 ? Tn / 2 : 2 * er, s ? (u[W] = a ? 1 : ke(n, r), u) : (u[W] = 0, u)) : e === 1 ? (u[z] = r === 1 ? 1 : r < 1 ? Tn / 2 : 2 * er, u[W] = s ? 0 : a ? 1 : ke(n, r), u) : n === 0.5 && r === 0.5 ? (u[z] = Qp * c(Q * e), ae = x(c(s ? Q : e)), ae /= gr, a || (ae *= T), u[W] = ae, u) : (n === 1 && (A = r, r = n, n = A, A = Q, Q = e, e = A, s = !s), r === 1 ? n === 1 ? (u[W] = s ? Q : e, u[z] = 1, u) : (u[z] = n * V(e, n - 1), ae = Q < 0.5 ? s ? -qe(n * oe(-Q)) : R(n * oe(-Q)) : s ? -(V(e, n) - 1) : V(e, n), a || (ae /= n), u[W] = ae, u) : (Me(n, r) <= 1 ? (e > 0.5 && (A = r, r = n, n = A, A = Q, Q = e, e = A, s = !s), Pe(n, r) <= 1 ? n >= Me(0.2, r) || V(e, n) <= 0.9 ? s ? (C = -(a ? 1 : ke(n, r)), s = !1, C = -cr(n, r, e, C, a, u, Q)) : C = cr(n, r, e, 0, a, u, Q) : (A = r, r = n, n = A, A = Q, Q = e, e = A, s = !s, Q >= 0.3 ? s ? (C = -(a ? 1 : ke(n, r)), s = !1, C = -cr(n, r, e, C, a, u, Q)) : C = cr(n, r, e, 0, a, u, Q) : (b = a ? 1 : w0(n + r, n, 20), C = Vi(n, r, e, Q, 20, a, u), s ? (C -= a ? 1 : ke(n, r), s = !1, C = -Or(n + 20, r, e, Q, C, b, a)) : C = Or(n + 20, r, e, Q, C, b, a))) : r <= 1 || e < 0.1 && V(r * e, n) <= 0.7 ? s ? (C = -(a ? 1 : ke(n, r)), s = !1, C = -cr(n, r, e, C, a, u, Q)) : C = cr(n, r, e, 0, a, u, Q) : (A = r, r = n, n = A, A = Q, Q = e, e = A, s = !s, Q >= 0.3 ? s ? (C = -(a ? 1 : ke(n, r)), s = !1, C = -cr(n, r, e, C, a, u, Q)) : C = cr(n, r, e, 0, a, u, Q) : n >= 15 ? s ? (C = -(a ? 1 : ke(n, r)), s = !1, C = -Or(n, r, e, Q, C, 1, a)) : C = Or(n, r, e, Q, 0, 1, a) : (b = a ? 1 : w0(n + r, n, 20), C = Vi(n, r, e, Q, 20, a, u), s ? (C -= a ? 1 : ke(n, r), s = !1, C = -Or(n + 20, r, e, Q, C, b, a)) : C = Or(n + 20, r, e, Q, C, b, a)))) : ((n < r ? n - (n + r) * e : (n + r) * Q - r) < 0 && (A = r, r = n, n = A, A = Q, Q = e, e = A, s = !s), r < 40 ? ye(n) === n && ye(r) === r && n < _8 - 100 ? (C = Kp($ = r + (K = n - 1), K, e, Q), a || (C *= ke(n, r))) : r * e <= 0.7 ? s ? (C = -(a ? 1 : ke(n, r)), s = !1, C = -cr(n, r, e, C, a, u, Q)) : C = cr(n, r, e, 0, a, u, Q) : n > 15 ? (($ = ye(r)) === r && ($ -= 1), O = r - $, b = a ? 1 : w0(n + O, O, $), C = Vi(O, n, Q, e, $, a), C = Or(n, O, e, Q, C, 1, a), C /= b) : a ? ((O = r - ($ = ye(r))) <= 0 && ($ -= 1, O += 1), C = Vi(O, n, Q, e, $, a), C += Vi(n, O, e, Q, 20, a), s && (C -= 1), C = Or(n + 20, O, e, Q, C, 1, a), s && (C = -C, s = !1)) : C = Vo(n, r, e, Q, a, u) : C = Vo(n, r, e, Q, a, u)), u[z] < 0 && (u[z] = x0(n, r, e, Q, !0)), B = Q * e, u[z] !== 0 && (Tn * B < u[z] ? u[z] = Tn / 2 : u[z] /= B), u[W] = s ? (a ? 1 : ke(n, r)) - C : C, u));
     }, Bo = function(e, n, r, a, s) {
       return Io(e, n, r, a, s, [0, 0], 1, 0);
     };
@@ -3981,7 +3981,7 @@ var T7 = { exports: {} };
       return qo(e) || Fo(e);
     };
     o(S0, "isPrimitive", qo), o(S0, "isObject", Fo);
-    var Ue = S0, Xp = function(e) {
+    var He = S0, Xp = function(e) {
       return e === 0 ? 0.13333333333320124 : 0.13333333333320124 + e * (0.021869488294859542 + e * (0.0035920791075913124 + e * (5880412408202641e-19 + e * (7817944429395571e-20 + -18558637485527546e-21 * e))));
     }, Yp = function(e) {
       return e === 0 ? 0.05396825397622605 : 0.05396825397622605 + e * (0.0088632398235993 + e * (0.0014562094543252903 + e * (2464631348184699e-19 + e * (7140724913826082e-20 + 2590730518636337e-20 * e))));
@@ -4030,7 +4030,7 @@ var T7 = { exports: {} };
       return e < 10 ? NaN : e >= ym ? 0 : e < Nm ? gm(2 * V(10 / e, 2) - 1) / e : 1 / (12 * e);
     }, lr = function(e, n) {
       var r, a, s;
-      return a = Se(e, n), s = Ee(e, n), a < 0 ? NaN : a === 0 ? H : s === H ? j : a >= 10 ? (r = Ai(a) + Ai(s) - Ai(a + s), -0.5 * M(s) + Ci + r + (a - 0.5) * M(a / (a + s)) + s * oe(-a / (a + s))) : s >= 10 ? (r = Ai(s) - Ai(a + s), ke(a) + r + a - a * M(a + s) + (s - 0.5) * oe(-a / (a + s))) : M(ve(a) * (ve(s) / ve(a + s)));
+      return a = Me(e, n), s = Pe(e, n), a < 0 ? NaN : a === 0 ? H : s === H ? j : a >= 10 ? (r = Ai(a) + Ai(s) - Ai(a + s), -0.5 * M(s) + Ci + r + (a - 0.5) * M(a / (a + s)) + s * oe(-a / (a + s))) : s >= 10 ? (r = Ai(s) - Ai(a + s), Te(a) + r + a - a * M(a + s) + (s - 0.5) * oe(-a / (a + s))) : M(ve(a) * (ve(s) / ve(a + s)));
     }, Uo = function(e, n) {
       var r;
       return e <= 0 || n <= 0 ? NaN : (r = lr(e, n), r -= (e - 1) * Qn(e), r -= (n - 1) * Qn(n), r += (e + n - 2) * Qn(e + n));
@@ -4060,7 +4060,7 @@ var T7 = { exports: {} };
     }, Cm = 6123233995736766e-32, Am = function(e) {
       var n;
       return i(e) ? NaN : e < -1 || e > 1 ? NaN : e > 0.5 ? 2 * x(c(0.5 - 0.5 * e)) : (n = P - x(e), n += Cm, n += P);
-    }, Pe = 1.4142135623730951, Im = function(e) {
+    }, Ve = 1.4142135623730951, Im = function(e) {
       return e === 0 ? 0.16666666666666666 : 0.16666666666666666 + 0.16666666666666666 * e;
     }, Bm = function(e) {
       return e === 0 ? 0.058333333333333334 : 0.058333333333333334 + e * (0.06666666666666667 + 0.008333333333333333 * e);
@@ -4086,7 +4086,7 @@ var T7 = { exports: {} };
       return b = N0(e / 2, 0.5) * c(e * T) * n, s = e + 2, u = e + 4, p = e + 6, Dr[0] = 1, Dr[1] = -(e + 1) / (2 * s), s *= e + 2, Dr[2] = -e * (e + 1) * (e + 3) / (8 * s * u), s *= e + 2, Dr[3] = -e * (e + 1) * (e + 5) * ((3 * e + 7) * e - 2) / (48 * s * u * p), s *= e + 2, u *= e + 4, Dr[4] = -e * (e + 1) * (e + 7) * (((((15 * e + 154) * e + 465) * e + 286) * e - 336) * e + 64) / (384 * s * u * p * (e + 8)), s *= e + 2, Dr[5] = -e * (e + 1) * (e + 3) * (e + 9) * ((((((35 * e + 452) * e + 1573) * e + 600) * e - 2020) * e + 928) * e - 128) / (1280 * s * u * p * (e + 8) * (e + 10)), s *= e + 2, u *= e + 4, p *= e + 6, Dr[6] = -e * (e + 1) * (e + 11) * (((((((((((945 * e + 31506) * e + 425858) * e + 2980236) * e + 11266745) * e + 20675018) * e + 7747124) * e - 22574632) * e - 8565600) * e + 18108416) * e - 7099392) * e + 884736) / (46080 * s * u * p * (e + 8) * (e + 10) * (e + 12)), k = c(e), a = V(k * b, 1 / e), r = hn(Dr, a * a), r *= k, -(r /= a);
     }, T0 = function(e, n) {
       var r, a, s, u, p, k;
-      return e > 1e20 ? -$e(2 * n) * Pe : (u = ((94.5 / ((a = 48 / ((r = 1 / (e - 0.5)) * r)) + (s = ((20700 * r / a - 98) * r - 16) * r + 96.36)) - 3) / a + 1) * c(r * gr) * e, (k = V(2 * u * n, 2 / e)) > 0.05 + r ? (k = (p = -$e(2 * n) * Pe) * p, e < 5 && (s += 0.3 * (e - 4.5) * (p + 0.6)), k = Le(r * (k = (((((0.4 * k + 6.3) * k + 36) * k + 94.5) / (s += (((0.05 * u * p - 5) * p - 7) * p - 2) * p + a) - k - 3) / a + 1) * p) * k)) : k = ((1 / (((e + 6) / (e * k) - 0.089 * u - 0.822) * (e + 2) * 3) + 0.5 / (e + 4)) * k - 1) * (e + 1) / (e + 2) + 1 / k, -c(e * k));
+      return e > 1e20 ? -$e(2 * n) * Ve : (u = ((94.5 / ((a = 48 / ((r = 1 / (e - 0.5)) * r)) + (s = ((20700 * r / a - 98) * r - 16) * r + 96.36)) - 3) / a + 1) * c(r * gr) * e, (k = V(2 * u * n, 2 / e)) > 0.05 + r ? (k = (p = -$e(2 * n) * Ve) * p, e < 5 && (s += 0.3 * (e - 4.5) * (p + 0.6)), k = qe(r * (k = (((((0.4 * k + 6.3) * k + 36) * k + 94.5) / (s += (((0.05 * u * p - 5) * p - 7) * p - 2) * p + a) - k - 3) / a + 1) * p) * k)) : k = ((1 / (((e + 6) / (e * k) - 0.089 * u - 0.822) * (e + 2) * 3) + 0.5 / (e + 4)) * k - 1) * (e + 1) / (e + 2) + 1 / k, -c(e * k));
     }, zo = 268435456, Wm = 1 / 3, Gm = 106 / 3, zm = 0.8549879733383485, jm = function(e, n, r) {
       var a, s, u, p, k, b, C, O, B, A, W, z, K;
       if (p = 0, n > r ? (k = r, r = n, n = k, u = !0) : u = !1, ye(e) === e && e < 20)
@@ -4110,17 +4110,17 @@ var T7 = { exports: {} };
             B = c(B - e), p = n - 0.5 < 0 ? -B : B;
             break;
           default:
-            p = e > zo ? $e(2 * n) * Pe : e < 3 ? n > 0.2742 - 0.0242143 * e ? Go(e, n) : va(e, n) : n > ir(1, jn(e / -0.654)) ? T0(e, n) : va(e, n);
+            p = e > zo ? $e(2 * n) * Ve : e < 3 ? n > 0.2742 - 0.0242143 * e ? Go(e, n) : va(e, n) : n > ir(1, jn(e / -0.654)) ? T0(e, n) : va(e, n);
         }
       else
-        p = e > zo ? -$e(2 * n) * Pe : e < 3 ? n > 0.2742 - 0.0242143 * e ? Go(e, n) : va(e, n) : n > ir(1, jn(e / -0.654)) ? T0(e, n) : va(e, n);
+        p = e > zo ? -$e(2 * n) * Ve : e < 3 ? n > 0.2742 - 0.0242143 * e ? Go(e, n) : va(e, n) : n > ir(1, jn(e / -0.654)) ? T0(e, n) : va(e, n);
       return u ? -p : p;
     }, Km = function(e, n, r) {
       var a, s, u;
       return u = jm(a = 2 * e, s = n / 2, 1 - s), r && (r.value = u * u / (a + u * u)), a / (a + u * u);
     }, ze = [0, 0, 0, 0, 0, 0, 0], Ii = [0, 0, 0, 0], Qm = function(e, n, r) {
       var a, s, u, p, k, b, C;
-      return a = $e(2 * r), a /= -c(e / 2), Ii[0] = a, k = (p = (b = n - e) * b) * b, ze[0] = -b * Pe / 2, ze[1] = (1 - 2 * b) / 8, ze[2] = -b * Pe / 48, ze[3] = -1 / 192, ze[4] = -b * Pe / 3840, ze[5] = 0, ze[6] = 0, Ii[1] = hn(ze, a), ze[0] = b * Pe * (3 * b - 2) / 12, ze[1] = (20 * p - 12 * b + 1) / 128, ze[2] = b * Pe * (20 * b - 1) / 960, ze[3] = (16 * p + 30 * b - 15) / 4608, ze[4] = b * Pe * (21 * b + 32) / 53760, ze[5] = (-32 * p + 63) / 368640, ze[6] = -b * Pe * (120 * b + 17) / 25804480, Ii[2] = hn(ze, a), ze[0] = b * Pe * (-75 * p + 80 * b - 16) / 480, ze[1] = (-1080 * k + 868 * p - 90 * b - 45) / 9216, ze[2] = b * Pe * (-1190 * p + 84 * b + 373) / 53760, ze[3] = (-2240 * k - 2508 * p + 2100 * b - 165) / 368640, ze[4] = 0, ze[5] = 0, ze[6] = 0, Ii[3] = hn(ze, a), u = hn(Ii, 1 / e), C = -R(-(s = u * u) / 2), s === 0 ? 0.5 : (1 + u * c((1 + C) / s)) / 2;
+      return a = $e(2 * r), a /= -c(e / 2), Ii[0] = a, k = (p = (b = n - e) * b) * b, ze[0] = -b * Ve / 2, ze[1] = (1 - 2 * b) / 8, ze[2] = -b * Ve / 48, ze[3] = -1 / 192, ze[4] = -b * Ve / 3840, ze[5] = 0, ze[6] = 0, Ii[1] = hn(ze, a), ze[0] = b * Ve * (3 * b - 2) / 12, ze[1] = (20 * p - 12 * b + 1) / 128, ze[2] = b * Ve * (20 * b - 1) / 960, ze[3] = (16 * p + 30 * b - 15) / 4608, ze[4] = b * Ve * (21 * b + 32) / 53760, ze[5] = (-32 * p + 63) / 368640, ze[6] = -b * Ve * (120 * b + 17) / 25804480, Ii[2] = hn(ze, a), ze[0] = b * Ve * (-75 * p + 80 * b - 16) / 480, ze[1] = (-1080 * k + 868 * p - 90 * b - 45) / 9216, ze[2] = b * Ve * (-1190 * p + 84 * b + 373) / 53760, ze[3] = (-2240 * k - 2508 * p + 2100 * b - 165) / 368640, ze[4] = 0, ze[5] = 0, ze[6] = 0, Ii[3] = hn(ze, a), u = hn(Ii, 1 / e), C = -R(-(s = u * u) / 2), s === 0 ? 0.5 : (1 + u * c((1 + C) / s)) / 2;
     }, pa = Tn / 4, jo = function(e, n) {
       return function(r) {
         var a;
@@ -4168,9 +4168,9 @@ var T7 = { exports: {} };
       return e === 0 ? 29233 : 29233 + e * (e * (105222 + e * (146879 + e * (e * (3195183 + e * (729754 * e - 2554139)) - 1602610))) - 78755);
     }, oh = function(e) {
       return e === 0 ? 1 : 1 + e * (13 * e - 13);
-    }, Te = [0, 0, 0, 0, 0, 0], Bi = [0, 0, 0, 0], sh = function(e, n, r) {
+    }, Ee = [0, 0, 0, 0, 0, 0], Bi = [0, 0, 0, 0], sh = function(e, n, r) {
       var a, s, u, p, k, b, C, O, B, A, W, z, K, $, ae, Q, fe, le, se, te;
-      return k = $e(2 * e) / -c(n / 2), le = ar(r), fe = Kr(r), Bi[0] = k, ae = le * le, Q = fe * fe, B = (z = (K = le * fe) * K) * (W = z * K), O = W * W, C = (A = z * z) * W, Te[0] = (2 * ae - 1) / (3 * K), Te[1] = -$m(ae) / (36 * z), Te[2] = Jm(ae) / (1620 * W), Te[3] = Xm(ae) / (6480 * A), Te[4] = Ym(ae) / (90720 * B), Te[5] = 0, Bi[1] = hn(Te, k), Te[0] = -_m(ae) / (405 * W), Te[1] = eh(ae) / (2592 * A), Te[2] = -nh(ae) / (204120 * B), Te[3] = -rh(ae) / (2099520 * O), Te[4] = 0, Te[5] = 0, Bi[2] = hn(Te, k), Te[0] = ih(ae) / (102060 * B), Te[1] = -ah(ae) / (20995200 * O), Te[2] = th(ae) / (36741600 * C), Te[3] = 0, Te[4] = 0, Te[5] = 0, Bi[3] = hn(Te, k), u = fe / le, u *= u, $ = -(b = hn(Bi, 1 / n)) * b / (2 * ae) + M(ae) + Q * M(Q) / ae, J(b) < 0.7 ? (Te[0] = ae, Te[1] = K, Te[2] = (1 - 2 * ae) / 3, Te[3] = oh(ae) / (36 * K), Te[4] = Zm(ae) / (270 * z), Te[5] = 0, te = hn(Te, b)) : (se = R($), Te[0] = se, Te[1] = u, Te[2] = 0, Te[3] = 3 * u * (3 * u + 1) / 6, Te[4] = 4 * u * (4 * u + 1) * (4 * u + 2) / 24, Te[5] = 5 * u * (5 * u + 1) * (5 * u + 2) * (5 * u + 3) / 120, ((te = hn(Te, se)) - ae) * b < 0 && (te = 1 - te)), b < 0 ? (s = 0, a = ae) : (s = ae, a = 1), (te < s || te > a) && (te = (s + a) / 2), p = jo(-$, u), te = Ko(p, te, s, a, 32, 100);
+      return k = $e(2 * e) / -c(n / 2), le = ar(r), fe = Kr(r), Bi[0] = k, ae = le * le, Q = fe * fe, B = (z = (K = le * fe) * K) * (W = z * K), O = W * W, C = (A = z * z) * W, Ee[0] = (2 * ae - 1) / (3 * K), Ee[1] = -$m(ae) / (36 * z), Ee[2] = Jm(ae) / (1620 * W), Ee[3] = Xm(ae) / (6480 * A), Ee[4] = Ym(ae) / (90720 * B), Ee[5] = 0, Bi[1] = hn(Ee, k), Ee[0] = -_m(ae) / (405 * W), Ee[1] = eh(ae) / (2592 * A), Ee[2] = -nh(ae) / (204120 * B), Ee[3] = -rh(ae) / (2099520 * O), Ee[4] = 0, Ee[5] = 0, Bi[2] = hn(Ee, k), Ee[0] = ih(ae) / (102060 * B), Ee[1] = -ah(ae) / (20995200 * O), Ee[2] = th(ae) / (36741600 * C), Ee[3] = 0, Ee[4] = 0, Ee[5] = 0, Bi[3] = hn(Ee, k), u = fe / le, u *= u, $ = -(b = hn(Bi, 1 / n)) * b / (2 * ae) + M(ae) + Q * M(Q) / ae, J(b) < 0.7 ? (Ee[0] = ae, Ee[1] = K, Ee[2] = (1 - 2 * ae) / 3, Ee[3] = oh(ae) / (36 * K), Ee[4] = Zm(ae) / (270 * z), Ee[5] = 0, te = hn(Ee, b)) : (se = R($), Ee[0] = se, Ee[1] = u, Ee[2] = 0, Ee[3] = 3 * u * (3 * u + 1) / 6, Ee[4] = 4 * u * (4 * u + 1) * (4 * u + 2) / 24, Ee[5] = 5 * u * (5 * u + 1) * (5 * u + 2) * (5 * u + 3) / 120, ((te = hn(Ee, se)) - ae) * b < 0 && (te = 1 - te)), b < 0 ? (s = 0, a = ae) : (s = ae, a = 1), (te < s || te > a) && (te = (s + a) / 2), p = jo(-$, u), te = Ko(p, te, s, a, 32, 100);
     }, Ri = 1e3, Li = 60 * Ri, qi = 60 * Li, Fi = 24 * qi, uh = 365.25 * Fi;
     function ma(e, n, r) {
       if (!(e < n))
@@ -4450,7 +4450,7 @@ var T7 = { exports: {} };
       return e === 0 ? 0.08333333333333333 : 0.08333333333333333 + e * (e * (7936507936507937e-19 + -5952380952380953e-19 * e) - 0.002777777777777778);
     }, bh = 0.30865217988013566, wh = function(e) {
       var n;
-      return e < nn ? da : e < 1 ? ke(e + 1) - (e + 0.5) * M(e) + e - Ci : e < 2 ? ke(e) - (e - 0.5) * M(e) + e - Ci : e < 3 ? ke(e - 1) - (e - 0.5) * M(e) + e - Ci + M(e - 1) : e < 12 ? gh(17, n = 18 / (e * e) - 1) / (12 * e) : (n = 1 / (e * e), e < 1e3 ? Nh(n) / (bh + n) / e : yh(n) / e);
+      return e < nn ? da : e < 1 ? Te(e + 1) - (e + 0.5) * M(e) + e - Ci : e < 2 ? Te(e) - (e - 0.5) * M(e) + e - Ci : e < 3 ? Te(e - 1) - (e - 0.5) * M(e) + e - Ci + M(e - 1) : e < 12 ? gh(17, n = 18 / (e * e) - 1) / (12 * e) : (n = 1 / (e * e), e < 1e3 ? Nh(n) / (bh + n) / e : yh(n) / e);
     }, Yo = function(e) {
       return e >= 3 ? R(wh(e)) : e > 0 ? ve(e) / (R(-e + (e - 0.5) * M(e)) * Ei) : da;
     }, xh = function(e) {
@@ -4490,13 +4490,13 @@ var T7 = { exports: {} };
       var n, r;
       return e < -8 ? (n = e * e, (e * (r = M(-e) / e) * (6 * n * r * r - 12 + n) - 30) / (12 * e * n * n)) : e < -4 ? Ph(e) / (e * e) : e < -2 ? Vh(e) : e < 2 ? Ch(e) : e < 10 ? Ah(n = 1 / e) / (e * e) : e < 100 ? Ih(n = 1 / e) / (e * e) : -M(e) / (12 * e * e * e);
     }, Rh = En("gammaincinv:compute"), Ur = 0.5, I0 = 0.3333333333333333, Lh = 0.25, _o = 0.2, es = 0.16666666666666666, qh = 0.08333333333333333, Fh = 0.041666666666666664, nr = [0, 0, 0, 0, 0], ns = function(e, n, r) {
-      var a, s, u, p, k, b, C, O, B, A, W, z, K, $, ae, Q, fe, le, se, te, xe, Fe, he, De, en, Re, ne, Be, Ui, w7, _0, zn, Ye, et, Hn, Pr, Vr, nt, x7, rt;
-      if (n < Ur ? (p = !0, k = n, nt = -1) : (p = !1, k = r, nt = 1), Hn = 0, J(e - 1) < 1e-4 && (Pr = 0, se = p ? n < 1e-3 ? n + (Ui = n * n) * Ur + (Re = Ui * n) * I0 + (Be = Re * n) * Lh + (le = Be * n) * _o + le * n * es : -M(1 - n) : -M(r), e === 1 ? (Hn = 2, _0 = se) : (u = ke(e), Hn = 1)), r < 1e-30 && e < Ur && (Pr = 0, se = -M(r * ve(e)) + (e - 1) * M(-M(r * ve(e))), Hn = 1, u = ke(e)), e > 1 && e < 500 && n < 1e-80) {
-        for (Pr = 0, b = 1 / e, a = 1 / (e + 1), se = (ke(e + 1) + M(n)) * b, K = se = R(se), et = 0; et < 10; et++)
+      var a, s, u, p, k, b, C, O, B, A, W, z, K, $, ae, Q, fe, le, se, te, xe, Oe, he, Ue, en, Re, ne, Be, Ui, w7, _0, zn, Ye, et, Hn, Pr, Vr, nt, x7, rt;
+      if (n < Ur ? (p = !0, k = n, nt = -1) : (p = !1, k = r, nt = 1), Hn = 0, J(e - 1) < 1e-4 && (Pr = 0, se = p ? n < 1e-3 ? n + (Ui = n * n) * Ur + (Re = Ui * n) * I0 + (Be = Re * n) * Lh + (le = Be * n) * _o + le * n * es : -M(1 - n) : -M(r), e === 1 ? (Hn = 2, _0 = se) : (u = Te(e), Hn = 1)), r < 1e-30 && e < Ur && (Pr = 0, se = -M(r * ve(e)) + (e - 1) * M(-M(r * ve(e))), Hn = 1, u = Te(e)), e > 1 && e < 500 && n < 1e-80) {
+        for (Pr = 0, b = 1 / e, a = 1 / (e + 1), se = (Te(e + 1) + M(n)) * b, K = se = R(se), et = 0; et < 10; et++)
           se = K * R(se * b) * V(1 - se * a, b);
-        Hn = 1, u = ke(e);
+        Hn = 1, u = Te(e);
       }
-      if ((C = 1 / e * (M(n) + ke(e + 1))) < M(_o * (1 + e)) && Hn === 0 && (Vr = R(C), Pr = 0, ne = (w7 = (te = e * e) * e) * e, A = ($ = e + 1) * (W = $ * $), B = W * W, O = (ae = e + 2) * ae, Q = e + 3, nr[0] = 1, nr[1] = 1 / $, nr[2] = Ur * (3 * e + 5) / (W * ae), nr[3] = I0 * (31 + 8 * te + 33 * e) / (A * ae * Q), nr[4] = Fh * (2888 + 1179 * w7 + 125 * ne + 3971 * te + 5661 * e) / (B * O * Q * (e + 4)), se = Vr * hn(nr, Vr), u = ke(e), Hn = 1), e < 10 && Hn === 0 && (z = c(e) / (Yo(e) * Ei), r < Se(0.02, z) && (Pr = 0, en = (De = (zn = 1 - e) * zn) * zn, fe = c(-2 / e * M(r / z)), se = e * A0(fe), Ye = M(se), se > 5 ? (he = (Fe = (xe = Ye * Ye) * Ye) * Ye, Vr = 1 / se, nr[0] = Ye - 1, nr[1] = (3 * zn - 2 * zn * Ye + xe - 2 * Ye + 2) * Ur, nr[2] = (24 * zn * Ye - 11 * De - 24 * zn - 6 * xe + 12 * Ye - 12 - 9 * zn * xe + 6 * De * Ye + 2 * Fe) * es, nr[3] = (-12 * en * Ye + 8.04 * zn * xe - 114 * De * Ye + (72 + 36 * xe) + (3 * he - 72 * Ye + 162) * (zn - 168 * zn * Ye) - (12 * Fe + 25 * en) - (22 * zn * Fe + 36 * De * xe + 120 * De)) * qh, nr[4] = 0, se = se - Ye + zn * Vr * hn(nr, Vr)) : (xe = Ye * Ye, (x7 = Ye - zn * (Vr = 1 / se) * (Ye - 1)) < se && (se -= x7)), u = ke(e), Hn = 1)), J(k - Ur) < 1e-5 && Hn === 0 && (Pr = 0, se = e - I0 + (0.019753086419753086 + 0.007211444248481286 * (b = 1 / e)) * b, u = ke(e), Hn = 1), e < 1 && Hn === 0 && (Pr = 0, se = R(p ? 1 / e * (M(k) + ke(e + 1)) : 1 / e * (M(1 - k) + ke(e + 1))), u = ke(e), Hn = 1), Hn === 0) {
+      if ((C = 1 / e * (M(n) + Te(e + 1))) < M(_o * (1 + e)) && Hn === 0 && (Vr = R(C), Pr = 0, ne = (w7 = (te = e * e) * e) * e, A = ($ = e + 1) * (W = $ * $), B = W * W, O = (ae = e + 2) * ae, Q = e + 3, nr[0] = 1, nr[1] = 1 / $, nr[2] = Ur * (3 * e + 5) / (W * ae), nr[3] = I0 * (31 + 8 * te + 33 * e) / (A * ae * Q), nr[4] = Fh * (2888 + 1179 * w7 + 125 * ne + 3971 * te + 5661 * e) / (B * O * Q * (e + 4)), se = Vr * hn(nr, Vr), u = Te(e), Hn = 1), e < 10 && Hn === 0 && (z = c(e) / (Yo(e) * Ei), r < Me(0.02, z) && (Pr = 0, en = (Ue = (zn = 1 - e) * zn) * zn, fe = c(-2 / e * M(r / z)), se = e * A0(fe), Ye = M(se), se > 5 ? (he = (Oe = (xe = Ye * Ye) * Ye) * Ye, Vr = 1 / se, nr[0] = Ye - 1, nr[1] = (3 * zn - 2 * zn * Ye + xe - 2 * Ye + 2) * Ur, nr[2] = (24 * zn * Ye - 11 * Ue - 24 * zn - 6 * xe + 12 * Ye - 12 - 9 * zn * xe + 6 * Ue * Ye + 2 * Oe) * es, nr[3] = (-12 * en * Ye + 8.04 * zn * xe - 114 * Ue * Ye + (72 + 36 * xe) + (3 * he - 72 * Ye + 162) * (zn - 168 * zn * Ye) - (12 * Oe + 25 * en) - (22 * zn * Oe + 36 * Ue * xe + 120 * Ue)) * qh, nr[4] = 0, se = se - Ye + zn * Vr * hn(nr, Vr)) : (xe = Ye * Ye, (x7 = Ye - zn * (Vr = 1 / se) * (Ye - 1)) < se && (se -= x7)), u = Te(e), Hn = 1)), J(k - Ur) < 1e-5 && Hn === 0 && (Pr = 0, se = e - I0 + (0.019753086419753086 + 0.007211444248481286 * (b = 1 / e)) * b, u = Te(e), Hn = 1), e < 1 && Hn === 0 && (Pr = 0, se = R(p ? 1 / e * (M(k) + Te(e + 1)) : 1 / e * (M(1 - k) + Te(e + 1))), u = Te(e), Hn = 1), Hn === 0) {
         if (Pr = 1, b = 1 / e, fe = nt * (Vr = $e(2 * k)) / c(e * Ur), !(Vr < da))
           return Rh("Warning: Overflow problems in one or more steps of the computation."), NaN;
         fe += (Sh(fe) + (Eh(fe) + Bh(fe) * b) * b) * b, se = e * A0(fe), rt = fe, s = 1 / (-c(e / yr) * R(-Ur * e * rt * rt) / Yo(e));
@@ -4505,11 +4505,11 @@ var T7 = { exports: {} };
     }, ii = function(e, n, r) {
       return i(e) || i(n) ? NaN : n < nn ? NaN : e > 1 || e < 0 ? NaN : r === !0 ? e === 0 ? H : e === 1 ? 0 : ns(n, 1 - e, e) : e === 0 ? 0 : e === 1 ? H : ns(n, e, 1 - e);
     }, Oh = 5e-324, Dh = function(e, n, r, a) {
-      var s, u, p, k, b, C, O, B, A, W, z, K, $, ae, Q, fe, le, se, te, xe, Fe, he, De, en, Re, ne, Be, Ui;
-      return b = r < a ? ii(r, n, !0) : ii(a, n, !1), b /= e, W = ((ne = c(1 + ($ = n / e))) + 2) * (ne - 1) / (3 * ne), W += ((le = (fe = ne * ne) * ne) + 9 * fe + 21 * ne + 5) * (Re = b - $) / (36 * fe * (en = ne + 1)), W -= ((se = fe * fe) - 13 * le + 69 * fe + 167 * ne + 46) * (ae = Re * Re) / (1620 * (O = en * en) * le), W -= (7 * (te = le * fe) + 21 * se + 70 * le + 26 * fe - 93 * ne - 31) * (Q = ae * Re) / (6480 * (B = en * O) * se), z = (28 * se + 131 * le + 402 * fe + 581 * ne + 208) * (ne - 1) / (1620 * en * le), z -= (35 * (xe = le * le) - 154 * te - 623 * se - 1636 * le - 3983 * fe - 3514 * ne - 925) * Re / (12960 * O * se), z -= (2132 * (Fe = se * le) + 7915 * xe + 16821 * te + 35066 * se + 87490 * le + 141183 * fe + 95993 * ne + 21640) * ae / (816480 * te * B), K = -(3592 * Fe + 8375 * xe - 1323 * te - 29198 * se - 89578 * le - 154413 * fe - 116063 * ne - 29632) * (ne - 1) / (816480 * te * O), K -= (442043 * (De = te * se) + 2054169 * (he = se * se) + 3803094 * Fe + 3470754 * xe + 2141568 * te - 2393568 * se - 19904934 * le - 34714674 * fe - 23128299 * ne - 5253353) * Re / (146966400 * xe * B), (C = b + (W -= ae * ae * (75 * xe + 202 * te + 188 * se - 888 * le - 1345 * fe + 118 * ne + 138) / (272160 * (A = O * O) * te)) / e + (z -= (11053 * he + 53308 * Fe + 117010 * xe + 163924 * te + 116188 * se - 258428 * le - 677042 * fe - 481940 * ne - 105497) * Q / (14696640 * A * xe)) / (e * e) + (K -= (te * te * 116932 + 819281 * De + 2378172 * he + 4341330 * Fe + 6806004 * xe + 10622748 * te + 18739500 * se + 30651894 * le + 30869976 * fe + 15431867 * ne + 2919016) * ae / (146966400 * A * Fe)) / (e * e * e)) <= 0 && (C = Oh), Be = C - $ * M(C) + (1 + $) * M(1 + $) - $, s = 1 / (1 + $), Ui = ((p = C < $ ? s : 0) + (k = C < $ ? 1 : s)) / 2, u = jo(Be, $), Ko(u, Ui, p, k, 32, 100);
+      var s, u, p, k, b, C, O, B, A, W, z, K, $, ae, Q, fe, le, se, te, xe, Oe, he, Ue, en, Re, ne, Be, Ui;
+      return b = r < a ? ii(r, n, !0) : ii(a, n, !1), b /= e, W = ((ne = c(1 + ($ = n / e))) + 2) * (ne - 1) / (3 * ne), W += ((le = (fe = ne * ne) * ne) + 9 * fe + 21 * ne + 5) * (Re = b - $) / (36 * fe * (en = ne + 1)), W -= ((se = fe * fe) - 13 * le + 69 * fe + 167 * ne + 46) * (ae = Re * Re) / (1620 * (O = en * en) * le), W -= (7 * (te = le * fe) + 21 * se + 70 * le + 26 * fe - 93 * ne - 31) * (Q = ae * Re) / (6480 * (B = en * O) * se), z = (28 * se + 131 * le + 402 * fe + 581 * ne + 208) * (ne - 1) / (1620 * en * le), z -= (35 * (xe = le * le) - 154 * te - 623 * se - 1636 * le - 3983 * fe - 3514 * ne - 925) * Re / (12960 * O * se), z -= (2132 * (Oe = se * le) + 7915 * xe + 16821 * te + 35066 * se + 87490 * le + 141183 * fe + 95993 * ne + 21640) * ae / (816480 * te * B), K = -(3592 * Oe + 8375 * xe - 1323 * te - 29198 * se - 89578 * le - 154413 * fe - 116063 * ne - 29632) * (ne - 1) / (816480 * te * O), K -= (442043 * (Ue = te * se) + 2054169 * (he = se * se) + 3803094 * Oe + 3470754 * xe + 2141568 * te - 2393568 * se - 19904934 * le - 34714674 * fe - 23128299 * ne - 5253353) * Re / (146966400 * xe * B), (C = b + (W -= ae * ae * (75 * xe + 202 * te + 188 * se - 888 * le - 1345 * fe + 118 * ne + 138) / (272160 * (A = O * O) * te)) / e + (z -= (11053 * he + 53308 * Oe + 117010 * xe + 163924 * te + 116188 * se - 258428 * le - 677042 * fe - 481940 * ne - 105497) * Q / (14696640 * A * xe)) / (e * e) + (K -= (te * te * 116932 + 819281 * Ue + 2378172 * he + 4341330 * Oe + 6806004 * xe + 10622748 * te + 18739500 * se + 30651894 * le + 30869976 * fe + 15431867 * ne + 2919016) * ae / (146966400 * A * Oe)) / (e * e * e)) <= 0 && (C = Oh), Be = C - $ * M(C) + (1 + $) * M(1 + $) - $, s = 1 / (1 + $), Ui = ((p = C < $ ? s : 0) + (k = C < $ ? 1 : s)) / 2, u = jo(Be, $), Ko(u, Ui, p, k, 32, 100);
     }, Uh = function(e, n, r, a, s, u) {
       var p, k, b, C, O, B, A, W, z, K, $, ae, Q, fe, le, se;
-      fe = 0, k = !1, B = n, O = ir(1, 1 - s), A = 0, b = z = Ee(1e7 * n, 1e7), C = z, W = u;
+      fe = 0, k = !1, B = n, O = ir(1, 1 - s), A = 0, b = z = Pe(1e7 * n, 1e7), C = z, W = u;
       do {
         if (A = fe, C = b, b = z, fe = (Q = e(B))[0], le = Q[1], se = Q[2], W -= 1, fe === 0)
           break;
@@ -4533,7 +4533,7 @@ var T7 = { exports: {} };
         return C = 1 - s, Hh(s, e, n, !0, a, u = [0, 0], 1, 0), b = u[0] - r, p = u[1], a && (p = -p), C === 0 && (C = 64 * er), s === 0 && (s = 64 * er), J(k = p * (-C * e + (n - 2) * s + 1)) < C * s * Tn && (k /= C * s), a && (k = -k), p === 0 && (p = (a ? -1 : 1) * er * 64), [b, p, k];
       };
     }, Gh = 32, zh = 1e3, $r = [0, 0, 0, 0, 0], ai = function(e, n, r, a) {
-      var s, u, p, k, b, C, O, B, A, W, z, K, $, ae, Q, fe, le, se, te, xe, Fe, he, De, en, Re, ne, Be;
+      var s, u, p, k, b, C, O, B, A, W, z, K, $, ae, Q, fe, le, se, te, xe, Oe, he, Ue, en, Re, ne, Be;
       if (u = !1, a === 0)
         return [1, 0];
       if (r === 0)
@@ -4552,15 +4552,15 @@ var T7 = { exports: {} };
         ne = Km(e, r, xe = {}), Be = xe.value;
       else {
         if (n === 1)
-          return r < a ? e > 1 ? (ne = V(r, 1 / e), Be = -Le(M(r) / e)) : Be = 1 - (ne = V(r, 1 / e)) : (ne = R(oe(-a) / e), Be = -Le(oe(-a) / e)), u && (K = Be, Be = ne, ne = K), [ne, Be];
+          return r < a ? e > 1 ? (ne = V(r, 1 / e), Be = -qe(M(r) / e)) : Be = 1 - (ne = V(r, 1 / e)) : (ne = R(oe(-a) / e), Be = -qe(oe(-a) / e)), u && (K = Be, Be = ne, ne = K), [ne, Be];
         if (e + n > 5)
-          r > 0.5 && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u), A = Se(e, n), B = Ee(e, n), c(A) > B - A && A > 5 ? Be = 1 - (ne = Qm(e, n, r)) : (b = x(c(e / (en = e + n))), (p = A / en) >= 0.2 && p <= 0.8 && en >= 10 ? Be = 1 - (ne = (z = V(r, 1 / e)) < 25e-4 && e + n < 200 ? z * V(e * Me(e, n), 1 / e) : sh(r, en, b)) : (e < n && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u), W = 0, n < 2 && (W = Me(e, n)), W === 0 ? Be = 1 : ne = 1 - (Be = V(n * a * W, 1 / n))), Be > 1e-5 && (Be = 1 - (ne = Dh(e, n, r, a))));
+          r > 0.5 && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u), A = Me(e, n), B = Pe(e, n), c(A) > B - A && A > 5 ? Be = 1 - (ne = Qm(e, n, r)) : (b = x(c(e / (en = e + n))), (p = A / en) >= 0.2 && p <= 0.8 && en >= 10 ? Be = 1 - (ne = (z = V(r, 1 / e)) < 25e-4 && e + n < 200 ? z * V(e * ke(e, n), 1 / e) : sh(r, en, b)) : (e < n && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u), W = 0, n < 2 && (W = ke(e, n)), W === 0 ? Be = 1 : ne = 1 - (Be = V(n * a * W, 1 / n))), Be > 1e-5 && (Be = 1 - (ne = Dh(e, n, r, a))));
         else if (e < 1 && n < 1) {
           if (fe = Qe(te = (1 - e) / (2 - e - n), e, n) - r, J(fe) / r < 3 * kn)
             return u ? [1 - te, te] : [te, 1 - te];
-          fe < 0 && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u, te = 1 - te), Be = 1 / (1 + (se = V(e * r * Me(e, n), 1 / e))), (ne = se / (1 + se)) > te && (ne = te), C = te;
+          fe < 0 && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u, te = 1 - te), Be = 1 / (1 + (se = V(e * r * ke(e, n), 1 / e))), (ne = se / (1 + se)) > te && (ne = te), C = te;
         } else
-          e > 1 && n > 1 ? ($ = (n - 1) / (e + n - 2), Qe(te = (e - 1) / (e + n - 2), e, n) - r < 0 && (K = n, n = e, e = K, K = a, a = r, r = K, K = $, $ = te, te = K, u = !u), le = M(r * e * Me(e, n)) / e, Be = (ne = R(le)) < 0.9 ? 1 - ne : -Le(le), n < e && ne < 0.2 && (ae = e - 1, Q = n - 1, he = e * (Fe = e * e), De = n * n, $r[0] = 0, $r[1] = 1, $r[2] = Q / ae, ae *= ae, $r[3] = Q * (3 * e * n + 5 * n + Fe - e - 4) / (2 * (e + 2) * ae), ae *= e + 1, $r[4] = Q * (33 * e * De + 31 * De + 8 * Fe * De - 30 * e * n - 47 * n + 11 * Fe * n + 6 * he * n + 18 + 4 * e - he + Fe * Fe - 10 * Fe), $r[4] /= 3 * (e + 3) * (e + 2) * ae, ne = hn($r, ne)), ne > te && (ne = te), C = te) : (n < e && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u), V(r, 1 / e) < 0.5 ? ((ne = V(r * e * Me(e, n), 1 / e)) === 0 && (ne = er), Be = 1 - ne) : ((Be = V(1 - V(r, n * Me(e, n)), 1 / n)) === 0 && (Be = er), ne = 1 - Be));
+          e > 1 && n > 1 ? ($ = (n - 1) / (e + n - 2), Qe(te = (e - 1) / (e + n - 2), e, n) - r < 0 && (K = n, n = e, e = K, K = a, a = r, r = K, K = $, $ = te, te = K, u = !u), le = M(r * e * ke(e, n)) / e, Be = (ne = R(le)) < 0.9 ? 1 - ne : -qe(le), n < e && ne < 0.2 && (ae = e - 1, Q = n - 1, he = e * (Oe = e * e), Ue = n * n, $r[0] = 0, $r[1] = 1, $r[2] = Q / ae, ae *= ae, $r[3] = Q * (3 * e * n + 5 * n + Oe - e - 4) / (2 * (e + 2) * ae), ae *= e + 1, $r[4] = Q * (33 * e * Ue + 31 * Ue + 8 * Oe * Ue - 30 * e * n - 47 * n + 11 * Oe * n + 6 * he * n + 18 + 4 * e - he + Oe * Oe - 10 * Oe), $r[4] /= 3 * (e + 3) * (e + 2) * ae, ne = hn($r, ne)), ne > te && (ne = te), C = te) : (n < e && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u), V(r, 1 / e) < 0.5 ? ((ne = V(r * e * ke(e, n), 1 / e)) === 0 && (ne = er), Be = 1 - ne) : ((Be = V(1 - V(r, n * ke(e, n)), 1 / n)) === 0 && (Be = er), ne = 1 - Be));
       }
       return ne > 0.5 && (K = n, n = e, e = K, K = a, a = r, r = K, K = Be, Be = ne, ne = K, u = !u, Re = 1 - k, k = 1 - C, C = Re), k === 0 && (u ? ne < (k = kn) && (ne = k) : k = er, ne < k && (ne = k)), s = Gh, ne < 1e-50 && (e < 1 || n < 1) && (s *= 3, s /= 2), O = Wh(e, n, r < a ? r : a, r >= a), (ne = Uh(O, ne, k, C, s, zh)) === k && (ne = 0), u ? [1 - ne, ne] : [ne, 1 - ne];
     }, Oi = function(e, n, r, a) {
@@ -4599,9 +4599,9 @@ var T7 = { exports: {} };
     });
     var fs = us, cs = function(e, n, r) {
       var a, s, u, p, k;
-      s = Me(n, r), u = 1, p = 1, k = 1;
+      s = ke(n, r), u = 1, p = 1, k = 1;
       do
-        p *= e / k, u += a = Me(n + k, r) / s * p, k += 1;
+        p *= e / k, u += a = ke(n + k, r) / s * p, k += 1;
       while (J(a / u) >= kn);
       return u;
     }, ls = function(e, n, r) {
@@ -4631,7 +4631,7 @@ var T7 = { exports: {} };
         return i(r) || r < 0 || r > 1 ? NaN : Oi(r, e, n);
       };
     });
-    var ds = hs, Na = Ue.isPrimitive;
+    var ds = hs, Na = He.isPrimitive;
     function rn() {
       var e, n;
       if (!(this instanceof rn))
@@ -4750,7 +4750,7 @@ var T7 = { exports: {} };
         return i(r) || r < 0 || r > 1 ? NaN : (a = Oi(r, e, n)) / (1 - a);
       };
     });
-    var As = Cs, ba = Ue.isPrimitive;
+    var As = Cs, ba = He.isPrimitive;
     function Ln() {
       var e, n;
       if (!(this instanceof Ln))
@@ -4900,7 +4900,7 @@ var T7 = { exports: {} };
       return e;
     }, iu = function(e, n, r) {
       var a, s, u, p, k;
-      return i(e) || i(n) || i(r) || e < 0 || e > 1 || r < 0 || r > 1 || !ee(n) || n === H ? NaN : e === 1 || r === 1 ? n : e === 0 || r === 0 || n === 0 ? 0 : (p = n * r, a = 1 / (u = c(n * r * (1 - r))), k = e < 0.5 ? -$e(2 * e) * Pe : $e(2 * (1 - e)) * Pe, s = jn(p + u * (k + a * (k * k - 1) / 6)), ti(s, n, r) >= e ? nu(s, e, n, r) : ru(s, e, n, r));
+      return i(e) || i(n) || i(r) || e < 0 || e > 1 || r < 0 || r > 1 || !ee(n) || n === H ? NaN : e === 1 || r === 1 ? n : e === 0 || r === 0 || n === 0 ? 0 : (p = n * r, a = 1 / (u = c(n * r * (1 - r))), k = e < 0.5 ? -$e(2 * e) * Ve : $e(2 * (1 - e)) * Ve, s = jn(p + u * (k + a * (k * k - 1) / 6)), ti(s, n, r) >= e ? nu(s, e, n, r) : ru(s, e, n, r));
     }, au = function(e, n) {
       return i(e) || e < 0 || e > 1 ? NaN : n;
     };
@@ -4914,7 +4914,7 @@ var T7 = { exports: {} };
       var r, a, s;
       return i(e) || i(n) || !ee(e) || e === H || n < 0 || n > 1 ? N(NaN) : n === 0 || e === 0 ? tu(0) : n === 1 ? tu(e) : (s = e * n, a = c(e * n * (1 - n)), r = 1 / a, function(u) {
         var p, k;
-        return i(u) || u < 0 || u > 1 ? NaN : u === 0 ? 0 : u === 1 ? e : (k = u < 0.5 ? -$e(2 * u) * Pe : $e(2 * (1 - u)) * Pe, p = jn(s + a * (k + r * (k * k - 1) / 6)), ti(p, e, n) >= u ? nu(p, u, e, n) : ru(p, u, e, n));
+        return i(u) || u < 0 || u > 1 ? NaN : u === 0 ? 0 : u === 1 ? e : (k = u < 0.5 ? -$e(2 * u) * Ve : $e(2 * (1 - u)) * Ve, p = jn(s + a * (k + r * (k * k - 1) / 6)), ti(p, e, n) >= u ? nu(p, u, e, n) : ru(p, u, e, n));
       });
     });
     var ou = iu, su = Os.isPrimitive, uu = ta.isPrimitive;
@@ -5044,7 +5044,7 @@ var T7 = { exports: {} };
         return i(r) || r < 0 || r > 1 ? NaN : e + n * k0(T * (r - 0.5));
       };
     });
-    var Mu = Su, ku = Ue.isPrimitive, Tu = Ge.isPrimitive;
+    var Mu = Su, ku = He.isPrimitive, Tu = Ge.isPrimitive;
     function rr() {
       var e, n;
       if (!(this instanceof rr))
@@ -5114,9 +5114,9 @@ var T7 = { exports: {} };
     });
     var Cu = Vu, Au = function(e) {
       var n;
-      return i(e) || e <= 0 ? NaN : ke(n = e / 2) + 0.5 * (e - Oe - (e - 1) * Qn(n));
+      return i(e) || e <= 0 ? NaN : Te(n = e / 2) + 0.5 * (e - De - (e - 1) * Qn(n));
     }, oi = function(e) {
-      return i(e) || e < 0 ? NaN : Pe * ve((e + 1) / 2) / ve(e / 2);
+      return i(e) || e < 0 ? NaN : Ve * ve((e + 1) / 2) / ve(e / 2);
     }, ka = function(e) {
       var n;
       return i(e) || e < 0 ? NaN : e - (n = oi(e)) * n;
@@ -5133,7 +5133,7 @@ var T7 = { exports: {} };
       return i(e) || e < 0 ? NaN : (n = oi(e), c(e - n * n));
     }, Lu = function(e, n) {
       var r, a;
-      return i(e) || i(n) || n < 0 ? NaN : n === 0 ? e === 0 ? H : j : e < 0 || e === H ? j : (r = (1 - (a = n / 2)) * Oe + (n - 1) * M(e) - e * e / 2, r -= ke(a));
+      return i(e) || i(n) || n < 0 ? NaN : n === 0 ? e === 0 ? H : j : e < 0 || e === H ? j : (r = (1 - (a = n / 2)) * De + (n - 1) * M(e) - e * e / 2, r -= Te(a));
     }, qu = function(e, n) {
       return i(e) || i(n) ? NaN : e === n ? H : j;
     };
@@ -5147,7 +5147,7 @@ var T7 = { exports: {} };
       var n, r;
       return i(e) || e < 0 ? N(NaN) : e === 0 ? gd(0) : (r = e / 2, n = e - 1, function(a) {
         var s;
-        return i(a) ? NaN : a < 0 || a === H ? j : (s = (1 - r) * Oe + n * M(a) - a * a / 2, s -= ke(r));
+        return i(a) ? NaN : a < 0 || a === H ? j : (s = (1 - r) * De + n * M(a) - a * a / 2, s -= Te(r));
       });
     });
     var Fu = Lu, Ou = function(e, n) {
@@ -5186,7 +5186,7 @@ var T7 = { exports: {} };
         return c(n(r));
       };
     });
-    var Gu = Wu, zu = Ue.isPrimitive;
+    var Gu = Wu, zu = He.isPrimitive;
     function qn() {
       var e;
       if (!(this instanceof qn))
@@ -5249,7 +5249,7 @@ var T7 = { exports: {} };
     var O0 = Ju, Xu = function(e) {
       return O0(0.5, e);
     }, Yu = function(e) {
-      return i(e) || e < 0 ? NaN : Ee(e - 2, 0);
+      return i(e) || e < 0 ? NaN : Pe(e - 2, 0);
     }, _u = function(e) {
       return i(e) || e <= 0 ? NaN : c(8 / e);
     }, e1 = function(e) {
@@ -5266,16 +5266,16 @@ var T7 = { exports: {} };
     });
     var i1 = r1, Md = function(e, n) {
       var r, a, s, u, p, k, b;
-      return b = (n - e - qe + 0.5) / (s = e + qe - 0.5), e < 1 ? n <= de ? R(e * M(n) - n - ke(e)) : V(n, e) * R(-n) / ve(e) : (J(b * b * e) <= 100 && e > 150 ? (r = e * (oe(b) - b) + n * (0.5 - qe) / s, r = R(r)) : (u = e * M(n / s), Se(u, p = e - n) <= de || Ee(u, p) >= ce ? (a = p / e, Se(u, p) / 2 > de && Ee(u, p) / 2 < ce ? r = (k = V(n / s, e / 2) * R(p / 2)) * k : Se(u, p) / 4 > de && Ee(u, p) / 4 < ce && n > e ? (r = (k = V(n / s, e / 4) * R(p / 4)) * k, r *= r) : r = a > de && a < ce ? V(n * R(a) / s, e) : R(u + p)) : r = V(n / s, e) * R(p)), r *= c(s / Kn) / _e(e));
+      return b = (n - e - Fe + 0.5) / (s = e + Fe - 0.5), e < 1 ? n <= de ? R(e * M(n) - n - Te(e)) : V(n, e) * R(-n) / ve(e) : (J(b * b * e) <= 100 && e > 150 ? (r = e * (oe(b) - b) + n * (0.5 - Fe) / s, r = R(r)) : (u = e * M(n / s), Me(u, p = e - n) <= de || Pe(u, p) >= ce ? (a = p / e, Me(u, p) / 2 > de && Pe(u, p) / 2 < ce ? r = (k = V(n / s, e / 2) * R(p / 2)) * k : Me(u, p) / 4 > de && Pe(u, p) / 4 < ce && n > e ? (r = (k = V(n / s, e / 4) * R(p / 4)) * k, r *= r) : r = a > de && a < ce ? V(n * R(a) / s, e) : R(u + p)) : r = V(n / s, e) * R(p)), r *= c(s / Kn) / _e(e));
     }, kd = function(e, n) {
       var r, a, s, u, p, k, b;
-      return b = (n - e - qe + 0.5) / (s = e + qe - 0.5), e < 1 ? n <= de ? R(e * M(n) - n - ke(e)) : V(n, e) * R(-n) / ve(e) : (J(b * b * e) <= 100 && e > 150 ? (r = e * (oe(b) - b) + n * (0.5 - qe) / s, r = R(r)) : (u = e * M(n / s), Se(u, p = e - n) <= de || Ee(u, p) >= ce ? (a = p / e, Se(u, p) / 2 > de && Ee(u, p) / 2 < ce ? r = (k = V(n / s, e / 2) * R(p / 2)) * k : Se(u, p) / 4 > de && Ee(u, p) / 4 < ce && n > e ? (r = (k = V(n / s, e / 4) * R(p / 4)) * k, r *= r) : r = a > de && a < ce ? V(n * R(a) / s, e) : R(u + p)) : r = V(n / s, e) * R(p)), r *= c(s / Kn) / _e(e));
+      return b = (n - e - Fe + 0.5) / (s = e + Fe - 0.5), e < 1 ? n <= de ? R(e * M(n) - n - Te(e)) : V(n, e) * R(-n) / ve(e) : (J(b * b * e) <= 100 && e > 150 ? (r = e * (oe(b) - b) + n * (0.5 - Fe) / s, r = R(r)) : (u = e * M(n / s), Me(u, p = e - n) <= de || Pe(u, p) >= ce ? (a = p / e, Me(u, p) / 2 > de && Pe(u, p) / 2 < ce ? r = (k = V(n / s, e / 2) * R(p / 2)) * k : Me(u, p) / 4 > de && Pe(u, p) / 4 < ce && n > e ? (r = (k = V(n / s, e / 4) * R(p / 4)) * k, r *= r) : r = a > de && a < ce ? V(n * R(a) / s, e) : R(u + p)) : r = V(n / s, e) * R(p)), r *= c(s / Kn) / _e(e));
     }, a1 = function(e, n) {
       var r;
-      return e <= 0 ? NaN : n < 0 ? NaN : n === 0 ? e > 1 ? 0 : e === 1 ? 1 : H : (r = kd(e, n), n < 1 && Tn * n < r ? H : (r === 0 ? (r = e * M(n) - n - ke(e) - M(n), r = R(r)) : r /= n, r));
+      return e <= 0 ? NaN : n < 0 ? NaN : n === 0 ? e > 1 ? 0 : e === 1 ? 1 : H : (r = kd(e, n), n < 1 && Tn * n < r ? H : (r === 0 ? (r = e * M(n) - n - Te(e) - M(n), r = R(r)) : r /= n, r));
     }, t1 = function(e, n) {
       var r;
-      return e <= 0 ? NaN : n < 0 ? NaN : n === 0 ? e > 1 ? 0 : e === 1 ? 1 : H : (r = Md(e, n), n < 1 && Tn * n < r ? H : (r === 0 ? (r = e * M(n) - n - ke(e) - M(n), r = R(r)) : r /= n, r));
+      return e <= 0 ? NaN : n < 0 ? NaN : n === 0 ? e > 1 ? 0 : e === 1 ? 1 : H : (r = Md(e, n), n < 1 && Tn * n < r ? H : (r === 0 ? (r = e * M(n) - n - Te(e) - M(n), r = R(r)) : r /= n, r));
     }, o1 = function(e, n, r) {
       return i(e) || i(n) || i(r) || n < 0 || r <= 0 ? NaN : e < 0 || e === H ? 0 : n === 0 ? e === 0 ? H : 0 : t1(n, e * r) * r;
     }, Td = Wr.factory;
@@ -5290,7 +5290,7 @@ var T7 = { exports: {} };
     o(s1, "factory", function(e) {
       return Ed(e / 2, 0.5);
     });
-    var u1 = s1, f1 = Ue.isPrimitive;
+    var u1 = s1, f1 = He.isPrimitive;
     function Cn() {
       var e;
       if (!(this instanceof Cn))
@@ -5406,7 +5406,7 @@ var T7 = { exports: {} };
     var k1 = M1, Ld = function(e) {
       var n, r;
       return e === 0 ? 0.16666666666666666 : ((e < 0 ? -e : e) <= 1 ? (n = e * (e * (-0.789474443963537 * e - 163.72585752598383) - 11561.443576500522) - 351754.9648081514, r = e * (36157.827983443196 + e * (1 * e - 277.7110814206028)) - 2.1105297888489086e6) : (n = (e = 1 / e) * (e * (-351754.9648081514 * e - 11561.443576500522) - 163.72585752598383) - 0.789474443963537, r = 1 + e * (e * (36157.827983443196 + -2.1105297888489086e6 * e) - 277.7110814206028)), n / r);
-    }, qd = 709.782712893384 + Oe, Fd = -708.3964185322641 - Oe, Od = 709.782712893384 - Oe, T1 = function(e) {
+    }, qd = 709.782712893384 + De, Fd = -708.3964185322641 - De, Od = 709.782712893384 - De, T1 = function(e) {
       var n;
       return e === 0 ? e : (n = J(e), e > qd || e < Fd ? e > 0 ? H : j : n > 1 ? n >= Od ? (n = R(0.5 * n), n *= 0.5 * n, e < 0 && (n = -n), n) : (n = 0.5 * (n = R(n)) - 0.5 / n, e < 0 && (n = -n), n) : e + e * (n *= n) * Ld(n));
     }, E1 = function(e, n, r) {
@@ -5443,7 +5443,7 @@ var T7 = { exports: {} };
         return i(r) || r < 0 || r > 1 ? NaN : A1(r, e, n);
       };
     });
-    var B1 = I1, R1 = Ue.isPrimitive, L1 = Ge.isPrimitive;
+    var B1 = I1, R1 = He.isPrimitive, L1 = Ge.isPrimitive;
     function dn() {
       var e, n;
       if (!(this instanceof dn))
@@ -5607,13 +5607,13 @@ var T7 = { exports: {} };
     });
     var nf = ef, rf = function(e, n, r) {
       var a, s;
-      return i(e) || i(n) || i(r) || !me(n) || !me(r) || n > r ? NaN : e === 0 ? 1 : (s = r - n + 1, a = R(e * n) * Le(e * s), a /= s * Le(e));
+      return i(e) || i(n) || i(r) || !me(n) || !me(r) || n > r ? NaN : e === 0 ? 1 : (s = r - n + 1, a = R(e * n) * qe(e * s), a /= s * qe(e));
     };
     o(rf, "factory", function(e, n) {
       var r;
       return i(e) || i(n) || !me(e) || !me(n) || e > n ? N(NaN) : (r = n - e + 1, function(a) {
         var s;
-        return i(a) ? NaN : a === 0 ? 1 : (s = R(a * e) * Le(a * r), s /= r * Le(a));
+        return i(a) ? NaN : a === 0 ? 1 : (s = R(a * e) * qe(a * r), s /= r * qe(a));
       });
     });
     var af = rf, tf = function(e, n, r) {
@@ -5741,7 +5741,7 @@ var T7 = { exports: {} };
     o(Mf, "factory", function(e, n) {
       return ee(e) ? Jd(e, n) : N(NaN);
     });
-    var kf = Mf, Tf = Os.isPrimitive, Ef = Ue.isPrimitive;
+    var kf = Mf, Tf = Os.isPrimitive, Ef = He.isPrimitive;
     function An() {
       var e, n;
       if (!(this instanceof An))
@@ -5807,7 +5807,7 @@ var T7 = { exports: {} };
     }, If = function(e) {
       return i(e) || e < 0 ? NaN : 1 / e;
     }, Bf = function(e) {
-      return i(e) || e < 0 ? NaN : 1 / e * Oe;
+      return i(e) || e < 0 ? NaN : 1 / e * De;
     }, Rf = function(e) {
       return i(e) || e < 0 ? NaN : 0;
     }, Lf = function(e) {
@@ -5858,7 +5858,7 @@ var T7 = { exports: {} };
         return i(n) || n < 0 || n > 1 ? NaN : -M(1 - n) / e;
       };
     });
-    var Qf = Kf, $f = Ue.isPrimitive;
+    var Qf = Kf, $f = He.isPrimitive;
     function tn() {
       var e;
       if (!(this instanceof tn))
@@ -5915,7 +5915,7 @@ var T7 = { exports: {} };
     });
     var Jf = Zf, Xf = function(e, n) {
       var r, a, s, u;
-      return i(e) || i(n) || e <= 0 || n <= 0 ? NaN : (r = (e + n) / 2, a = e / 2, s = n / 2, u = M(n / e) + ke(a) + ke(s) - ke(r), u += (1 - a) * Qn(a), u += (-1 - s) * Qn(s), u += r * Qn(r));
+      return i(e) || i(n) || e <= 0 || n <= 0 ? NaN : (r = (e + n) / 2, a = e / 2, s = n / 2, u = M(n / e) + Te(a) + Te(s) - Te(r), u += (1 - a) * Qn(a), u += (-1 - s) * Qn(s), u += r * Qn(r));
     }, Yf = function(e, n) {
       return e <= 0 || n <= 8 ? NaN : 12 * (e * (5 * n - 22) * (e + n - 2) + (n - 4) * V(n - 2, 2)) / (e * (n - 6) * (n - 8) * (e + n - 2));
     }, _f = function(e, n) {
@@ -5927,7 +5927,7 @@ var T7 = { exports: {} };
       return e <= 0 || n <= 6 ? NaN : (r = (2 * e + n - 2) * c(8 * (n - 4)), r /= (n - 6) * c(e * (e + n - 2)));
     }, r2 = function(e, n) {
       var r;
-      return e <= 0 || n <= 4 ? NaN : (r = Pe * (n / (n - 2)), r *= c((e + n - 2) / (e * (n - 4))));
+      return e <= 0 || n <= 4 ? NaN : (r = Ve * (n / (n - 2)), r *= c((e + n - 2) / (e * (n - 4))));
     }, i2 = function(e, n) {
       var r;
       return e <= 0 || n <= 4 ? NaN : (r = 2 * n * n * (e + n - 2), r /= e * V(n - 2, 2) * (n - 4));
@@ -5935,11 +5935,11 @@ var T7 = { exports: {} };
       var u, p, k, b, C, O, B, A, W, z, K, $, ae, Q;
       if (!s)
         return V(r, e) * V(a, n);
-      if (b = e + qe - 0.5, C = n + qe - 0.5, O = (ae = e + n) + qe - 0.5, u = _e(ae), u /= _e(e) * _e(n), u *= c(C / Kn), u *= c(b / O), A = (a * e - r * C) / C, Se(J(B = (r * n - a * b) / b), J(A)) < 0.2)
-        if (B * A > 0 || Se(e, n) < 1)
+      if (b = e + Fe - 0.5, C = n + Fe - 0.5, O = (ae = e + n) + Fe - 0.5, u = _e(ae), u /= _e(e) * _e(n), u *= c(C / Kn), u *= c(b / O), A = (a * e - r * C) / C, Me(J(B = (r * n - a * b) / b), J(A)) < 0.2)
+        if (B * A > 0 || Me(e, n) < 1)
           J(B) < 0.1 ? u *= R(e * oe(B)) : u *= V(r * O / b, e), J(A) < 0.1 ? u *= R(n * oe(A)) : u *= V(a * O / C, n);
-        else if (Ee(J(B), J(A)) < 0.5)
-          k = n / e, (p = e < n) && k * A < 0.1 || !p && B / k > 0.1 ? (W = Le(k * oe(A)), W = e * oe(W = B + W + W * B), u *= R(W)) : (W = Le(oe(B) / k), W = n * oe(W = A + W + W * A), u *= R(W));
+        else if (Pe(J(B), J(A)) < 0.5)
+          k = n / e, (p = e < n) && k * A < 0.1 || !p && B / k > 0.1 ? (W = qe(k * oe(A)), W = e * oe(W = B + W + W * B), u *= R(W)) : (W = qe(oe(B) / k), W = n * oe(W = A + W + W * A), u *= R(W));
         else if (J(B) < J(A))
           if ((Q = e * oe(B) + n * M(a * O / C)) <= de || Q >= ce) {
             if ((Q += M(u)) >= ce)
@@ -5996,7 +5996,7 @@ var T7 = { exports: {} };
         return i(r) || r < 0 || r > 1 ? NaN : (a = ai(e / 2, n / 2, r, 1 - r), n * a[0] / (e * a[1]));
       };
     });
-    var s2 = o2, Va = Ue.isPrimitive;
+    var s2 = o2, Va = He.isPrimitive;
     function Gn() {
       var e, n;
       if (!(this instanceof Gn))
@@ -6059,7 +6059,7 @@ var T7 = { exports: {} };
     }, v2 = function(e, n, r) {
       return i(e) || i(n) || i(r) || e <= 0 || n <= 0 ? NaN : e <= 1 ? H : r + n * ve(1 - 1 / e);
     }, p2 = function(e, n, r) {
-      return i(e) || i(n) || i(r) || e <= 0 || n <= 0 ? NaN : r + n * V(Oe, -1 / e);
+      return i(e) || i(n) || i(r) || e <= 0 || n <= 0 ? NaN : r + n * V(De, -1 / e);
     }, m2 = function(e, n, r) {
       var a;
       return i(e) || i(n) || i(r) || e <= 0 || n <= 0 ? NaN : r + n * V(1 + (a = 1 / e), -a);
@@ -6107,7 +6107,7 @@ var T7 = { exports: {} };
         return i(a) || a < 0 || a > 1 ? NaN : r + n * V(-M(a), -1 / e);
       };
     });
-    var M2 = S2, Aa = Ue.isPrimitive, k2 = Ge.isPrimitive;
+    var M2 = S2, Aa = He.isPrimitive, k2 = Ge.isPrimitive;
     function Nn() {
       var e, n, r;
       if (!(this instanceof Nn))
@@ -6170,7 +6170,7 @@ var T7 = { exports: {} };
     });
     var rg = Nn, T2 = function(e, n) {
       var r;
-      return e <= 0 || n <= 0 ? NaN : (r = e - M(n), r += ke(e), r += (1 - e) * Qn(e));
+      return e <= 0 || n <= 0 ? NaN : (r = e - M(n), r += Te(e), r += (1 - e) * Qn(e));
     }, E2 = function(e, n) {
       return i(e) || i(n) || e <= 0 || n <= 0 ? NaN : 6 / e;
     }, P2 = function(e, n) {
@@ -6199,7 +6199,7 @@ var T7 = { exports: {} };
         return r >= n ? NaN : V(1 - r / n, -e);
       };
     });
-    var q2 = L2, Ia = Ue.isPrimitive;
+    var q2 = L2, Ia = He.isPrimitive;
     function yn() {
       var e, n;
       if (!(this instanceof yn))
@@ -6331,11 +6331,11 @@ var T7 = { exports: {} };
       };
     });
     var rc = nc, ic = function(e, n) {
-      return i(n) || i(e) || n < 0 || n > 1 || e < 0 || e > 1 ? NaN : e === 1 ? H : Ee(0, sa(M(1 - e) / oe(-n) - (1 + 1e-12)));
+      return i(n) || i(e) || n < 0 || n > 1 || e < 0 || e > 1 ? NaN : e === 1 ? H : Pe(0, sa(M(1 - e) / oe(-n) - (1 + 1e-12)));
     };
     o(ic, "factory", function(e) {
       return i(e) || e < 0 || e > 1 ? N(NaN) : function(n) {
-        return i(n) || n < 0 || n > 1 ? NaN : n === 1 ? H : Ee(0, sa(M(1 - n) / oe(-e) - (1 + 1e-12)));
+        return i(n) || n < 0 || n > 1 ? NaN : n === 1 ? H : Pe(0, sa(M(1 - n) / oe(-e) - (1 + 1e-12)));
       };
     });
     var ac = ic, tc = ta.isPrimitive;
@@ -6399,7 +6399,7 @@ var T7 = { exports: {} };
       return i(e) || i(n) || n <= 0 ? NaN : 2.4;
     }, cc = function(e, n) {
       return i(e) || i(n) || n <= 0 ? NaN : e + n * Rr;
-    }, Ng = M(Oe), lc = function(e, n) {
+    }, Ng = M(De), lc = function(e, n) {
       return i(e) || i(n) || n <= 0 ? NaN : e - n * Ng;
     }, vc = function(e, n) {
       return i(e) || i(n) || n <= 0 ? NaN : e;
@@ -6437,7 +6437,7 @@ var T7 = { exports: {} };
         if ((k = (s + 1) / 2 | 0) <= Pg)
           return -wg[k] / (s + 1);
       }
-      return J(n) < wo ? -0.5 - Ci * n : (a = 1 - n, n < 0 ? ye(n / 2) === n / 2 ? 0 : (r = n, n = a, a = r, n > Vg ? (r = 2 * Lr(0.5 * a) * e(n), p = ke(n), (p -= n * M(yr)) > Cg ? r < 0 ? j : H : r * R(p)) : 2 * Lr(0.5 * a) * V(yr, -n) * ve(n) * e(n)) : n < 1 ? (r = xg(a), r -= Ag, r += a, r /= a) : n <= 2 ? (r = 1 / (a = -a)) + Sg(a) : n <= 4 ? (r = Ig + 1 / -a) + Mg(n - 2) : n <= 7 ? (r = kg(n - 4), 1 + R(r)) : n < 15 ? (r = Tg(n - 7), 1 + R(r)) : n < 36 ? (r = Eg(n - 15), 1 + R(r)) : 1 + V(2, -n));
+      return J(n) < wo ? -0.5 - Ci * n : (a = 1 - n, n < 0 ? ye(n / 2) === n / 2 ? 0 : (r = n, n = a, a = r, n > Vg ? (r = 2 * Lr(0.5 * a) * e(n), p = Te(n), (p -= n * M(yr)) > Cg ? r < 0 ? j : H : r * R(p)) : 2 * Lr(0.5 * a) * V(yr, -n) * ve(n) * e(n)) : n < 1 ? (r = xg(a), r -= Ag, r += a, r /= a) : n <= 2 ? (r = 1 / (a = -a)) + Sg(a) : n <= 4 ? (r = Ig + 1 / -a) + Mg(n - 2) : n <= 7 ? (r = kg(n - 4), 1 + R(r)) : n < 15 ? (r = Tg(n - 7), 1 + R(r)) : n < 36 ? (r = Eg(n - 15), 1 + R(r)) : 1 + V(2, -n));
     }, Rg = 12 * c(6) * Bg(3) / (T * T * T), pc = function(e, n) {
       return i(e) || i(n) || n <= 0 ? NaN : Rg;
     }, Lg = c(6), mc = function(e, n) {
@@ -6489,7 +6489,7 @@ var T7 = { exports: {} };
         return i(r) || r < 0 || r > 1 ? NaN : e - n * M(-M(r));
       };
     });
-    var kc = Mc, Tc = Ue.isPrimitive, Ec = Ge.isPrimitive;
+    var kc = Mc, Tc = He.isPrimitive, Ec = Ge.isPrimitive;
     function sn() {
       var e, n;
       if (!(this instanceof sn))
@@ -6547,14 +6547,14 @@ var T7 = { exports: {} };
     var qg = sn, Fg = function(e) {
       return ye(e) === e && e < 0;
     }, we = function(e) {
-      return Fg(e) ? NaN : ke(e + 1);
+      return Fg(e) ? NaN : Te(e + 1);
     }, Pc = function(e, n, r, a) {
       var s, u, p, k;
-      return i(e) || i(n) || i(r) || i(a) || !ee(n) || !ee(r) || !ee(a) || n === H || r === H || r > n || a > n ? NaN : (k = Ee(0, a + r - n), p = Se(r, a), ee(e) && k <= e && e <= p ? (u = we(a) + we(r) + we(n - a) + we(n - r), s = we(n) + we(e) + we(a - e), s += we(r - e) + we(n - r + e - a), R(u - s)) : 0);
+      return i(e) || i(n) || i(r) || i(a) || !ee(n) || !ee(r) || !ee(a) || n === H || r === H || r > n || a > n ? NaN : (k = Pe(0, a + r - n), p = Me(r, a), ee(e) && k <= e && e <= p ? (u = we(a) + we(r) + we(n - a) + we(n - r), s = we(n) + we(e) + we(a - e), s += we(r - e) + we(n - r + e - a), R(u - s)) : 0);
     };
     o(Pc, "factory", function(e, n, r) {
       var a, s;
-      return i(e) || i(n) || i(r) || !ee(e) || !ee(n) || !ee(r) || e === H || n === H || n > e || r > e ? N(NaN) : (s = Ee(0, r + n - e), a = Se(n, r), function(u) {
+      return i(e) || i(n) || i(r) || !ee(e) || !ee(n) || !ee(r) || e === H || n === H || n > e || r > e ? N(NaN) : (s = Pe(0, r + n - e), a = Me(n, r), function(u) {
         var p, k;
         return i(u) ? NaN : ee(u) && s <= u && u <= a ? (k = we(r) + we(n) + we(e - r) + we(e - n), p = we(e) + we(u) + we(r - u), p += we(n - u) + we(e - n + u - r), R(k - p)) : 0;
       });
@@ -6568,26 +6568,26 @@ var T7 = { exports: {} };
       var s, u, p, k, b;
       if (i(e) || i(n) || i(r) || i(a) || !ee(n) || !ee(r) || !ee(a) || n === H || r === H || r > n || a > n)
         return NaN;
-      if ((e = Ti(e)) < Ee(0, a + r - n))
+      if ((e = Ti(e)) < Pe(0, a + r - n))
         return 0;
-      if (e >= Se(a, r))
+      if (e >= Me(a, r))
         return 1;
       for ((u = new sr(e + 1))[e] = Ba(e, n, r, a), b = e - 1; b >= 0; b--)
         p = (b + 1) * (n - r - (a - b - 1)), s = (r - b) * (a - b), u[b] = p / s * u[b + 1];
-      return k = Vc(u), Se(k, 1);
+      return k = Vc(u), Me(k, 1);
     };
     o(Cc, "factory", function(e, n, r) {
       return i(e) || i(n) || i(r) || !ee(e) || !ee(n) || !ee(r) || e === H || n === H || n > e || r > e ? N(NaN) : function(a) {
         var s, u, p, k, b;
         if (i(a))
           return NaN;
-        if ((a = Ti(a)) < Ee(0, r + n - e))
+        if ((a = Ti(a)) < Pe(0, r + n - e))
           return 0;
-        if (a >= Se(r, n))
+        if (a >= Me(r, n))
           return 1;
         for ((u = new sr(a + 1))[a] = Ba(a, e, n, r), b = a - 1; b >= 0; b--)
           p = (b + 1) * (e - n - (r - b - 1)), s = (n - b) * (r - b), u[b] = p / s * u[b + 1];
-        return k = Vc(u), Se(k, 1);
+        return k = Vc(u), Me(k, 1);
       };
     });
     var Ra = Cc, Og = Di.isPrimitive, Ac = function(e) {
@@ -6613,11 +6613,11 @@ var T7 = { exports: {} };
       return !ee(e) || !ee(n) || !ee(r) || e === H || n === H || n > e || r > e ? NaN : r * (n / e) * ((e - n) / e) * ((e - r) / (e - 1));
     }, Dc = function(e, n, r, a) {
       var s, u, p, k;
-      return i(e) || i(n) || i(r) || i(a) || !ee(n) || !ee(r) || !ee(a) || n === H || r === H || r > n || a > n ? NaN : (k = Ee(0, a + r - n), p = Se(r, a), ee(e) && k <= e && e <= p ? (u = we(a) + we(r) + we(n - a) + we(n - r), s = we(n) + we(e) + we(a - e), u - (s += we(r - e) + we(n - r + e - a))) : j);
+      return i(e) || i(n) || i(r) || i(a) || !ee(n) || !ee(r) || !ee(a) || n === H || r === H || r > n || a > n ? NaN : (k = Pe(0, a + r - n), p = Me(r, a), ee(e) && k <= e && e <= p ? (u = we(a) + we(r) + we(n - a) + we(n - r), s = we(n) + we(e) + we(a - e), u - (s += we(r - e) + we(n - r + e - a))) : j);
     };
     o(Dc, "factory", function(e, n, r) {
       var a, s;
-      return i(e) || i(n) || i(r) || !ee(e) || !ee(n) || !ee(r) || e === H || n === H || n > e || r > e ? N(NaN) : (s = Ee(0, r + n - e), a = Se(n, r), function(u) {
+      return i(e) || i(n) || i(r) || !ee(e) || !ee(n) || !ee(r) || e === H || n === H || n > e || r > e ? N(NaN) : (s = Pe(0, r + n - e), a = Me(n, r), function(u) {
         var p, k;
         return i(u) ? NaN : ee(u) && s <= u && u <= a ? (k = we(r) + we(n) + we(e - r) + we(e - n), p = we(e) + we(u) + we(r - u), p += we(n - u) + we(e - n + u - r), k - p) : j;
       });
@@ -6627,10 +6627,10 @@ var T7 = { exports: {} };
       if (i(e) || i(n) || i(r) || i(a) || !ee(n) || !ee(r) || !ee(a) || n === H || r === H || r > n || a > n || e < 0 || e > 1)
         return NaN;
       if (e === 0)
-        return Ee(0, a + r - n);
+        return Pe(0, a + r - n);
       if (e === 1)
-        return Se(a, r);
-      for (s = Ee(0, a + r - n); !(Ra(s, n, r, a) > e); )
+        return Me(a, r);
+      for (s = Pe(0, a + r - n); !(Ra(s, n, r, a) > e); )
         s += 1;
       return s;
     };
@@ -6640,10 +6640,10 @@ var T7 = { exports: {} };
         if (i(a) || a < 0 || a > 1)
           return NaN;
         if (a === 0)
-          return Ee(0, r + n - e);
+          return Pe(0, r + n - e);
         if (a === 1)
-          return Se(r, n);
-        for (s = Ee(0, r + n - e); !(Ra(s, e, n, r) > a); )
+          return Me(r, n);
+        for (s = Pe(0, r + n - e); !(Ra(s, e, n, r) > a); )
           s += 1;
         return s;
       };
@@ -6738,11 +6738,11 @@ var T7 = { exports: {} };
     });
     var Jc = Zc, Xc = function(e, n, r) {
       var a;
-      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e <= 0 ? j : (a = n * M(r) - ke(n), a -= (n + 1) * M(e), a -= r / e);
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e <= 0 ? j : (a = n * M(r) - Te(n), a -= (n + 1) * M(e), a -= r / e);
     };
     o(Xc, "factory", function(e, n) {
       var r;
-      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : (r = e * M(n) - ke(e), function(a) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : (r = e * M(n) - Te(e), function(a) {
         return i(a) ? NaN : a <= 0 ? j : r - (e + 1) * M(a) - n / a;
       });
     });
@@ -6754,16 +6754,16 @@ var T7 = { exports: {} };
       return e <= 2 || n <= 0 ? NaN : n * n / (V(e - 1, 2) * (e - 2));
     }, r3 = function(e, n, r) {
       var a;
-      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e <= 0 ? 0 : (a = n * M(r) - ke(n), a -= (n + 1) * M(e), R(a -= r / e));
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e <= 0 ? 0 : (a = n * M(r) - Te(n), a -= (n + 1) * M(e), R(a -= r / e));
     };
     o(r3, "factory", function(e, n) {
       var r;
-      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : (r = e * M(n) - ke(e), function(a) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : (r = e * M(n) - Te(e), function(a) {
         var s;
         return i(a) ? NaN : a <= 0 ? 0 : (s = r - (e + 1) * M(a) - n / a, R(s));
       });
     });
-    var i3 = r3, La = Ue.isPrimitive;
+    var i3 = r3, La = He.isPrimitive;
     function Fn() {
       var e, n;
       if (!(this instanceof Fn))
@@ -6822,20 +6822,20 @@ var T7 = { exports: {} };
     });
     var t3 = a3, o3 = function(e, n) {
       var r, a, s, u, p, k;
-      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : (u = n * Me(1 + 1 / e, n), p = n * Me(1 + 2 / e, n), k = n * Me(1 + 3 / e, n), a = n * Me(1 + 4 / e, n) - 4 * k * u + 6 * p * (s = u * u) - 3 * s * s, a /= (r = p - u * u) * r);
+      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : (u = n * ke(1 + 1 / e, n), p = n * ke(1 + 2 / e, n), k = n * ke(1 + 3 / e, n), a = n * ke(1 + 4 / e, n) - 4 * k * u + 6 * p * (s = u * u) - 3 * s * s, a /= (r = p - u * u) * r);
     }, s3 = function(e, n) {
-      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : n * Me(1 + 1 / e, n);
+      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : n * ke(1 + 1 / e, n);
     }, u3 = function(e, n) {
       return i(e) || e < 1 || i(n) || n < 1 || e === 1 && n === 1 ? NaN : V((e - 1) / (e * n - 1), 1 / e);
     }, f3 = function(e, n) {
       var r, a, s;
-      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : (a = n * Me(1 + 1 / e, n), s = n * Me(1 + 2 / e, n), (n * Me(1 + 3 / e, n) - 3 * a * (r = s - a * a) - a * a * a) / V(r, 1.5));
+      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : (a = n * ke(1 + 1 / e, n), s = n * ke(1 + 2 / e, n), (n * ke(1 + 3 / e, n) - 3 * a * (r = s - a * a) - a * a * a) / V(r, 1.5));
     }, c3 = function(e, n) {
       var r, a;
-      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : (r = n * Me(1 + 1 / e, n), a = n * Me(1 + 2 / e, n), c(a - r * r));
+      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : (r = n * ke(1 + 1 / e, n), a = n * ke(1 + 2 / e, n), c(a - r * r));
     }, l3 = function(e, n) {
       var r;
-      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : (r = n * Me(1 + 1 / e, n), n * Me(1 + 2 / e, n) - r * r);
+      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : (r = n * ke(1 + 1 / e, n), n * ke(1 + 2 / e, n) - r * r);
     }, v3 = function(e, n, r) {
       return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e <= 0 ? j : e >= 1 ? 0 : M(1 - V(1 - V(e, n), r));
     };
@@ -6870,7 +6870,7 @@ var T7 = { exports: {} };
         return i(r) || r < 0 || r > 1 ? NaN : V(1 - V(1 - r, 1 / n), 1 / e);
       };
     });
-    var y3 = N3, qa = Ue.isPrimitive;
+    var y3 = N3, qa = He.isPrimitive;
     function On() {
       var e, n;
       if (!(this instanceof On))
@@ -6944,17 +6944,17 @@ var T7 = { exports: {} };
     }, E3 = function(e, n) {
       return i(e) || i(n) || n <= 0 ? NaN : 0;
     }, P3 = function(e, n) {
-      return i(e) || i(n) || n <= 0 ? NaN : Pe * n;
+      return i(e) || i(n) || n <= 0 ? NaN : Ve * n;
     }, V3 = function(e, n) {
       return i(e) || i(n) || n <= 0 ? NaN : 2 * n * n;
     }, pr = -0.6931471805599453, C3 = function(e, n, r) {
       var a;
-      return i(e) || i(n) || i(r) || r <= 0 ? NaN : (a = (e - n) / r, e < n ? pr + a : pr + oe(-Le(-a)));
+      return i(e) || i(n) || i(r) || r <= 0 ? NaN : (a = (e - n) / r, e < n ? pr + a : pr + oe(-qe(-a)));
     };
     o(C3, "factory", function(e, n) {
       return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
         var a;
-        return i(r) ? NaN : (a = (r - e) / n, r < e ? pr + a : pr + oe(-Le(-a)));
+        return i(r) ? NaN : (a = (r - e) / n, r < e ? pr + a : pr + oe(-qe(-a)));
       };
     });
     var A3 = C3, I3 = function(e, n, r) {
@@ -6991,7 +6991,7 @@ var T7 = { exports: {} };
         return i(r) || r < 0 || r > 1 ? NaN : e - n * br(r - 0.5) * M(1 - 2 * J(r - 0.5));
       };
     });
-    var D3 = O3, U3 = Ue.isPrimitive, H3 = Ge.isPrimitive;
+    var D3 = O3, U3 = He.isPrimitive, H3 = Ge.isPrimitive;
     function un() {
       var e, n;
       if (!(this instanceof un))
@@ -7106,7 +7106,7 @@ var T7 = { exports: {} };
         return i(r) || r < 0 || r > 1 ? NaN : (a = $e(r), e + n / (2 * a * a));
       };
     });
-    var il = rl, al = Ue.isPrimitive, tl = Ge.isPrimitive;
+    var il = rl, al = He.isPrimitive, tl = Ge.isPrimitive;
     function Dn() {
       var e, n;
       if (!(this instanceof Dn))
@@ -7230,7 +7230,7 @@ var T7 = { exports: {} };
         return i(r) || r < 0 || r > 1 ? NaN : e + n * M(r / (1 - r));
       };
     });
-    var El = Tl, Pl = Ue.isPrimitive, Vl = Ge.isPrimitive;
+    var El = Tl, Pl = He.isPrimitive, Vl = Ge.isPrimitive;
     function fn() {
       var e, n;
       if (!(this instanceof fn))
@@ -7378,7 +7378,7 @@ var T7 = { exports: {} };
         return i(r) || r < 0 || r > 1 ? NaN : R(e + n * Oa(r, 0, 1));
       };
     });
-    var $l = Ql, Zl = Ue.isPrimitive, Jl = Ge.isPrimitive;
+    var $l = Ql, Zl = He.isPrimitive, Jl = Ge.isPrimitive;
     function In() {
       var e, n;
       if (!(this instanceof In))
@@ -7455,11 +7455,11 @@ var T7 = { exports: {} };
       var u, p, k, b, C, O, B, A, W, z, K, $, ae, Q;
       if (!s)
         return V(r, e) * V(a, n);
-      if (b = e + qe - 0.5, C = n + qe - 0.5, O = (ae = e + n) + qe - 0.5, u = _e(ae), u /= _e(e) * _e(n), u *= c(C / Kn), u *= c(b / O), A = (a * e - r * C) / C, Se(J(B = (r * n - a * b) / b), J(A)) < 0.2)
-        if (B * A > 0 || Se(e, n) < 1)
+      if (b = e + Fe - 0.5, C = n + Fe - 0.5, O = (ae = e + n) + Fe - 0.5, u = _e(ae), u /= _e(e) * _e(n), u *= c(C / Kn), u *= c(b / O), A = (a * e - r * C) / C, Me(J(B = (r * n - a * b) / b), J(A)) < 0.2)
+        if (B * A > 0 || Me(e, n) < 1)
           J(B) < 0.1 ? u *= R(e * oe(B)) : u *= V(r * O / b, e), J(A) < 0.1 ? u *= R(n * oe(A)) : u *= V(a * O / C, n);
-        else if (Ee(J(B), J(A)) < 0.5)
-          k = n / e, (p = e < n) && k * A < 0.1 || !p && B / k > 0.1 ? (W = Le(k * oe(A)), W = e * oe(W = B + W + W * B), u *= R(W)) : (W = Le(oe(B) / k), W = n * oe(W = A + W + W * A), u *= R(W));
+        else if (Pe(J(B), J(A)) < 0.5)
+          k = n / e, (p = e < n) && k * A < 0.1 || !p && B / k > 0.1 ? (W = qe(k * oe(A)), W = e * oe(W = B + W + W * B), u *= R(W)) : (W = qe(oe(B) / k), W = n * oe(W = A + W + W * A), u *= R(W));
         else if (J(B) < J(A))
           if ((Q = e * oe(B) + n * M(a * O / C)) <= de || Q >= ce) {
             if ((Q += M(u)) >= ce)
@@ -7515,11 +7515,11 @@ var T7 = { exports: {} };
       var u, p, k, b, C, O, B, A, W, z, K, $, ae, Q;
       if (!s)
         return V(r, e) * V(a, n);
-      if (b = e + qe - 0.5, C = n + qe - 0.5, O = (ae = e + n) + qe - 0.5, u = _e(ae), u /= _e(e) * _e(n), u *= c(C / Kn), u *= c(b / O), A = (a * e - r * C) / C, Se(J(B = (r * n - a * b) / b), J(A)) < 0.2)
-        if (B * A > 0 || Se(e, n) < 1)
+      if (b = e + Fe - 0.5, C = n + Fe - 0.5, O = (ae = e + n) + Fe - 0.5, u = _e(ae), u /= _e(e) * _e(n), u *= c(C / Kn), u *= c(b / O), A = (a * e - r * C) / C, Me(J(B = (r * n - a * b) / b), J(A)) < 0.2)
+        if (B * A > 0 || Me(e, n) < 1)
           J(B) < 0.1 ? u *= R(e * oe(B)) : u *= V(r * O / b, e), J(A) < 0.1 ? u *= R(n * oe(A)) : u *= V(a * O / C, n);
-        else if (Ee(J(B), J(A)) < 0.5)
-          k = n / e, (p = e < n) && k * A < 0.1 || !p && B / k > 0.1 ? (W = Le(k * oe(A)), W = e * oe(W = B + W + W * B), u *= R(W)) : (W = Le(oe(B) / k), W = n * oe(W = A + W + W * A), u *= R(W));
+        else if (Pe(J(B), J(A)) < 0.5)
+          k = n / e, (p = e < n) && k * A < 0.1 || !p && B / k > 0.1 ? (W = qe(k * oe(A)), W = e * oe(W = B + W + W * B), u *= R(W)) : (W = qe(oe(B) / k), W = n * oe(W = A + W + W * A), u *= R(W));
         else if (J(B) < J(A))
           if ((Q = e * oe(B) + n * M(a * O / C)) <= de || Q >= ce) {
             if ((Q += M(u)) >= ce)
@@ -7575,16 +7575,16 @@ var T7 = { exports: {} };
           return e;
     } }, v6 = function(e, n, r) {
       var a, s, u, p, k, b;
-      return i(n) || i(r) || i(e) || n <= 0 || r < 0 || r > 1 || e < 0 || e > 1 ? NaN : e === 0 ? 0 : e === 1 ? H : (p = n * (b = 1 - r) / r, a = 1 / (u = c(n * b) / r), k = e < 0.5 ? -$e(2 * e) * Pe : $e(2 * (1 - e)) * Pe, s = jn(p + u * (k + a * (k * k - 1) / 6)), vi(s, n, r) >= e ? Da.left(s, e, n, r) : Da.right(s, e, n, r));
+      return i(n) || i(r) || i(e) || n <= 0 || r < 0 || r > 1 || e < 0 || e > 1 ? NaN : e === 0 ? 0 : e === 1 ? H : (p = n * (b = 1 - r) / r, a = 1 / (u = c(n * b) / r), k = e < 0.5 ? -$e(2 * e) * Ve : $e(2 * (1 - e)) * Ve, s = jn(p + u * (k + a * (k * k - 1) / 6)), vi(s, n, r) >= e ? Da.left(s, e, n, r) : Da.right(s, e, n, r));
     };
     o(v6, "factory", function(e, n) {
       var r, a, s, u;
       return i(e) || i(n) || e <= 0 || n < 0 || n > 1 ? N(NaN) : (s = e * (u = 1 - n) / n, a = c(e * u) / n, r = (2 / n - 1) / a, function(p) {
         var k, b;
-        return i(p) || p < 0 || p > 1 ? NaN : p === 0 ? 0 : p === 1 ? H : (b = p < 0.5 ? -$e(2 * p) * Pe : $e(2 * (1 - p)) * Pe, k = jn(s + a * (b + r * (b * b - 1) / 6)), vi(k, e, n) >= p ? Da.left(k, p, e, n) : Da.right(k, p, e, n));
+        return i(p) || p < 0 || p > 1 ? NaN : p === 0 ? 0 : p === 1 ? H : (b = p < 0.5 ? -$e(2 * p) * Ve : $e(2 * (1 - p)) * Ve, k = jn(s + a * (b + r * (b * b - 1) / 6)), vi(k, e, n) >= p ? Da.left(k, p, e, n) : Da.right(k, p, e, n));
       });
     });
-    var p6 = v6, m6 = ta.isPrimitive, h6 = Ue.isPrimitive;
+    var p6 = v6, m6 = ta.isPrimitive, h6 = He.isPrimitive;
     function Un() {
       var e, n;
       if (!(this instanceof Un))
@@ -7677,7 +7677,7 @@ var T7 = { exports: {} };
         return i(u) ? NaN : a * R(s * V(u - e, 2));
       });
     });
-    var V6 = P6, C6 = Ue.isPrimitive, A6 = Ge.isPrimitive;
+    var V6 = P6, C6 = He.isPrimitive, A6 = Ge.isPrimitive;
     function bn() {
       var e, n;
       if (!(this instanceof bn))
@@ -7789,7 +7789,7 @@ var T7 = { exports: {} };
         return i(a) || a < 0 || a > 1 ? NaN : n / V(1 - a, r);
       });
     });
-    var $6 = Q6, Ua = Ue.isPrimitive;
+    var $6 = Q6, Ua = He.isPrimitive;
     function Bn() {
       var e, n;
       if (!(this instanceof Bn))
@@ -7911,16 +7911,16 @@ var T7 = { exports: {} };
           return e;
     } }, c5 = function(e, n) {
       var r, a, s, u;
-      return i(n) || n < 0 ? NaN : i(e) || e < 0 || e > 1 ? NaN : n === 0 || e === 0 ? 0 : e === 1 ? H : (r = 1 / (s = c(n)), u = e < 0.5 ? -$e(2 * e) * Pe : $e(2 * (1 - e)) * Pe, a = jn(n + s * (u + r * (u * u - 1) / 6)), pi(a, n) >= e ? Ha.left(a, e, n) : Ha.right(a, e, n));
+      return i(n) || n < 0 ? NaN : i(e) || e < 0 || e > 1 ? NaN : n === 0 || e === 0 ? 0 : e === 1 ? H : (r = 1 / (s = c(n)), u = e < 0.5 ? -$e(2 * e) * Ve : $e(2 * (1 - e)) * Ve, a = jn(n + s * (u + r * (u * u - 1) / 6)), pi(a, n) >= e ? Ha.left(a, e, n) : Ha.right(a, e, n));
     }, EN = kr.factory;
     o(c5, "factory", function(e) {
       var n, r;
       return i(e) || e < 0 ? N(NaN) : e === 0 ? EN(0) : (r = c(e), n = 1 / r, function(a) {
         var s, u;
-        return i(a) || a < 0 || a > 1 ? NaN : a === 0 ? 0 : a === 1 ? H : (u = a < 0.5 ? -$e(2 * a) * Pe : $e(2 * (1 - a)) * Pe, s = jn(e + r * (u + n * (u * u - 1) / 6)), pi(s, e) >= a ? Ha.left(s, a, e) : Ha.right(s, a, e));
+        return i(a) || a < 0 || a > 1 ? NaN : a === 0 ? 0 : a === 1 ? H : (u = a < 0.5 ? -$e(2 * a) * Ve : $e(2 * (1 - a)) * Ve, s = jn(e + r * (u + n * (u * u - 1) / 6)), pi(s, e) >= a ? Ha.left(s, a, e) : Ha.right(s, a, e));
       });
     });
-    var l5 = c5, v5 = Ue.isPrimitive;
+    var l5 = c5, v5 = He.isPrimitive;
     function wn() {
       var e;
       if (!(this instanceof wn))
@@ -7976,30 +7976,30 @@ var T7 = { exports: {} };
       });
     });
     var m5 = p5, h5 = function(e) {
-      return i(e) || e <= 0 ? NaN : 1 + M(e / Pe) + 0.5 * Rr;
+      return i(e) || e <= 0 ? NaN : 1 + M(e / Ve) + 0.5 * Rr;
     }, CN = -(6 * T * T - 24 * T + 16) / ((4 - T) * (4 - T)), d5 = function(e) {
       return i(e) || e < 0 ? NaN : CN;
     }, G0 = 1.2533141373155003, g5 = function(e) {
       return i(e) || e < 0 ? NaN : e * G0;
-    }, AN = c(2 * Oe), N5 = function(e) {
+    }, AN = c(2 * De), N5 = function(e) {
       return i(e) || e < 0 ? NaN : e * AN;
     }, y5 = function(e) {
       return i(e) || e < 0 ? NaN : e;
     }, IN = 3.544907701811032 * (T - 3) / V(4 - T, 1.5), b5 = function(e) {
       return i(e) || e < 0 ? NaN : IN;
     }, BN = c(4 - T), w5 = function(e) {
-      return i(e) || e < 0 ? NaN : BN * e / Pe;
+      return i(e) || e < 0 ? NaN : BN * e / Ve;
     }, x5 = function(e) {
       return i(e) || e < 0 ? NaN : (4 - T) * e * e / 2;
     }, S5 = function(e, n) {
       var r, a;
-      return i(e) || i(n) || n < 0 ? NaN : n === 0 ? e < 0 ? j : 0 : e < 0 ? j : (r = V(n, 2), (a = -V(e, 2) / (2 * r)) < pr ? oe(-R(a)) : M(-Le(a)));
+      return i(e) || i(n) || n < 0 ? NaN : n === 0 ? e < 0 ? j : 0 : e < 0 ? j : (r = V(n, 2), (a = -V(e, 2) / (2 * r)) < pr ? oe(-R(a)) : M(-qe(a)));
     }, RN = fi.factory;
     o(S5, "factory", function(e) {
       var n;
       return i(e) || e < 0 ? N(NaN) : e === 0 ? RN(0) : (n = V(e, 2), function(r) {
         var a;
-        return i(r) ? NaN : r < 0 ? j : (a = -V(r, 2) / (2 * n)) < pr ? oe(-R(a)) : M(-Le(a));
+        return i(r) ? NaN : r < 0 ? j : (a = -V(r, 2) / (2 * n)) < pr ? oe(-R(a)) : M(-qe(a));
       });
     });
     var M5 = S5, k5 = function(e, n) {
@@ -8017,12 +8017,12 @@ var T7 = { exports: {} };
       return i(e) ? NaN : e === H ? 1 : e === j ? -1 : e === 0 ? e : (e < 0 ? (n = !0, r = -e) : (n = !1, r = e), r < 0.84375 ? r < FN ? r < qN ? 0.125 * (8 * e + DN * e) : e + ON * e : e + e * ((s = UN + (a = e * e) * F9(a)) / (u = HN + a * D9(a))) : r < 1.25 ? (p = WN + (u = r - 1) * H9(u), k = GN + u * G9(u), n ? -P5 - p / k : P5 + p / k) : r >= 6 ? n ? E5 - 1 : 1 - E5 : (u = 1 / (r * r), r < 2.857142857142857 ? (s = zN + u * j9(u), u = jN + u * Q9(u)) : (s = KN + u * Z9(u), u = QN + u * X9(u)), a = _n(r, 0), s = R(-a * a - 0.5625) * R((a - r) * (a + r) + s / u), n ? s / r - 1 : 1 - s / r));
     }, C5 = function(e, n) {
       var r, a;
-      return i(e) || i(n) || n < 0 ? NaN : (a = 1 + (r = e * n) * R(r * r / 2), a *= G0 * (V5(r / Pe) + 1));
+      return i(e) || i(n) || n < 0 ? NaN : (a = 1 + (r = e * n) * R(r * r / 2), a *= G0 * (V5(r / Ve) + 1));
     };
     o(C5, "factory", function(e) {
       return i(e) || e < 0 ? N(NaN) : function(n) {
         var r, a;
-        return i(n) ? NaN : (a = 1 + (r = n * e) * R(r * r / 2), a *= G0 * (V5(r / Pe) + 1));
+        return i(n) ? NaN : (a = 1 + (r = n * e) * R(r * r / 2), a *= G0 * (V5(r / Ve) + 1));
       };
     });
     var A5 = C5, I5 = function(e, n) {
@@ -8044,7 +8044,7 @@ var T7 = { exports: {} };
         return i(r) || r < 0 || r > 1 ? NaN : c(-2 * n * oe(-r));
       });
     });
-    var L5 = R5, q5 = Ue.isPrimitive;
+    var L5 = R5, q5 = He.isPrimitive;
     function cn() {
       var e;
       if (!(this instanceof cn))
@@ -8193,13 +8193,13 @@ var T7 = { exports: {} };
         return 0;
       if ((e = jn(e)) >= n * (n + 1) / 2)
         return 1;
-      for (r = R(-n * Oe), s = 0, a = 0; a <= e; a++)
+      for (r = R(-n * De), s = 0, a = 0; a <= e; a++)
         s += z5(a, n) * r;
       return s;
     };
     o(j5, "factory", function(e) {
       var n, r;
-      return $n(e) && mi(e) ? (r = R(-e * Oe), n = e * (e + 1) / 2, function(a) {
+      return $n(e) && mi(e) ? (r = R(-e * De), n = e * (e + 1) / 2, function(a) {
         var s, u;
         if (i(a))
           return NaN;
@@ -8216,12 +8216,12 @@ var T7 = { exports: {} };
       var r;
       return n === 0 ? e === 0 ? 1 : 0 : (r = n * (n + 1) / 2, e < 0 || e > r ? 0 : (e > r / 2 && (e = r - e), J0(e - n, n - 1) + J0(e, n - 1)));
     }), Q5 = function(e, n) {
-      return !i(e) && $n(n) && mi(n) ? e < 0 || e > n * (n + 1) / 2 ? 0 : R(M(K5(e, n)) - n * Oe) : NaN;
+      return !i(e) && $n(n) && mi(n) ? e < 0 || e > n * (n + 1) / 2 ? 0 : R(M(K5(e, n)) - n * De) : NaN;
     };
     o(Q5, "factory", function(e) {
       var n;
       return $n(e) && mi(e) ? (n = e * (e + 1) / 2, function(r) {
-        return i(r) ? NaN : r < 0 || r > n ? 0 : R(M(K5(r, e)) - e * Oe);
+        return i(r) ? NaN : r < 0 || r > n ? 0 : R(M(K5(r, e)) - e * De);
       }) : N(NaN);
     });
     var X0, dy = Q5, $5 = X0 = Z0(function(e, n) {
@@ -8237,13 +8237,13 @@ var T7 = { exports: {} };
         return 0;
       if (e === 1)
         return n * (n + 1) / 2;
-      for (r = R(-n * Oe), s = 0, a = -1; s < e; )
+      for (r = R(-n * De), s = 0, a = -1; s < e; )
         s += r * $5(a += 1, n);
       return a;
     };
     o(Z5, "factory", function(e) {
       var n;
-      return !i(e) && $n(e) && mi(e) ? (n = R(-e * Oe), function(r) {
+      return !i(e) && $n(e) && mi(e) ? (n = R(-e * De), function(r) {
         var a, s;
         if (i(r) || r < 0 || r > 1)
           return NaN;
@@ -8268,7 +8268,7 @@ var T7 = { exports: {} };
     });
     var X5 = J5, Y5 = function(e) {
       var n, r;
-      return i(e) || e <= 0 ? NaN : (r = e / 2, n = (e + 1) / 2, n *= Qn((1 + e) / 2) - Qn(r), n += M(c(e) * Me(r, 0.5)));
+      return i(e) || e <= 0 ? NaN : (r = e / 2, n = (e + 1) / 2, n *= Qn((1 + e) / 2) - Qn(r), n += M(c(e) * ke(r, 0.5)));
     }, _5 = function(e) {
       return i(e) || e <= 2 ? NaN : e <= 4 ? H : 6 / (e - 4);
     }, e4 = function(e) {
@@ -8305,11 +8305,11 @@ var T7 = { exports: {} };
     });
     var f4 = u4, c4 = function(e, n) {
       var r;
-      return i(e) || i(n) || n <= 0 ? NaN : (r = c(n) * Me(n / 2, 0.5), V(n / (n + V(e, 2)), (1 + n) / 2) / r);
+      return i(e) || i(n) || n <= 0 ? NaN : (r = c(n) * ke(n / 2, 0.5), V(n / (n + V(e, 2)), (1 + n) / 2) / r);
     };
     o(c4, "factory", function(e) {
       var n, r;
-      return i(e) || e <= 0 ? N(NaN) : (r = c(e) * Me(e / 2, 0.5), n = (1 + e) / 2, function(a) {
+      return i(e) || e <= 0 ? N(NaN) : (r = c(e) * ke(e / 2, 0.5), n = (1 + e) / 2, function(a) {
         return i(a) ? NaN : V(e / (e + V(a, 2)), n) / r;
       });
     });
@@ -8323,7 +8323,7 @@ var T7 = { exports: {} };
         return i(n) || n < 0 || n > 1 ? NaN : (a = ai(e / 2, 0.5, 2 * (r = n > 0.5 ? 1 - n : n), 1 - 2 * r), br(n - 0.5) * c(e * a[1] / a[0]));
       };
     });
-    var p4 = v4, m4 = Ue.isPrimitive;
+    var p4 = v4, m4 = He.isPrimitive;
     function xn() {
       var e;
       if (!(this instanceof xn))
@@ -8390,7 +8390,7 @@ var T7 = { exports: {} };
       return i(e) || i(n) || i(r) || !(e <= r && r <= n) ? NaN : r;
     }, x4 = function(e, n, r) {
       var a;
-      return i(e) || i(n) || i(r) || !(e <= r && r <= n) ? NaN : (a = Pe * (e + n - 2 * r) * (2 * e - n - r) * (e - 2 * n + r), a /= 5 * V(e * e + n * n + r * r - e * n - e * r - n * r, 1.5));
+      return i(e) || i(n) || i(r) || !(e <= r && r <= n) ? NaN : (a = Ve * (e + n - 2 * r) * (2 * e - n - r) * (e - 2 * n + r), a /= 5 * V(e * e + n * n + r * r - e * n - e * r - n * r, 1.5));
     }, S4 = function(e, n, r) {
       return i(e) || i(n) || i(r) || !(e <= r && r <= n) ? NaN : c((e * e + n * n + r * r - e * n - e * r - n * r) / 18);
     }, M4 = function(e, n, r) {
@@ -8407,12 +8407,12 @@ var T7 = { exports: {} };
     });
     var T4 = k4, E4 = function(e, n, r, a) {
       var s, u, p;
-      return i(e) || i(n) || i(r) || i(a) || n > a || a > r ? NaN : e < n ? j : (s = M(r - n) + M(a - n), u = M(r - n), p = M(r - n) + M(r - a), e < a ? Oe + M(e - n) - s : e === a ? Oe - u : e <= r ? Oe + M(r - e) - p : j);
+      return i(e) || i(n) || i(r) || i(a) || n > a || a > r ? NaN : e < n ? j : (s = M(r - n) + M(a - n), u = M(r - n), p = M(r - n) + M(r - a), e < a ? De + M(e - n) - s : e === a ? De - u : e <= r ? De + M(r - e) - p : j);
     };
     o(E4, "factory", function(e, n, r) {
       var a, s, u;
       return i(e) || i(n) || i(r) || e > r || r > n ? N(NaN) : (a = M(n - e) + M(r - e), s = M(n - e), u = M(n - e) + M(n - r), function(p) {
-        return i(p) ? NaN : p < e ? j : p < r ? Oe + M(p - e) - a : p === r ? Oe - s : p <= n ? Oe + M(n - p) - u : j;
+        return i(p) ? NaN : p < e ? j : p < r ? De + M(p - e) - a : p === r ? De - s : p <= n ? De + M(n - p) - u : j;
       });
     });
     var P4 = E4, V4 = function(e, n, r, a) {
@@ -8650,11 +8650,11 @@ var T7 = { exports: {} };
       return r7(e, this.a, this.b);
     });
     var xy = Sn, i7 = function(e, n, r) {
-      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e < 0 ? 0 : -Le(-V(e / r, n));
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e < 0 ? 0 : -qe(-V(e / r, n));
     };
     o(i7, "factory", function(e, n) {
       return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
-        return i(r) ? NaN : r < 0 ? 0 : -Le(-V(r / n, e));
+        return i(r) ? NaN : r < 0 ? 0 : -qe(-V(r / n, e));
       };
     });
     var a7 = i7, t7 = function(e, n) {
@@ -8665,7 +8665,7 @@ var T7 = { exports: {} };
     }, Ga = function(e, n) {
       return i(e) || i(n) || e <= 0 || n <= 0 ? NaN : n * ve(1 + 1 / e);
     }, s7 = function(e, n) {
-      return i(e) || i(n) || e <= 0 || n <= 0 ? NaN : n * V(Oe, 1 / e);
+      return i(e) || i(n) || e <= 0 || n <= 0 ? NaN : n * V(De, 1 / e);
     }, u7 = function(e, n) {
       return i(e) || i(n) || e <= 0 || n <= 0 ? NaN : e <= 1 ? 0 : n * V((e - 1) / e, 1 / e);
     }, Y0 = function(e, n) {
@@ -8679,12 +8679,12 @@ var T7 = { exports: {} };
       return i(e) || i(n) || e <= 0 || n <= 0 ? NaN : (r = ve(1 + 1 / e), n * c(ve(1 + 2 / e) - r * r));
     }, l7 = function(e, n, r) {
       var a;
-      return i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e < 0 ? j : (a = -V(e / r, n)) < pr ? oe(-R(a)) : M(-Le(a));
+      return i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e < 0 ? j : (a = -V(e / r, n)) < pr ? oe(-R(a)) : M(-qe(a));
     };
     o(l7, "factory", function(e, n) {
       return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
         var a;
-        return i(r) ? NaN : r < 0 ? j : (a = -V(r / n, e)) < pr ? oe(-R(a)) : M(-Le(a));
+        return i(r) ? NaN : r < 0 ? j : (a = -V(r / n, e)) < pr ? oe(-R(a)) : M(-qe(a));
       };
     });
     var v7 = l7, p7 = function(e, n, r) {
@@ -8738,7 +8738,7 @@ var T7 = { exports: {} };
         return i(r) || r < 0 || r > 1 ? NaN : n * V(-M(1 - r), 1 / e);
       };
     });
-    var b7 = y7, za = Ue.isPrimitive;
+    var b7 = y7, za = He.isPrimitive;
     function vn() {
       var e, n;
       if (!(this instanceof vn))
@@ -8799,36 +8799,41 @@ var T7 = { exports: {} };
 })(T7);
 var ky = T7.exports;
 const Ty = /* @__PURE__ */ M7(ky), di = Ty.base.dists, S7 = di.normal.cdf;
-function Ey(Ve, He, _, ge, E, f) {
-  let y = S7(Ve, He, _), g = S7(Ve, ge, E);
+function Ey(Se, Le, _, ge, E, f) {
+  let y = S7(Se, Le, _), g = S7(Se, ge, E);
   return f * y + (1 - f) * g;
 }
-const Py = {
-  uniform: (Ve, He = 0, _ = 1) => di.uniform.cdf(Ve, He, _),
-  normal: (Ve, He = 0, _ = 1) => di.normal.cdf(Ve, He, _),
-  laplace: (Ve, He = 0, _ = 1) => di.laplace.cdf(Ve, He, _),
-  logistic: (Ve, He = 0, _ = 1) => di.logistic.cdf(Ve, He, _),
-  cauchy: (Ve, He = 0, _ = 1) => di.cauchy.cdf(Ve, He, _),
-  bimodal: (Ve, He = -3, _ = 0.6, ge = 3, E = 1.3, f = 0.5) => Ey(Ve, He, _, ge, E, f)
-}, Vy = (Ve, He, _) => Array.from(
-  { length: (He - Ve) / _ + 1 },
-  (ge, E) => Ve + E * _
+function Py(Se, Le) {
+  const _ = Math.floor(Se);
+  return _ < 0 ? 0 : 1 - Math.pow(1 - Le, _ + 1);
+}
+const Vy = {
+  uniform: (Se, Le = 0, _ = 1) => di.uniform.cdf(Se, Le, _),
+  normal: (Se, Le = 0, _ = 1) => di.normal.cdf(Se, Le, _),
+  laplace: (Se, Le = 0, _ = 1) => di.laplace.cdf(Se, Le, _),
+  logistic: (Se, Le = 0, _ = 1) => di.logistic.cdf(Se, Le, _),
+  cauchy: (Se, Le = 0, _ = 1) => di.cauchy.cdf(Se, Le, _),
+  bimodal: (Se, Le = -3, _ = 0.6, ge = 3, E = 1.3, f = 0.5) => Ey(Se, Le, _, ge, E, f),
+  geometric: (Se, Le = 0.5) => Py(Se, Le)
+}, Cy = (Se, Le, _) => Array.from(
+  { length: (Le - Se) / _ + 1 },
+  (ge, E) => Se + E * _
 );
-Vy(-5, 5, 0.01);
-function Cy(Ve, He) {
-  for (var _ = He[0], ge = Math.abs(Ve - _), E = 0; E < He.length; E++) {
-    var f = Math.abs(Ve - He[E]);
-    f < ge && (ge = f, _ = He[E]);
+Cy(-5, 5, 0.01);
+function Ay(Se, Le) {
+  for (var _ = Le[0], ge = Math.abs(Se - _), E = 0; E < Le.length; E++) {
+    var f = Math.abs(Se - Le[E]);
+    f < ge && (ge = f, _ = Le[E]);
   }
   return _;
 }
-function Ay(Ve, He) {
+function Iy(Se, Le) {
   let _ = Cr.Engine, ge = Cr.Render, E = Cr.Runner, f = Cr.Events, y = Cr.Body, g = Cr.World, h = Cr.Bodies, S = _.create({
     enableSleeping: !1
   }), d = S.world;
   const w = 500, l = 500;
   let t = ge.create({
-    element: Ve,
+    element: Se,
     engine: S,
     options: {
       background: "#FFFFFF",
@@ -8874,7 +8879,7 @@ function Ay(Ve, He) {
   }
   S.gravity.y = 0;
   let I = {}, N = {}, F = [], G = 1 / 0, m = 0;
-  const X = Py[He];
+  const X = Vy[Le];
   for (let Z = 0; Z < w / q; Z++) {
     const ie = Z * q, Y = X((ie - w / 2) / 40);
     let ue = c - Y * P;
@@ -8929,7 +8934,7 @@ function Ay(Ve, He) {
           }
         }
       );
-      Y.id = "square" + D, re[Y.id] = N[Cy(ie, F)], y.setVelocity(Y, { x: U, y: 0 }), g.add(d, Y);
+      Y.id = "square" + D, re[Y.id] = N[Ay(ie, F)], y.setVelocity(Y, { x: U, y: 0 }), g.add(d, Y);
     }
   }), {
     engine: S,
@@ -8942,8 +8947,8 @@ function Ay(Ve, He) {
   };
 }
 export {
-  Py as cdfDict,
+  Vy as cdfDict,
   di as dists,
-  Ay as galton
+  Iy as galton
 };
 //# sourceMappingURL=invcdfboard.js.map
