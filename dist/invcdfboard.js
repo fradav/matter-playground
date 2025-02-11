@@ -1,6 +1,6 @@
 var Hi = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {};
-function wv(Se) {
-  return Se && Se.__esModule && Object.prototype.hasOwnProperty.call(Se, "default") ? Se.default : Se;
+function wv(xe) {
+  return xe && xe.__esModule && Object.prototype.hasOwnProperty.call(xe, "default") ? xe.default : xe;
 }
 var xv = { exports: {} };
 /*!
@@ -30,9 +30,9 @@ var xv = { exports: {} };
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-(function(Se, Le) {
+(function(xe, Ce) {
   (function(ge, E) {
-    Se.exports = E();
+    xe.exports = E();
   })(Hi, function() {
     return (
       /******/
@@ -1299,13 +1299,13 @@ var xv = { exports: {} };
                 for (F = 0; F < T.length; F++) {
                   var be = T[F];
                   for (G = F + 1; G < T.length; G++) {
-                    var Ce = T[G];
-                    if (S.overlaps(be.bounds, Ce.bounds)) {
-                      var ve = be.vertices, Ae = Ce.vertices;
+                    var Ae = T[G];
+                    if (S.overlaps(be.bounds, Ae.bounds)) {
+                      var ve = be.vertices, Ie = Ae.vertices;
                       for (m = 0; m < be.vertices.length; m++)
-                        for (re = 0; re < Ce.vertices.length; re++) {
-                          var je = d.magnitudeSquared(d.sub(ve[(m + 1) % ve.length], Ae[re])), Wn = d.magnitudeSquared(d.sub(ve[m], Ae[(re + 1) % Ae.length]));
-                          je < Ne && Wn < Ne && (ve[m].isInternal = !0, Ae[re].isInternal = !0);
+                        for (re = 0; re < Ae.vertices.length; re++) {
+                          var je = d.magnitudeSquared(d.sub(ve[(m + 1) % ve.length], Ie[re])), Wn = d.magnitudeSquared(d.sub(ve[m], Ie[(re + 1) % Ie.length]));
+                          je < Ne && Wn < Ne && (ve[m].isInternal = !0, Ie[re].isInternal = !0);
                         }
                     }
                   }
@@ -1666,18 +1666,18 @@ var xv = { exports: {} };
               for (x = 0; x < q; x++) {
                 var L = S[x];
                 if (!(!L.isActive || L.isSensor)) {
-                  var I = L.collision, N = I.parentA, F = I.parentB, G = N.velocity, m = F.velocity, X = I.normal.x, re = I.normal.y, Z = I.tangent.x, ie = I.tangent.y, Y = L.activeContacts, ue = Y.length, Ne = 1 / ue, be = N.inverseMass + F.inverseMass, Ce = L.friction * L.frictionStatic * c;
+                  var I = L.collision, N = I.parentA, F = I.parentB, G = N.velocity, m = F.velocity, X = I.normal.x, re = I.normal.y, Z = I.tangent.x, ie = I.tangent.y, Y = L.activeContacts, ue = Y.length, Ne = 1 / ue, be = N.inverseMass + F.inverseMass, Ae = L.friction * L.frictionStatic * c;
                   for (G.x = N.position.x - N.positionPrev.x, G.y = N.position.y - N.positionPrev.y, m.x = F.position.x - F.positionPrev.x, m.y = F.position.y - F.positionPrev.y, N.angularVelocity = N.angle - N.anglePrev, F.angularVelocity = F.angle - F.anglePrev, T = 0; T < ue; T++) {
-                    var ve = Y[T], Ae = ve.vertex, je = Ae.x - N.position.x, Wn = Ae.y - N.position.y, We = Ae.x - F.position.x, Ze = Ae.y - F.position.y, Je = G.x - Wn * N.angularVelocity, Wi = G.y + je * N.angularVelocity, gi = m.x - Ze * F.angularVelocity, Ge = m.y + We * F.angularVelocity, Gi = Je - gi, zi = Wi - Ge, Hr = X * Gi + re * zi, Jn = Z * Gi + ie * zi, ji = L.separation + Hr, Ni = Math.min(ji, 1);
+                    var ve = Y[T], Ie = ve.vertex, je = Ie.x - N.position.x, Wn = Ie.y - N.position.y, We = Ie.x - F.position.x, Ze = Ie.y - F.position.y, Je = G.x - Wn * N.angularVelocity, Wi = G.y + je * N.angularVelocity, gi = m.x - Ze * F.angularVelocity, Ge = m.y + We * F.angularVelocity, Gi = Je - gi, zi = Wi - Ge, Hr = X * Gi + re * zi, Jn = Z * Gi + ie * zi, ji = L.separation + Hr, Ni = Math.min(ji, 1);
                     Ni = ji < 0 ? 0 : Ni;
-                    var mr = Ni * Ce;
+                    var mr = Ni * Ae;
                     Jn < -mr || Jn > mr ? (U = Jn > 0 ? Jn : -Jn, D = L.friction * (Jn > 0 ? 1 : -1) * t, D < -U ? D = -U : D > U && (D = U)) : (D = Jn, U = P);
-                    var Ki = je * re - Wn * X, Qi = We * re - Ze * X, yi = Ne / (be + N.inverseInertia * Ki * Ki + F.inverseInertia * Qi * Qi), $r = (1 + L.restitution) * Hr * yi;
+                    var Ki = je * re - Wn * X, Qi = We * re - Ze * X, yi = Ne / (be + N.inverseInertia * Ki * Ki + F.inverseInertia * Qi * Qi), Zr = (1 + L.restitution) * Hr * yi;
                     if (D *= yi, Hr < o)
                       ve.normalImpulse = 0;
                     else {
                       var za = ve.normalImpulse;
-                      ve.normalImpulse += $r, ve.normalImpulse > 0 && (ve.normalImpulse = 0), $r = ve.normalImpulse - za;
+                      ve.normalImpulse += Zr, ve.normalImpulse > 0 && (ve.normalImpulse = 0), Zr = ve.normalImpulse - za;
                     }
                     if (Jn < -i || Jn > i)
                       ve.tangentImpulse = 0;
@@ -1685,8 +1685,8 @@ var xv = { exports: {} };
                       var sr = ve.tangentImpulse;
                       ve.tangentImpulse += D, ve.tangentImpulse < -U && (ve.tangentImpulse = -U), ve.tangentImpulse > U && (ve.tangentImpulse = U), D = ve.tangentImpulse - sr;
                     }
-                    var Zr = X * $r + Z * D, Jr = re * $r + ie * D;
-                    N.isStatic || N.isSleeping || (N.positionPrev.x += Zr * N.inverseMass, N.positionPrev.y += Jr * N.inverseMass, N.anglePrev += (je * Jr - Wn * Zr) * N.inverseInertia), F.isStatic || F.isSleeping || (F.positionPrev.x -= Zr * F.inverseMass, F.positionPrev.y -= Jr * F.inverseMass, F.anglePrev -= (We * Jr - Ze * Zr) * F.inverseInertia);
+                    var Jr = X * Zr + Z * D, Xr = re * Zr + ie * D;
+                    N.isStatic || N.isSleeping || (N.positionPrev.x += Jr * N.inverseMass, N.positionPrev.y += Xr * N.inverseMass, N.anglePrev += (je * Xr - Wn * Jr) * N.inverseInertia), F.isStatic || F.isSleeping || (F.positionPrev.x -= Jr * F.inverseMass, F.positionPrev.y -= Xr * F.inverseMass, F.anglePrev -= (We * Xr - Ze * Jr) * F.inverseInertia);
                   }
                 }
               }
@@ -2138,8 +2138,8 @@ var xv = { exports: {} };
                 var G = T[F], m = G.bounds ? G.bounds.min : G.min || G.position || G, X = G.bounds ? G.bounds.max : G.max || G.position || G;
                 m && X && (m.x < N.min.x && (N.min.x = m.x), X.x > N.max.x && (N.max.x = X.x), m.y < N.min.y && (N.min.y = m.y), X.y > N.max.y && (N.max.y = X.y));
               }
-              var re = N.max.x - N.min.x + 2 * L.x, Z = N.max.y - N.min.y + 2 * L.y, ie = x.canvas.height, Y = x.canvas.width, ue = Y / ie, Ne = re / Z, be = 1, Ce = 1;
-              Ne > ue ? Ce = Ne / ue : be = ue / Ne, x.options.hasBounds = !0, x.bounds.min.x = N.min.x, x.bounds.max.x = N.min.x + re * be, x.bounds.min.y = N.min.y, x.bounds.max.y = N.min.y + Z * Ce, I && (x.bounds.min.x += re * 0.5 - re * be * 0.5, x.bounds.max.x += re * 0.5 - re * be * 0.5, x.bounds.min.y += Z * 0.5 - Z * Ce * 0.5, x.bounds.max.y += Z * 0.5 - Z * Ce * 0.5), x.bounds.min.x -= L.x, x.bounds.max.x -= L.x, x.bounds.min.y -= L.y, x.bounds.max.y -= L.y, x.mouse && (l.setScale(x.mouse, {
+              var re = N.max.x - N.min.x + 2 * L.x, Z = N.max.y - N.min.y + 2 * L.y, ie = x.canvas.height, Y = x.canvas.width, ue = Y / ie, Ne = re / Z, be = 1, Ae = 1;
+              Ne > ue ? Ae = Ne / ue : be = ue / Ne, x.options.hasBounds = !0, x.bounds.min.x = N.min.x, x.bounds.max.x = N.min.x + re * be, x.bounds.min.y = N.min.y, x.bounds.max.y = N.min.y + Z * Ae, I && (x.bounds.min.x += re * 0.5 - re * be * 0.5, x.bounds.max.x += re * 0.5 - re * be * 0.5, x.bounds.min.y += Z * 0.5 - Z * Ae * 0.5, x.bounds.max.y += Z * 0.5 - Z * Ae * 0.5), x.bounds.min.x -= L.x, x.bounds.max.x -= L.x, x.bounds.min.y -= L.y, x.bounds.max.y -= L.y, x.mouse && (l.setScale(x.mouse, {
                 x: (x.bounds.max.x - x.bounds.min.x) / x.canvas.width,
                 y: (x.bounds.max.y - x.bounds.min.y) / x.canvas.height
               }), l.setOffset(x.mouse, x.bounds.min));
@@ -2161,12 +2161,12 @@ var xv = { exports: {} };
               };
               if (d.trigger(x, "beforeRender", be), x.currentBackground !== ie && U(x, ie), G.globalCompositeOperation = "source-in", G.fillStyle = "transparent", G.fillRect(0, 0, F.width, F.height), G.globalCompositeOperation = "source-over", m.hasBounds) {
                 for (Ne = 0; Ne < re.length; Ne++) {
-                  var Ce = re[Ne];
-                  S.overlaps(Ce.bounds, x.bounds) && Y.push(Ce);
+                  var Ae = re[Ne];
+                  S.overlaps(Ae.bounds, x.bounds) && Y.push(Ae);
                 }
                 for (Ne = 0; Ne < Z.length; Ne++) {
-                  var ve = Z[Ne], Ae = ve.bodyA, je = ve.bodyB, Wn = ve.pointA, We = ve.pointB;
-                  Ae && (Wn = w.add(Ae.position, ve.pointA)), je && (We = w.add(je.position, ve.pointB)), !(!Wn || !We) && (S.contains(x.bounds, Wn) || S.contains(x.bounds, We)) && ue.push(ve);
+                  var ve = Z[Ne], Ie = ve.bodyA, je = ve.bodyB, Wn = ve.pointA, We = ve.pointB;
+                  Ie && (Wn = w.add(Ie.position, ve.pointA)), je && (We = w.add(je.position, ve.pointB)), !(!Wn || !We) && (S.contains(x.bounds, Wn) || S.contains(x.bounds, We)) && ue.push(ve);
                 }
                 f.startViewTransform(x), x.mouse && (l.setScale(x.mouse, {
                   x: (x.bounds.max.x - x.bounds.min.x) / x.options.width,
@@ -2191,22 +2191,22 @@ var xv = { exports: {} };
                 T.fillStyle = "#aaa", T.fillText(ue, re + m, Z + 8), T.fillStyle = "#eee", T.fillText(Ne, re + m, Z + 26), re += m;
               }
             }, f.performance = function(x, T) {
-              var L = x.engine, I = x.timing, N = I.deltaHistory, F = I.elapsedHistory, G = I.timestampElapsedHistory, m = I.engineDeltaHistory, X = I.engineElapsedHistory, re = L.timing.lastDelta, Z = c(N), ie = c(F), Y = c(m), ue = c(X), Ne = c(G), be = Ne / Z || 0, Ce = 1e3 / Z || 0, ve = 4, Ae = 12, je = 60, Wn = 34, We = 10, Ze = 69;
-              T.fillStyle = "#0e0f19", T.fillRect(0, 50, Ae * 4 + je * 5 + 22, Wn), f.status(
+              var L = x.engine, I = x.timing, N = I.deltaHistory, F = I.elapsedHistory, G = I.timestampElapsedHistory, m = I.engineDeltaHistory, X = I.engineElapsedHistory, re = L.timing.lastDelta, Z = c(N), ie = c(F), Y = c(m), ue = c(X), Ne = c(G), be = Ne / Z || 0, Ae = 1e3 / Z || 0, ve = 4, Ie = 12, je = 60, Wn = 34, We = 10, Ze = 69;
+              T.fillStyle = "#0e0f19", T.fillRect(0, 50, Ie * 4 + je * 5 + 22, Wn), f.status(
                 T,
                 We,
                 Ze,
                 je,
                 ve,
                 N.length,
-                Math.round(Ce) + " fps",
-                Ce / f._goodFps,
+                Math.round(Ae) + " fps",
+                Ae / f._goodFps,
                 function(Je) {
                   return N[Je] / Z - 1;
                 }
               ), f.status(
                 T,
-                We + Ae + je,
+                We + Ie + je,
                 Ze,
                 je,
                 ve,
@@ -2218,7 +2218,7 @@ var xv = { exports: {} };
                 }
               ), f.status(
                 T,
-                We + (Ae + je) * 2,
+                We + (Ie + je) * 2,
                 Ze,
                 je,
                 ve,
@@ -2230,7 +2230,7 @@ var xv = { exports: {} };
                 }
               ), f.status(
                 T,
-                We + (Ae + je) * 3,
+                We + (Ie + je) * 3,
                 Ze,
                 je,
                 ve,
@@ -2242,7 +2242,7 @@ var xv = { exports: {} };
                 }
               ), f.status(
                 T,
-                We + (Ae + je) * 4,
+                We + (Ie + je) * 4,
                 Ze,
                 je,
                 ve,
@@ -2678,9 +2678,9 @@ var my = xv.exports;
 const Pr = /* @__PURE__ */ wv(my);
 var Sv = { exports: {} };
 /* @license Apache-2.0 */
-(function(Se, Le) {
+(function(xe, Ce) {
   (function(_) {
-    Se.exports = _();
+    xe.exports = _();
   })(function() {
     var _ = typeof Object.defineProperty == "function" ? Object.defineProperty : null, ge = function() {
       try {
@@ -2740,7 +2740,7 @@ var Sv = { exports: {} };
       return ie.call(e);
     }, ue = Object.prototype.hasOwnProperty, Ne = function(e, n) {
       return e != null && ue.call(e, n);
-    }, be = typeof Symbol == "function" ? Symbol.toStringTag : "", Ce = function(e) {
+    }, be = typeof Symbol == "function" ? Symbol.toStringTag : "", Ae = function(e) {
       var n, r, a;
       if (e == null) return ie.call(e);
       r = e[be], n = Ne(e, be);
@@ -2750,7 +2750,7 @@ var Sv = { exports: {} };
         return ie.call(e);
       }
       return a = ie.call(e), n ? e[be] = r : delete e[be], a;
-    }, ve = Z() ? Ce : Y, Ae = Number, je = Ae.prototype.toString, Wn = Boolean.prototype.toString, We = function(e) {
+    }, ve = Z() ? Ae : Y, Ie = Number, je = Ie.prototype.toString, Wn = Boolean.prototype.toString, We = function(e) {
       try {
         return Wn.call(e), !0;
       } catch {
@@ -2763,7 +2763,7 @@ var Sv = { exports: {} };
         return !1;
       }
     }, Je = Z(), Wi = function(e) {
-      return typeof e == "object" && (e instanceof Ae || (Je ? Ze(e) : ve(e) === "[object Number]"));
+      return typeof e == "object" && (e instanceof Ie || (Je ? Ze(e) : ve(e) === "[object Number]"));
     }, gi = function(e) {
       return X(e) || Wi(e);
     };
@@ -2783,7 +2783,7 @@ var Sv = { exports: {} };
       return e;
     }() ? ji : Ni, Ki = typeof Float64Array == "function", Qi = function(e) {
       return Ki && e instanceof Float64Array || ve(e) === "[object Float64Array]";
-    }, yi = typeof Float64Array == "function" ? Float64Array : null, $r = typeof Float64Array == "function" ? Float64Array : void 0, za = function() {
+    }, yi = typeof Float64Array == "function" ? Float64Array : null, Zr = typeof Float64Array == "function" ? Float64Array : void 0, za = function() {
       throw new Error("not implemented");
     }, sr = function() {
       var e, n;
@@ -2794,15 +2794,15 @@ var Sv = { exports: {} };
         e = !1;
       }
       return e;
-    }() ? $r : za, Zr = typeof Uint8Array == "function", Jr = function(e) {
-      return Zr && e instanceof Uint8Array || ve(e) === "[object Uint8Array]";
+    }() ? Zr : za, Jr = typeof Uint8Array == "function", Xr = function(e) {
+      return Jr && e instanceof Uint8Array || ve(e) === "[object Uint8Array]";
     }, ja = 255, n0 = typeof Uint8Array == "function" ? Uint8Array : null, Mv = typeof Uint8Array == "function" ? Uint8Array : void 0, kv = function() {
       throw new Error("not implemented");
     }, Tv = function() {
       var e, n;
       if (typeof n0 != "function") return !1;
       try {
-        n = new n0(n = [1, 3.14, -3.14, ja + 1, ja + 2]), e = Jr(n) && n[0] === 1 && n[1] === 3 && n[2] === ja - 2 && n[3] === 0 && n[4] === 1;
+        n = new n0(n = [1, 3.14, -3.14, ja + 1, ja + 2]), e = Xr(n) && n[0] === 1 && n[1] === 3 && n[2] === ja - 2 && n[3] === 0 && n[4] === 1;
       } catch {
         e = !1;
       }
@@ -2822,11 +2822,11 @@ var Sv = { exports: {} };
       return e;
     }() ? Vv : Cv, uint8: Tv };
     (i0 = new a0.uint16(1))[0] = 4660;
-    var Xr = new a0.uint8(i0.buffer)[0] === 52, Av = Xr === !0 ? 1 : 0, t0 = new sr(1), Iv = new mr(t0.buffer), Ke = function(e) {
+    var Yr = new a0.uint8(i0.buffer)[0] === 52, Av = Yr === !0 ? 1 : 0, t0 = new sr(1), Iv = new mr(t0.buffer), Ke = function(e) {
       return t0[0] = e, Iv[Av];
-    }, Bv = Xr === !0 ? 1 : 0, Qa = new sr(1), Rv = new mr(Qa.buffer), Xn = function(e, n) {
+    }, Bv = Yr === !0 ? 1 : 0, Qa = new sr(1), Rv = new mr(Qa.buffer), Xn = function(e, n) {
       return Qa[0] = e, Rv[Bv] = n >>> 0, Qa[0];
-    }, ur = 1023, j = Ae.NEGATIVE_INFINITY, Lv = function(e) {
+    }, ur = 1023, j = Ie.NEGATIVE_INFINITY, Lv = function(e) {
       return e === 0 ? 0.3999999999940942 : 0.3999999999940942 + e * (0.22222198432149784 + 0.15313837699209373 * e);
     }, qv = function(e) {
       return e === 0 ? 0.6666666666666735 : 0.6666666666666735 + e * (0.2857142874366239 + e * (0.1818357216161805 + 0.14798198605116586 * e));
@@ -2858,14 +2858,14 @@ var Sv = { exports: {} };
     }, $a, Za, J = function(e) {
       return Math.abs(e);
     };
-    Xr === !0 ? ($a = 1, Za = 0) : ($a = 0, Za = 1);
+    Yr === !0 ? ($a = 1, Za = 0) : ($a = 0, Za = 1);
     var Ja, Xa, m0 = { HIGH: $a, LOW: Za };
-    Xr === !0 ? (Ja = 1, Xa = 0) : (Ja = 0, Xa = 1);
+    Yr === !0 ? (Ja = 1, Xa = 0) : (Ja = 0, Xa = 1);
     var h0 = { HIGH: Ja, LOW: Xa }, d0 = new sr(1), g0 = new mr(d0.buffer), jv = h0.HIGH, Kv = h0.LOW, N0 = function(e, n) {
       return d0[0] = n, e[0] = g0[jv], e[1] = g0[Kv], e;
-    }, Yr = function(e, n) {
+    }, _r = function(e, n) {
       return arguments.length === 1 ? N0([0, 0], e) : N0(e, n);
-    }, Qv = Xr === !0 ? 0 : 1, $v = Xr === !0 ? 0 : 1, Ya = new sr(1), Zv = new mr(Ya.buffer), _n = function(e, n) {
+    }, Qv = Yr === !0 ? 0 : 1, $v = Yr === !0 ? 0 : 1, Ya = new sr(1), Zv = new mr(Ya.buffer), _n = function(e, n) {
       return Ya[0] = e, Zv[$v] = n >>> 0, Ya[0];
     }, _a = function(e) {
       return 0 | e;
@@ -2873,7 +2873,7 @@ var Sv = { exports: {} };
       return b0[Jv] = e, b0[Xv] = n, y0[0];
     }, Yv = 2147483648, _v = 2147483647, nt = [0, 0], Bn = function(e, n) {
       var r, a;
-      return Yr(nt, e), r = nt[0], r &= _v, a = Ke(n), et(r |= a &= Yv, nt[1]);
+      return _r(nt, e), r = nt[0], r &= _v, a = Ke(n), et(r |= a &= Yv, nt[1]);
     }, e7 = function(e, n) {
       return n === j ? H : n === H ? 0 : n > 0 ? bi(n) ? e : 0 : bi(n) ? Bn(H, e) : H;
     }, n7 = 2147483647, r7 = 1072693247, Ji = 1e300, Xi = 1e-300, i7 = function(e, n) {
@@ -2899,7 +2899,7 @@ var Sv = { exports: {} };
       return (n = (n & V7) >>> 20) - ur | 0;
     }, A7 = 2220446049250313e-31, I7 = 2148532223, rt = [0, 0], it = [0, 0], ir = function(e, n) {
       var r, a;
-      return e === 0 || i(e) || Yn(e) ? e : (P7(rt, e), e = rt[0], n += rt[1], (n += C7(e)) < T7 ? Bn(0, e) : n > M7 ? e < 0 ? j : H : (n <= k7 ? (n += 52, a = A7) : a = 1, Yr(it, e), r = it[0], r &= I7, a * et(r |= n + ur << 20, it[1])));
+      return e === 0 || i(e) || Yn(e) ? e : (P7(rt, e), e = rt[0], n += rt[1], (n += C7(e)) < T7 ? Bn(0, e) : n > M7 ? e < 0 ? j : H : (n <= k7 ? (n += 52, a = A7) : a = 1, _r(it, e), r = it[0], r &= I7, a * et(r |= n + ur << 20, it[1])));
     }, De = 0.6931471805599453, B7 = function(e) {
       return e === 0 ? 0.16666666666666602 : 0.16666666666666602 + e * (e * (6613756321437934e-20 + e * (41381367970572385e-24 * e - 16533902205465252e-22)) - 0.0027777777777015593);
     }, R7 = function(e) {
@@ -2910,7 +2910,7 @@ var Sv = { exports: {} };
     }, at = 2147483647, D7 = 1072693247, U7 = 1105199104, H7 = 1139802112, T0 = 1083179008, W7 = 1072693248, G7 = 1083231232, z7 = 3230714880, E0 = 31, Vr = 1e300, Cr = 1e-300, j7 = 8008566259537294e-32, hr = [0, 0], P0 = [0, 0], C = function e(n, r) {
       var a, s, u, p, k, b, V, O, B, A, W, z, K, $;
       if (i(n) || i(r)) return NaN;
-      if (Yr(hr, r), k = hr[0], hr[1] === 0) {
+      if (_r(hr, r), k = hr[0], hr[1] === 0) {
         if (r === 0) return 1;
         if (r === 1) return n;
         if (r === -1) return 1 / n;
@@ -2921,7 +2921,7 @@ var Sv = { exports: {} };
         if (r === 4) return (n *= n) * n;
         if (Yn(r)) return a7(n, r);
       }
-      if (Yr(hr, n), p = hr[0], hr[1] === 0) {
+      if (_r(hr, n), p = hr[0], hr[1] === 0) {
         if (p === 0) return e7(n, r);
         if (n === 1) return 1;
         if (n === -1 && bi(r)) return -1;
@@ -2934,27 +2934,27 @@ var Sv = { exports: {} };
         if (a > W7) return V === 0 ? b * Vr * Vr : b * Cr * Cr;
         W = S7(P0, u);
       } else W = N7(P0, u, a);
-      if (A = (r - (O = _n(r, 0))) * W[0] + r * W[1], B = O * W[0], Yr(hr, z = A + B), K = _a(hr[0]), $ = _a(hr[1]), K >= T0) {
+      if (A = (r - (O = _n(r, 0))) * W[0] + r * W[1], B = O * W[0], _r(hr, z = A + B), K = _a(hr[0]), $ = _a(hr[1]), K >= T0) {
         if (K - T0 | $ || A + j7 > z - B) return b * Vr * Vr;
       } else if ((K & at) >= G7 && (K - z7 | $ || A <= z - B))
         return b * Cr * Cr;
       return b * (z = O7(K, B, A));
     }, V0 = function(e, n) {
       return e >= n ? NaN : 0.125 * C(n - e, 2);
-    }, _r = 1.1447298858494002, C0 = function(e, n, r) {
-      return i(e) || i(n) || i(r) || n >= r ? NaN : e < n ? j : e >= r ? 0 : De - _r + M(x(c((e - n) / (r - n))));
+    }, ei = 1.1447298858494002, C0 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n >= r ? NaN : e < n ? j : e >= r ? 0 : De - ei + M(x(c((e - n) / (r - n))));
     };
     o(C0, "factory", function(e, n) {
       return i(e) || i(n) || e >= n ? N(NaN) : function(r) {
-        return i(r) ? NaN : r < e ? j : r >= n ? 0 : De - _r + M(x(c((r - e) / (n - e))));
+        return i(r) ? NaN : r < e ? j : r >= n ? 0 : De - ei + M(x(c((r - e) / (n - e))));
       };
     });
     var A0 = C0, I0 = function(e, n, r) {
-      return i(e) || i(n) || i(r) || n >= r ? NaN : e < n || e > r ? j : -(_r + M((e - n) * (r - e)) / 2);
+      return i(e) || i(n) || i(r) || n >= r ? NaN : e < n || e > r ? j : -(ei + M((e - n) * (r - e)) / 2);
     };
     o(I0, "factory", function(e, n) {
       return i(e) || i(n) || e >= n ? N(NaN) : function(r) {
-        return i(r) ? NaN : r < e || r > n ? j : -(_r + M((r - e) * (n - r)) / 2);
+        return i(r) ? NaN : r < e || r > n ? j : -(ei + M((r - e) * (n - r)) / 2);
       };
     });
     var B0 = I0, R0 = function(e, n, r) {
@@ -2991,10 +2991,10 @@ var Sv = { exports: {} };
         D0[b] = s;
       }
       return function B(A, W, z, K, $, ae, Q, fe, le) {
-        var se, te, xe, Oe, he, Ue, en, Re, ne;
-        for (Oe = ae, ne = K[z], Re = z, he = 0; Re > 0; he++) te = ot * ne | 0, pn[he] = ne - tt * te | 0, ne = K[Re - 1] + te, Re -= 1;
-        if (ne = ir(ne, $), ne -= 8 * ye(0.125 * ne), ne -= en = 0 | ne, xe = 0, $ > 0 ? (en += he = pn[z - 1] >> 24 - $, pn[z - 1] -= he << 24 - $, xe = pn[z - 1] >> 23 - $) : $ === 0 ? xe = pn[z - 1] >> 23 : ne >= 0.5 && (xe = 2), xe > 0) {
-          for (en += 1, se = 0, he = 0; he < z; he++) Re = pn[he], se === 0 ? Re !== 0 && (se = 1, pn[he] = 16777216 - Re) : pn[he] = 16777215 - Re;
+        var se, te, Se, Oe, he, Ue, en, Le, ne;
+        for (Oe = ae, ne = K[z], Le = z, he = 0; Le > 0; he++) te = ot * ne | 0, pn[he] = ne - tt * te | 0, ne = K[Le - 1] + te, Le -= 1;
+        if (ne = ir(ne, $), ne -= 8 * ye(0.125 * ne), ne -= en = 0 | ne, Se = 0, $ > 0 ? (en += he = pn[z - 1] >> 24 - $, pn[z - 1] -= he << 24 - $, Se = pn[z - 1] >> 23 - $) : $ === 0 ? Se = pn[z - 1] >> 23 : ne >= 0.5 && (Se = 2), Se > 0) {
+          for (en += 1, se = 0, he = 0; he < z; he++) Le = pn[he], se === 0 ? Le !== 0 && (se = 1, pn[he] = 16777216 - Le) : pn[he] = 16777215 - Le;
           if ($ > 0) switch ($) {
             case 1:
               pn[z - 1] &= 8388607;
@@ -3002,14 +3002,14 @@ var Sv = { exports: {} };
             case 2:
               pn[z - 1] &= 4194303;
           }
-          xe === 2 && (ne = 1 - ne, se !== 0 && (ne -= ir(1, $)));
+          Se === 2 && (ne = 1 - ne, se !== 0 && (ne -= ir(1, $)));
         }
         if (ne === 0) {
-          for (Re = 0, he = z - 1; he >= ae; he--) Re |= pn[he];
-          if (Re === 0) {
+          for (Le = 0, he = z - 1; he >= ae; he--) Le |= pn[he];
+          if (Le === 0) {
             for (Ue = 1; pn[ae - Ue] === 0; Ue++) ;
             for (he = z + 1; he <= z + Ue; he++) {
-              for (le[fe + he] = O0[Q + he], te = 0, Re = 0; Re <= fe; Re++) te += A[Re] * le[fe + (he - Re)];
+              for (le[fe + he] = O0[Q + he], te = 0, Le = 0; Le <= fe; Le++) te += A[Le] * le[fe + (he - Le)];
               K[he] = te;
             }
             return B(A, W, z += Ue, K, $, ae, Q, fe, le);
@@ -3023,8 +3023,8 @@ var Sv = { exports: {} };
           Yi[z - he] = te;
         }
         for (te = 0, he = z; he >= 0; he--) te += Yi[he];
-        for (W[0] = xe === 0 ? te : -te, te = Yi[0] - te, he = 1; he <= z; he++) te += Yi[he];
-        return W[1] = xe === 0 ? te : -te, 7 & en;
+        for (W[0] = Se === 0 ? te : -te, te = Yi[0] - te, he = 1; he <= z; he++) te += Yi[he];
+        return W[1] = Se === 0 ? te : -te, 7 & en;
       }(e, n, 4, D0, k, 4, u, p, st);
     }, jn = Math.round, i8 = 0.6366197723675814, a8 = 1.5707963267341256, t8 = 6077100506506192e-26, o8 = 6077100506303966e-26, s8 = 20222662487959506e-37, u8 = 20222662487111665e-37, f8 = 84784276603689e-45, U0 = 2047, ea = function(e, n, r) {
       var a, s, u, p, k;
@@ -3337,7 +3337,7 @@ var Sv = { exports: {} };
         default:
           return Si(gr[0], gr[1]);
       }
-    }, ei = function(e) {
+    }, ni = function(e) {
       var n, r;
       return i(e) ? NaN : Yn(e) ? NaN : (n = J(r = e % 2)) === 0 || n === 1 ? Bn(0, r) : n < 0.25 ? ar(T * r) : n < 0.75 ? Bn(Gr(T * (n = 0.5 - n)), r) : n < 1.25 ? (r = Bn(1, r) - r, ar(T * r)) : n < 1.75 ? -Bn(Gr(T * (n -= 1.5)), r) : (r -= Bn(2, r), ar(T * r));
     }, f9 = function(e) {
@@ -3366,7 +3366,7 @@ var Sv = { exports: {} };
       if (e === 0) return H;
       if (e < 0 ? (n = !0, e = -e) : n = !1, e < A9) return -M(e);
       if (n) {
-        if (e >= V9 || (k = ei(e)) === 0) return H;
+        if (e >= V9 || (k = ni(e)) === 0) return H;
         r = M(T / J(k * e));
       }
       if (e === 1 || e === 2) return 0;
@@ -3658,9 +3658,9 @@ var Sv = { exports: {} };
       var r, a, s, u, p, k, b;
       return b = (n - e - Fe + 0.5) / (s = e + Fe - 0.5), e < 1 ? n <= de ? R(e * M(n) - n - Pe(e)) : C(n, e) * R(-n) / me(e) : (J(b * b * e) <= 100 && e > 150 ? (r = e * (oe(b) - b) + n * (0.5 - Fe) / s, r = R(r)) : (u = e * M(n / s), Me(u, p = e - n) <= de || Ee(u, p) >= ce ? (a = p / e, Me(u, p) / 2 > de && Ee(u, p) / 2 < ce ? r = (k = C(n / s, e / 2) * R(p / 2)) * k : Me(u, p) / 4 > de && Ee(u, p) / 4 < ce && n > e ? (r = (k = C(n / s, e / 4) * R(p / 4)) * k, r *= r) : r = a > de && a < ce ? C(n * R(a) / s, e) : R(u + p)) : r = C(n / s, e) * R(p)), r *= c(s / Kn) / _e(e));
     }, Lr = new Array(30), qr = function(e, n, r, a, s, u, p) {
-      var k, b, V, O, B, A, W, z, K, $, ae, Q, fe, le, se, te, xe, Oe;
-      if (xe = e + (A = n - 1) / 2, $ = a < 0.35 ? oe(-a) : M(r), (Q = Up(n, Oe = -xe * $)) <= er) return s;
-      for (p ? (k = Q / dt(e, n), k /= C(xe, n)) : k = Dp(n, Oe) / C(xe, n), k *= u, Lr[0] = 1, fe = fr(Oe, n, !0, !0), O = s + k * (fe /= Q), V = 1, W = $ / 2, W *= W, z = 1, ae = 4 * xe * xe, B = n, se = 1; se < Lr.length; ++se) {
+      var k, b, V, O, B, A, W, z, K, $, ae, Q, fe, le, se, te, Se, Oe;
+      if (Se = e + (A = n - 1) / 2, $ = a < 0.35 ? oe(-a) : M(r), (Q = Up(n, Oe = -Se * $)) <= er) return s;
+      for (p ? (k = Q / dt(e, n), k /= C(Se, n)) : k = Dp(n, Oe) / C(Se, n), k *= u, Lr[0] = 1, fe = fr(Oe, n, !0, !0), O = s + k * (fe /= Q), V = 1, W = $ / 2, W *= W, z = 1, ae = 4 * Se * Se, B = n, se = 1; se < Lr.length; ++se) {
         for (V += 2, Lr[se] = 0, K = n - se, b = 3, le = 1; le < se; ++le) K = le * n - se, Lr[se] += K * Lr[se - le] / Pi(b), b += 2;
         if (Lr[se] /= se, Lr[se] += A / Pi(V), fe = (B * (B + 1) * fe + (Oe + B + 1) * z) / ae, z *= W, B += 2, O += te = k * Lr[se] * fe, te > 1) {
           if (J(te) < J(kn * O)) break;
@@ -3966,46 +3966,46 @@ var Sv = { exports: {} };
     function pa(e, n, r) {
       if (!(e < n)) return e < 1.5 * n ? Math.floor(e / n) + " " + r : Math.ceil(e / n) + " " + r + "s";
     }
-    var kt, Ie = {};
+    var kt, Be = {};
     function Tt(e) {
       function n() {
         if (n.enabled) {
           var r = n, a = +/* @__PURE__ */ new Date(), s = a - (kt || a);
           r.diff = s, r.prev = kt, r.curr = a, kt = a;
           for (var u = new Array(arguments.length), p = 0; p < u.length; p++) u[p] = arguments[p];
-          u[0] = Ie.coerce(u[0]), typeof u[0] != "string" && u.unshift("%O");
+          u[0] = Be.coerce(u[0]), typeof u[0] != "string" && u.unshift("%O");
           var k = 0;
           u[0] = u[0].replace(/%([a-zA-Z%])/g, function(b, V) {
             if (b === "%%") return b;
             k++;
-            var O = Ie.formatters[V];
+            var O = Be.formatters[V];
             if (typeof O == "function") {
               var B = u[k];
               b = O.call(r, B), u.splice(k, 1), k--;
             }
             return b;
-          }), Ie.formatArgs.call(r, u), (n.log || Ie.log || console.log.bind(console)).apply(r, u);
+          }), Be.formatArgs.call(r, u), (n.log || Be.log || console.log.bind(console)).apply(r, u);
         }
       }
-      return n.namespace = e, n.enabled = Ie.enabled(e), n.useColors = Ie.useColors(), n.color = function(r) {
+      return n.namespace = e, n.enabled = Be.enabled(e), n.useColors = Be.useColors(), n.color = function(r) {
         var a, s = 0;
         for (a in r) s = (s << 5) - s + r.charCodeAt(a), s |= 0;
-        return Ie.colors[Math.abs(s) % Ie.colors.length];
-      }(e), typeof Ie.init == "function" && Ie.init(n), n;
+        return Be.colors[Math.abs(s) % Be.colors.length];
+      }(e), typeof Be.init == "function" && Be.init(n), n;
     }
-    (Ie = Ie = Tt.debug = Tt.default = Tt).coerce = function(e) {
+    (Be = Be = Tt.debug = Tt.default = Tt).coerce = function(e) {
       return e instanceof Error ? e.stack || e.message : e;
-    }, Ie.disable = function() {
-      Ie.enable("");
-    }, Ie.enable = function(e) {
-      Ie.save(e), Ie.names = [], Ie.skips = [];
-      for (var n = (typeof e == "string" ? e : "").split(/[\s,]+/), r = n.length, a = 0; a < r; a++) n[a] && ((e = n[a].replace(/\*/g, ".*?"))[0] === "-" ? Ie.skips.push(new RegExp("^" + e.substr(1) + "$")) : Ie.names.push(new RegExp("^" + e + "$")));
-    }, Ie.enabled = function(e) {
+    }, Be.disable = function() {
+      Be.enable("");
+    }, Be.enable = function(e) {
+      Be.save(e), Be.names = [], Be.skips = [];
+      for (var n = (typeof e == "string" ? e : "").split(/[\s,]+/), r = n.length, a = 0; a < r; a++) n[a] && ((e = n[a].replace(/\*/g, ".*?"))[0] === "-" ? Be.skips.push(new RegExp("^" + e.substr(1) + "$")) : Be.names.push(new RegExp("^" + e + "$")));
+    }, Be.enabled = function(e) {
       var n, r;
-      for (n = 0, r = Ie.skips.length; n < r; n++) if (Ie.skips[n].test(e)) return !1;
-      for (n = 0, r = Ie.names.length; n < r; n++) if (Ie.names[n].test(e)) return !0;
+      for (n = 0, r = Be.skips.length; n < r; n++) if (Be.skips[n].test(e)) return !1;
+      for (n = 0, r = Be.names.length; n < r; n++) if (Be.names[n].test(e)) return !0;
       return !1;
-    }, Ie.humanize = function(e, n) {
+    }, Be.humanize = function(e, n) {
       n = n || {};
       var r, a = typeof e;
       if (a === "string" && e.length > 0) return function(s) {
@@ -4058,7 +4058,7 @@ var Sv = { exports: {} };
         return s >= Fi ? Math.round(s / Fi) + "d" : s >= qi ? Math.round(s / qi) + "h" : s >= Li ? Math.round(s / Li) + "m" : s >= Ri ? Math.round(s / Ri) + "s" : s + "ms";
       }(e);
       throw new Error("val is not a non-empty string or a valid number. val=" + JSON.stringify(e));
-    }, Ie.names = [], Ie.skips = [], Ie.formatters = {};
+    }, Be.names = [], Be.skips = [], Be.formatters = {};
     var jo, yr, br, Xe = jo = {};
     function Et() {
       throw new Error("setTimeout has not been defined");
@@ -4091,19 +4091,19 @@ var Sv = { exports: {} };
         br = Pt;
       }
     })();
-    var jr, wr = [], ni = !1, ma = -1;
+    var jr, wr = [], ri = !1, ma = -1;
     function sh() {
-      ni && jr && (ni = !1, jr.length ? wr = jr.concat(wr) : ma = -1, wr.length && Qo());
+      ri && jr && (ri = !1, jr.length ? wr = jr.concat(wr) : ma = -1, wr.length && Qo());
     }
     function Qo() {
-      if (!ni) {
+      if (!ri) {
         var e = Ko(sh);
-        ni = !0;
+        ri = !0;
         for (var n = wr.length; n; ) {
           for (jr = wr, wr = []; ++ma < n; ) jr && jr[ma].run();
           ma = -1, n = wr.length;
         }
-        jr = null, ni = !1, function(r) {
+        jr = null, ri = !1, function(r) {
           if (br === clearTimeout) return clearTimeout(r);
           if ((br === Pt || !br) && clearTimeout) return br = clearTimeout, clearTimeout(r);
           try {
@@ -4126,7 +4126,7 @@ var Sv = { exports: {} };
     Xe.nextTick = function(e) {
       var n = new Array(arguments.length - 1);
       if (arguments.length > 1) for (var r = 1; r < arguments.length; r++) n[r - 1] = arguments[r];
-      wr.push(new $o(e, n)), wr.length !== 1 || ni || Ko(Qo);
+      wr.push(new $o(e, n)), wr.length !== 1 || ri || Ko(Qo);
     }, $o.prototype.run = function() {
       this.fun.apply(null, this.array);
     }, Xe.title = "browser", Xe.browser = !0, Xe.env = {}, Xe.argv = [], Xe.version = "", Xe.versions = {}, Xe.on = xr, Xe.addListener = xr, Xe.once = xr, Xe.off = xr, Xe.removeListener = xr, Xe.removeAllListeners = xr, Xe.emit = xr, Xe.prependListener = xr, Xe.prependOnceListener = xr, Xe.listeners = function(e) {
@@ -4151,7 +4151,7 @@ var Sv = { exports: {} };
           }
           return !r && e !== void 0 && "env" in e && (r = e.env.DEBUG), r;
         }
-        (Tn = Tn = Ie).log = function() {
+        (Tn = Tn = Be).log = function() {
           return typeof console == "object" && console.log && Function.prototype.apply.call(console.log, console, arguments);
         }, Tn.formatArgs = function(r) {
           var a = this.useColors;
@@ -4199,9 +4199,9 @@ var Sv = { exports: {} };
       return e === 0 ? 0 : 0 + e * (1 + e * (1 + e * (1.5 + e * (2.6666666666666665 + e * (5.208333333333333 + 10.8 * e)))));
     }, ch = function(e) {
       return e === 0 ? 1 : 1 + e * (1 + e * (0.3333333333333333 + e * (0.027777777777777776 + e * (e * (2314814814814815e-19 + 5878894767783657e-20 * e) - 0.003703703703703704))));
-    }, lh = 1e-8, vh = 0.08333333333333333, ph = 0.008333333333333333, ri = [1, 0, 0, 0, 0, 0], Vt = function(e) {
+    }, lh = 1e-8, vh = 0.08333333333333333, ph = 0.008333333333333333, ii = [1, 0, 0, 0, 0, 0], Vt = function(e) {
       var n, r, a, s, u, p, k, b, V;
-      if (V = e * e * 0.5, e === 0 ? u = 0 : e < -1 ? (b = R(-1 - V), u = fh(b)) : e < 1 ? u = ch(b = e) : (u = (b = 11 + V) + (p = M(b)), b = 1 / b, s = (a = (r = (n = p * p) * p) * p) * p, ri[1] = 0.5 * (2 - p), ri[2] = (-9 * p + 6 + 2 * n) / 6, ri[3] = -(3 * r + 36 * p - 22 * n - 12) * vh, ri[4] = (60 + 350 * n - 300 * p - 125 * r + 12 * a) / 60, ri[5] = -(-120 - 274 * a + 900 * p - 1700 * n + 1125 * r + 20 * s) * ph, u += p * b * hn(ri, b)), b = 1, e > -3.5 && e < -0.03 || e > 0.03 && e < 40) {
+      if (V = e * e * 0.5, e === 0 ? u = 0 : e < -1 ? (b = R(-1 - V), u = fh(b)) : e < 1 ? u = ch(b = e) : (u = (b = 11 + V) + (p = M(b)), b = 1 / b, s = (a = (r = (n = p * p) * p) * p) * p, ii[1] = 0.5 * (2 - p), ii[2] = (-9 * p + 6 + 2 * n) / 6, ii[3] = -(3 * r + 36 * p - 22 * n - 12) * vh, ii[4] = (60 + 350 * n - 300 * p - 125 * r + 12 * a) / 60, ii[5] = -(-120 - 274 * a + 900 * p - 1700 * n + 1125 * r + 20 * s) * ph, u += p * b * hn(ii, b)), b = 1, e > -3.5 && e < -0.03 || e > 0.03 && e < 40) {
         b = 1, k = u;
         do
           u = k * (V + M(k)) / (k - 1), b = J(k / u - 1), k = u;
@@ -4261,21 +4261,21 @@ var Sv = { exports: {} };
       var n, r;
       return e < -8 ? (n = e * e, (e * (r = M(-e) / e) * (6 * n * r * r - 12 + n) - 30) / (12 * e * n * n)) : e < -4 ? Th(e) / (e * e) : e < -2 ? Eh(e) : e < 2 ? Ph(e) : e < 10 ? Vh(n = 1 / e) / (e * e) : e < 100 ? Ch(n = 1 / e) / (e * e) : -M(e) / (12 * e * e * e);
     }, Ih = Tn("gammaincinv:compute"), Kr = 0.5, Ct = 0.3333333333333333, Bh = 0.25, Xo = 0.2, Yo = 0.16666666666666666, Rh = 0.08333333333333333, Lh = 0.041666666666666664, nr = [0, 0, 0, 0, 0], _o = function(e, n, r) {
-      var a, s, u, p, k, b, V, O, B, A, W, z, K, $, ae, Q, fe, le, se, te, xe, Oe, he, Ue, en, Re, ne, Be, Ui, Nv, Xt, zn, Ye, Yt, Hn, Tr, Er, _t, yv, e0;
-      if (n < Kr ? (p = !0, k = n, _t = -1) : (p = !1, k = r, _t = 1), Hn = 0, J(e - 1) < 1e-4 && (Tr = 0, se = p ? n < 1e-3 ? n + (Ui = n * n) * Kr + (Re = Ui * n) * Ct + (Be = Re * n) * Bh + (le = Be * n) * Xo + le * n * Yo : -M(1 - n) : -M(r), e === 1 ? (Hn = 2, Xt = se) : (u = Pe(e), Hn = 1)), r < 1e-30 && e < Kr && (Tr = 0, se = -M(r * me(e)) + (e - 1) * M(-M(r * me(e))), Hn = 1, u = Pe(e)), e > 1 && e < 500 && n < 1e-80) {
+      var a, s, u, p, k, b, V, O, B, A, W, z, K, $, ae, Q, fe, le, se, te, Se, Oe, he, Ue, en, Le, ne, Re, Ui, Nv, Xt, zn, Ye, Yt, Hn, Tr, Er, _t, yv, e0;
+      if (n < Kr ? (p = !0, k = n, _t = -1) : (p = !1, k = r, _t = 1), Hn = 0, J(e - 1) < 1e-4 && (Tr = 0, se = p ? n < 1e-3 ? n + (Ui = n * n) * Kr + (Le = Ui * n) * Ct + (Re = Le * n) * Bh + (le = Re * n) * Xo + le * n * Yo : -M(1 - n) : -M(r), e === 1 ? (Hn = 2, Xt = se) : (u = Pe(e), Hn = 1)), r < 1e-30 && e < Kr && (Tr = 0, se = -M(r * me(e)) + (e - 1) * M(-M(r * me(e))), Hn = 1, u = Pe(e)), e > 1 && e < 500 && n < 1e-80) {
         for (Tr = 0, b = 1 / e, a = 1 / (e + 1), se = (Pe(e + 1) + M(n)) * b, K = se = R(se), Yt = 0; Yt < 10; Yt++) se = K * R(se * b) * C(1 - se * a, b);
         Hn = 1, u = Pe(e);
       }
-      if ((V = 1 / e * (M(n) + Pe(e + 1))) < M(Xo * (1 + e)) && Hn === 0 && (Er = R(V), Tr = 0, ne = (Nv = (te = e * e) * e) * e, A = ($ = e + 1) * (W = $ * $), B = W * W, O = (ae = e + 2) * ae, Q = e + 3, nr[0] = 1, nr[1] = 1 / $, nr[2] = Kr * (3 * e + 5) / (W * ae), nr[3] = Ct * (31 + 8 * te + 33 * e) / (A * ae * Q), nr[4] = Lh * (2888 + 1179 * Nv + 125 * ne + 3971 * te + 5661 * e) / (B * O * Q * (e + 4)), se = Er * hn(nr, Er), u = Pe(e), Hn = 1), e < 10 && Hn === 0 && (z = c(e) / (Jo(e) * Ei), r < Me(0.02, z) && (Tr = 0, en = (Ue = (zn = 1 - e) * zn) * zn, fe = c(-2 / e * M(r / z)), se = e * Vt(fe), Ye = M(se), se > 5 ? (he = (Oe = (xe = Ye * Ye) * Ye) * Ye, Er = 1 / se, nr[0] = Ye - 1, nr[1] = (3 * zn - 2 * zn * Ye + xe - 2 * Ye + 2) * Kr, nr[2] = (24 * zn * Ye - 11 * Ue - 24 * zn - 6 * xe + 12 * Ye - 12 - 9 * zn * xe + 6 * Ue * Ye + 2 * Oe) * Yo, nr[3] = (-12 * en * Ye + 8.04 * zn * xe - 114 * Ue * Ye + (72 + 36 * xe) + (3 * he - 72 * Ye + 162) * (zn - 168 * zn * Ye) - (12 * Oe + 25 * en) - (22 * zn * Oe + 36 * Ue * xe + 120 * Ue)) * Rh, nr[4] = 0, se = se - Ye + zn * Er * hn(nr, Er)) : (xe = Ye * Ye, (yv = Ye - zn * (Er = 1 / se) * (Ye - 1)) < se && (se -= yv)), u = Pe(e), Hn = 1)), J(k - Kr) < 1e-5 && Hn === 0 && (Tr = 0, se = e - Ct + (0.019753086419753086 + 0.007211444248481286 * (b = 1 / e)) * b, u = Pe(e), Hn = 1), e < 1 && Hn === 0 && (Tr = 0, se = R(p ? 1 / e * (M(k) + Pe(e + 1)) : 1 / e * (M(1 - k) + Pe(e + 1))), u = Pe(e), Hn = 1), Hn === 0) {
+      if ((V = 1 / e * (M(n) + Pe(e + 1))) < M(Xo * (1 + e)) && Hn === 0 && (Er = R(V), Tr = 0, ne = (Nv = (te = e * e) * e) * e, A = ($ = e + 1) * (W = $ * $), B = W * W, O = (ae = e + 2) * ae, Q = e + 3, nr[0] = 1, nr[1] = 1 / $, nr[2] = Kr * (3 * e + 5) / (W * ae), nr[3] = Ct * (31 + 8 * te + 33 * e) / (A * ae * Q), nr[4] = Lh * (2888 + 1179 * Nv + 125 * ne + 3971 * te + 5661 * e) / (B * O * Q * (e + 4)), se = Er * hn(nr, Er), u = Pe(e), Hn = 1), e < 10 && Hn === 0 && (z = c(e) / (Jo(e) * Ei), r < Me(0.02, z) && (Tr = 0, en = (Ue = (zn = 1 - e) * zn) * zn, fe = c(-2 / e * M(r / z)), se = e * Vt(fe), Ye = M(se), se > 5 ? (he = (Oe = (Se = Ye * Ye) * Ye) * Ye, Er = 1 / se, nr[0] = Ye - 1, nr[1] = (3 * zn - 2 * zn * Ye + Se - 2 * Ye + 2) * Kr, nr[2] = (24 * zn * Ye - 11 * Ue - 24 * zn - 6 * Se + 12 * Ye - 12 - 9 * zn * Se + 6 * Ue * Ye + 2 * Oe) * Yo, nr[3] = (-12 * en * Ye + 8.04 * zn * Se - 114 * Ue * Ye + (72 + 36 * Se) + (3 * he - 72 * Ye + 162) * (zn - 168 * zn * Ye) - (12 * Oe + 25 * en) - (22 * zn * Oe + 36 * Ue * Se + 120 * Ue)) * Rh, nr[4] = 0, se = se - Ye + zn * Er * hn(nr, Er)) : (Se = Ye * Ye, (yv = Ye - zn * (Er = 1 / se) * (Ye - 1)) < se && (se -= yv)), u = Pe(e), Hn = 1)), J(k - Kr) < 1e-5 && Hn === 0 && (Tr = 0, se = e - Ct + (0.019753086419753086 + 0.007211444248481286 * (b = 1 / e)) * b, u = Pe(e), Hn = 1), e < 1 && Hn === 0 && (Tr = 0, se = R(p ? 1 / e * (M(k) + Pe(e + 1)) : 1 / e * (M(1 - k) + Pe(e + 1))), u = Pe(e), Hn = 1), Hn === 0) {
         if (Tr = 1, b = 1 / e, fe = _t * (Er = $e(2 * k)) / c(e * Kr), !(Er < ha)) return Ih("Warning: Overflow problems in one or more steps of the computation."), NaN;
         fe += (wh(fe) + (kh(fe) + Ah(fe) * b) * b) * b, se = e * Vt(fe), e0 = fe, s = 1 / (-c(e / zr) * R(-0.5 * e * e0 * e0) / Jo(e));
       }
       return Hn < 2 && (Xt = uh(se, e, Tr, n, r, u, s, p)), Xt;
-    }, ii = function(e, n, r) {
+    }, ai = function(e, n, r) {
       return i(e) || i(n) ? NaN : n < nn ? NaN : e > 1 || e < 0 ? NaN : r === !0 ? e === 0 ? H : e === 1 ? 0 : _o(n, 1 - e, e) : e === 0 ? 0 : e === 1 ? H : _o(n, e, 1 - e);
     }, qh = 5e-324, Fh = function(e, n, r, a) {
-      var s, u, p, k, b, V, O, B, A, W, z, K, $, ae, Q, fe, le, se, te, xe, Oe, he, Ue, en, Re, ne, Be, Ui;
-      return b = r < a ? ii(r, n, !0) : ii(a, n, !1), b /= e, W = ((ne = c(1 + ($ = n / e))) + 2) * (ne - 1) / (3 * ne), W += ((le = (fe = ne * ne) * ne) + 9 * fe + 21 * ne + 5) * (Re = b - $) / (36 * fe * (en = ne + 1)), W -= ((se = fe * fe) - 13 * le + 69 * fe + 167 * ne + 46) * (ae = Re * Re) / (1620 * (O = en * en) * le), W -= (7 * (te = le * fe) + 21 * se + 70 * le + 26 * fe - 93 * ne - 31) * (Q = ae * Re) / (6480 * (B = en * O) * se), z = (28 * se + 131 * le + 402 * fe + 581 * ne + 208) * (ne - 1) / (1620 * en * le), z -= (35 * (xe = le * le) - 154 * te - 623 * se - 1636 * le - 3983 * fe - 3514 * ne - 925) * Re / (12960 * O * se), z -= (2132 * (Oe = se * le) + 7915 * xe + 16821 * te + 35066 * se + 87490 * le + 141183 * fe + 95993 * ne + 21640) * ae / (816480 * te * B), K = -(3592 * Oe + 8375 * xe - 1323 * te - 29198 * se - 89578 * le - 154413 * fe - 116063 * ne - 29632) * (ne - 1) / (816480 * te * O), K -= (442043 * (Ue = te * se) + 2054169 * (he = se * se) + 3803094 * Oe + 3470754 * xe + 2141568 * te - 2393568 * se - 19904934 * le - 34714674 * fe - 23128299 * ne - 5253353) * Re / (146966400 * xe * B), (V = b + (W -= ae * ae * (75 * xe + 202 * te + 188 * se - 888 * le - 1345 * fe + 118 * ne + 138) / (272160 * (A = O * O) * te)) / e + (z -= (11053 * he + 53308 * Oe + 117010 * xe + 163924 * te + 116188 * se - 258428 * le - 677042 * fe - 481940 * ne - 105497) * Q / (14696640 * A * xe)) / (e * e) + (K -= (te * te * 116932 + 819281 * Ue + 2378172 * he + 4341330 * Oe + 6806004 * xe + 10622748 * te + 18739500 * se + 30651894 * le + 30869976 * fe + 15431867 * ne + 2919016) * ae / (146966400 * A * Oe)) / (e * e * e)) <= 0 && (V = qh), Be = V - $ * M(V) + (1 + $) * M(1 + $) - $, s = 1 / (1 + $), Ui = ((p = V < $ ? s : 0) + (k = V < $ ? 1 : s)) / 2, u = Go(Be, $), zo(u, Ui, p, k, 32, 100);
+      var s, u, p, k, b, V, O, B, A, W, z, K, $, ae, Q, fe, le, se, te, Se, Oe, he, Ue, en, Le, ne, Re, Ui;
+      return b = r < a ? ai(r, n, !0) : ai(a, n, !1), b /= e, W = ((ne = c(1 + ($ = n / e))) + 2) * (ne - 1) / (3 * ne), W += ((le = (fe = ne * ne) * ne) + 9 * fe + 21 * ne + 5) * (Le = b - $) / (36 * fe * (en = ne + 1)), W -= ((se = fe * fe) - 13 * le + 69 * fe + 167 * ne + 46) * (ae = Le * Le) / (1620 * (O = en * en) * le), W -= (7 * (te = le * fe) + 21 * se + 70 * le + 26 * fe - 93 * ne - 31) * (Q = ae * Le) / (6480 * (B = en * O) * se), z = (28 * se + 131 * le + 402 * fe + 581 * ne + 208) * (ne - 1) / (1620 * en * le), z -= (35 * (Se = le * le) - 154 * te - 623 * se - 1636 * le - 3983 * fe - 3514 * ne - 925) * Le / (12960 * O * se), z -= (2132 * (Oe = se * le) + 7915 * Se + 16821 * te + 35066 * se + 87490 * le + 141183 * fe + 95993 * ne + 21640) * ae / (816480 * te * B), K = -(3592 * Oe + 8375 * Se - 1323 * te - 29198 * se - 89578 * le - 154413 * fe - 116063 * ne - 29632) * (ne - 1) / (816480 * te * O), K -= (442043 * (Ue = te * se) + 2054169 * (he = se * se) + 3803094 * Oe + 3470754 * Se + 2141568 * te - 2393568 * se - 19904934 * le - 34714674 * fe - 23128299 * ne - 5253353) * Le / (146966400 * Se * B), (V = b + (W -= ae * ae * (75 * Se + 202 * te + 188 * se - 888 * le - 1345 * fe + 118 * ne + 138) / (272160 * (A = O * O) * te)) / e + (z -= (11053 * he + 53308 * Oe + 117010 * Se + 163924 * te + 116188 * se - 258428 * le - 677042 * fe - 481940 * ne - 105497) * Q / (14696640 * A * Se)) / (e * e) + (K -= (te * te * 116932 + 819281 * Ue + 2378172 * he + 4341330 * Oe + 6806004 * Se + 10622748 * te + 18739500 * se + 30651894 * le + 30869976 * fe + 15431867 * ne + 2919016) * ae / (146966400 * A * Oe)) / (e * e * e)) <= 0 && (V = qh), Re = V - $ * M(V) + (1 + $) * M(1 + $) - $, s = 1 / (1 + $), Ui = ((p = V < $ ? s : 0) + (k = V < $ ? 1 : s)) / 2, u = Go(Re, $), zo(u, Ui, p, k, 32, 100);
     }, Oh = function(e, n, r, a, s, u) {
       var p, k, b, V, O, B, A, W, z, K, $, ae, Q, fe, le, se;
       fe = 0, k = !1, B = n, O = ir(1, 1 - s), A = 0, b = z = Ee(1e7 * n, 1e7), V = z, W = u;
@@ -4296,8 +4296,8 @@ var Sv = { exports: {} };
         var u, p, k, b, V;
         return V = 1 - s, Dh(s, e, n, !0, a, u = [0, 0], 1, 0), b = u[0] - r, p = u[1], a && (p = -p), V === 0 && (V = 64 * er), s === 0 && (s = 64 * er), J(k = p * (-V * e + (n - 2) * s + 1)) < V * s * Rn && (k /= V * s), a && (k = -k), p === 0 && (p = (a ? -1 : 1) * er * 64), [b, p, k];
       };
-    }, Hh = 32, Wh = 1e3, Qr = [0, 0, 0, 0, 0], ai = function(e, n, r, a) {
-      var s, u, p, k, b, V, O, B, A, W, z, K, $, ae, Q, fe, le, se, te, xe, Oe, he, Ue, en, Re, ne, Be;
+    }, Hh = 32, Wh = 1e3, Qr = [0, 0, 0, 0, 0], ti = function(e, n, r, a) {
+      var s, u, p, k, b, V, O, B, A, W, z, K, $, ae, Q, fe, le, se, te, Se, Oe, he, Ue, en, Le, ne, Re;
       if (u = !1, a === 0) return [1, 0];
       if (r === 0) return [0, 1];
       if (e === 1) {
@@ -4305,21 +4305,21 @@ var Sv = { exports: {} };
         K = n, n = e, e = K, K = a, a = r, r = K, u = !0;
       }
       if (ne = 0, k = 0, V = 1, e === 0.5) {
-        if (n === 0.5) return ne = ar(r * Ir), ne *= ne, Be = ar(a * Ir), [ne, Be *= Be];
+        if (n === 0.5) return ne = ar(r * Ir), ne *= ne, Re = ar(a * Ir), [ne, Re *= Re];
         n > 0.5 && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u);
       }
-      if (n === 0.5 && e >= 0.5 && r !== 1) ne = zm(e, r, xe = {}), Be = xe.value;
+      if (n === 0.5 && e >= 0.5 && r !== 1) ne = zm(e, r, Se = {}), Re = Se.value;
       else {
-        if (n === 1) return r < a ? e > 1 ? (ne = C(r, 1 / e), Be = -qe(M(r) / e)) : Be = 1 - (ne = C(r, 1 / e)) : (ne = R(oe(-a) / e), Be = -qe(oe(-a) / e)), u && (K = Be, Be = ne, ne = K), [ne, Be];
-        if (e + n > 5) r > 0.5 && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u), A = Me(e, n), B = Ee(e, n), c(A) > B - A && A > 5 ? Be = 1 - (ne = jm(e, n, r)) : (b = x(c(e / (en = e + n))), (p = A / en) >= 0.2 && p <= 0.8 && en >= 10 ? Be = 1 - (ne = (z = C(r, 1 / e)) < 25e-4 && e + n < 200 ? z * C(e * ke(e, n), 1 / e) : th(r, en, b)) : (e < n && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u), W = 0, n < 2 && (W = ke(e, n)), W === 0 ? Be = 1 : ne = 1 - (Be = C(n * a * W, 1 / n))), Be > 1e-5 && (Be = 1 - (ne = Fh(e, n, r, a))));
+        if (n === 1) return r < a ? e > 1 ? (ne = C(r, 1 / e), Re = -qe(M(r) / e)) : Re = 1 - (ne = C(r, 1 / e)) : (ne = R(oe(-a) / e), Re = -qe(oe(-a) / e)), u && (K = Re, Re = ne, ne = K), [ne, Re];
+        if (e + n > 5) r > 0.5 && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u), A = Me(e, n), B = Ee(e, n), c(A) > B - A && A > 5 ? Re = 1 - (ne = jm(e, n, r)) : (b = x(c(e / (en = e + n))), (p = A / en) >= 0.2 && p <= 0.8 && en >= 10 ? Re = 1 - (ne = (z = C(r, 1 / e)) < 25e-4 && e + n < 200 ? z * C(e * ke(e, n), 1 / e) : th(r, en, b)) : (e < n && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u), W = 0, n < 2 && (W = ke(e, n)), W === 0 ? Re = 1 : ne = 1 - (Re = C(n * a * W, 1 / n))), Re > 1e-5 && (Re = 1 - (ne = Fh(e, n, r, a))));
         else if (e < 1 && n < 1) {
           if (fe = Qe(te = (1 - e) / (2 - e - n), e, n) - r, J(fe) / r < 3 * kn) return u ? [1 - te, te] : [te, 1 - te];
-          fe < 0 && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u, te = 1 - te), Be = 1 / (1 + (se = C(e * r * ke(e, n), 1 / e))), (ne = se / (1 + se)) > te && (ne = te), V = te;
-        } else e > 1 && n > 1 ? ($ = (n - 1) / (e + n - 2), Qe(te = (e - 1) / (e + n - 2), e, n) - r < 0 && (K = n, n = e, e = K, K = a, a = r, r = K, K = $, $ = te, te = K, u = !u), le = M(r * e * ke(e, n)) / e, Be = (ne = R(le)) < 0.9 ? 1 - ne : -qe(le), n < e && ne < 0.2 && (ae = e - 1, Q = n - 1, he = e * (Oe = e * e), Ue = n * n, Qr[0] = 0, Qr[1] = 1, Qr[2] = Q / ae, ae *= ae, Qr[3] = Q * (3 * e * n + 5 * n + Oe - e - 4) / (2 * (e + 2) * ae), ae *= e + 1, Qr[4] = Q * (33 * e * Ue + 31 * Ue + 8 * Oe * Ue - 30 * e * n - 47 * n + 11 * Oe * n + 6 * he * n + 18 + 4 * e - he + Oe * Oe - 10 * Oe), Qr[4] /= 3 * (e + 3) * (e + 2) * ae, ne = hn(Qr, ne)), ne > te && (ne = te), V = te) : (n < e && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u), C(r, 1 / e) < 0.5 ? ((ne = C(r * e * ke(e, n), 1 / e)) === 0 && (ne = er), Be = 1 - ne) : ((Be = C(1 - C(r, n * ke(e, n)), 1 / n)) === 0 && (Be = er), ne = 1 - Be));
+          fe < 0 && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u, te = 1 - te), Re = 1 / (1 + (se = C(e * r * ke(e, n), 1 / e))), (ne = se / (1 + se)) > te && (ne = te), V = te;
+        } else e > 1 && n > 1 ? ($ = (n - 1) / (e + n - 2), Qe(te = (e - 1) / (e + n - 2), e, n) - r < 0 && (K = n, n = e, e = K, K = a, a = r, r = K, K = $, $ = te, te = K, u = !u), le = M(r * e * ke(e, n)) / e, Re = (ne = R(le)) < 0.9 ? 1 - ne : -qe(le), n < e && ne < 0.2 && (ae = e - 1, Q = n - 1, he = e * (Oe = e * e), Ue = n * n, Qr[0] = 0, Qr[1] = 1, Qr[2] = Q / ae, ae *= ae, Qr[3] = Q * (3 * e * n + 5 * n + Oe - e - 4) / (2 * (e + 2) * ae), ae *= e + 1, Qr[4] = Q * (33 * e * Ue + 31 * Ue + 8 * Oe * Ue - 30 * e * n - 47 * n + 11 * Oe * n + 6 * he * n + 18 + 4 * e - he + Oe * Oe - 10 * Oe), Qr[4] /= 3 * (e + 3) * (e + 2) * ae, ne = hn(Qr, ne)), ne > te && (ne = te), V = te) : (n < e && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u), C(r, 1 / e) < 0.5 ? ((ne = C(r * e * ke(e, n), 1 / e)) === 0 && (ne = er), Re = 1 - ne) : ((Re = C(1 - C(r, n * ke(e, n)), 1 / n)) === 0 && (Re = er), ne = 1 - Re));
       }
-      return ne > 0.5 && (K = n, n = e, e = K, K = a, a = r, r = K, K = Be, Be = ne, ne = K, u = !u, Re = 1 - k, k = 1 - V, V = Re), k === 0 && (u ? ne < (k = kn) && (ne = k) : k = er, ne < k && (ne = k)), s = Hh, ne < 1e-50 && (e < 1 || n < 1) && (s *= 3, s /= 2), O = Uh(e, n, r < a ? r : a, r >= a), (ne = Oh(O, ne, k, V, s, Wh)) === k && (ne = 0), u ? [1 - ne, ne] : [ne, 1 - ne];
+      return ne > 0.5 && (K = n, n = e, e = K, K = a, a = r, r = K, K = Re, Re = ne, ne = K, u = !u, Le = 1 - k, k = 1 - V, V = Le), k === 0 && (u ? ne < (k = kn) && (ne = k) : k = er, ne < k && (ne = k)), s = Hh, ne < 1e-50 && (e < 1 || n < 1) && (s *= 3, s /= 2), O = Uh(e, n, r < a ? r : a, r >= a), (ne = Oh(O, ne, k, V, s, Wh)) === k && (ne = 0), u ? [1 - ne, ne] : [ne, 1 - ne];
     }, Oi = function(e, n, r, a) {
-      return i(e) || i(n) || i(r) ? NaN : n <= 0 || r <= 0 ? NaN : e < 0 || e > 1 ? NaN : a ? ai(n, r, 1 - e, e)[0] : ai(n, r, e, 1 - e)[0];
+      return i(e) || i(n) || i(r) ? NaN : n <= 0 || r <= 0 ? NaN : e < 0 || e > 1 ? NaN : a ? ti(n, r, 1 - e, e)[0] : ti(n, r, e, 1 - e)[0];
     }, es = function(e, n) {
       return e <= 0 || n <= 0 ? NaN : Oi(0.5, e, n);
     }, ns = function(e, n) {
@@ -4552,7 +4552,7 @@ var Sv = { exports: {} };
         return i(r) ? NaN : r < 0 ? 0 : r >= e ? 1 : (r = ye(r + 1e-7), Qe(n, r + 1, e - r, !0, !0));
       };
     });
-    var ti = Cs, As = function(e) {
+    var oi = Cs, As = function(e) {
       return e < H && e > j && pe(e);
     }, $h = Ge.isPrimitive, Is = function(e) {
       return $h(e) && As(e);
@@ -4634,14 +4634,14 @@ var Sv = { exports: {} };
       };
     });
     var Ys = Zs, _s = function(e, n, r, a) {
-      for (; e !== 0 && ti(e - 1, r, a) >= n; ) e -= 1;
+      for (; e !== 0 && oi(e - 1, r, a) >= n; ) e -= 1;
       return e;
     }, eu = function(e, n, r, a) {
-      for (e += 1; ti(e, r, a) < n; ) e += 1;
+      for (e += 1; oi(e, r, a) < n; ) e += 1;
       return e;
     }, nu = function(e, n, r) {
       var a, s, u, p, k;
-      return i(e) || i(n) || i(r) || e < 0 || e > 1 || r < 0 || r > 1 || !ee(n) || n === H ? NaN : e === 1 || r === 1 ? n : e === 0 || r === 0 || n === 0 ? 0 : (p = n * r, a = 1 / (u = c(n * r * (1 - r))), k = e < 0.5 ? -$e(2 * e) * Ve : $e(2 * (1 - e)) * Ve, s = jn(p + u * (k + a * (k * k - 1) / 6)), ti(s, n, r) >= e ? _s(s, e, n, r) : eu(s, e, n, r));
+      return i(e) || i(n) || i(r) || e < 0 || e > 1 || r < 0 || r > 1 || !ee(n) || n === H ? NaN : e === 1 || r === 1 ? n : e === 0 || r === 0 || n === 0 ? 0 : (p = n * r, a = 1 / (u = c(n * r * (1 - r))), k = e < 0.5 ? -$e(2 * e) * Ve : $e(2 * (1 - e)) * Ve, s = jn(p + u * (k + a * (k * k - 1) / 6)), oi(s, n, r) >= e ? _s(s, e, n, r) : eu(s, e, n, r));
     }, ru = function(e, n) {
       return i(e) || e < 0 || e > 1 ? NaN : n;
     };
@@ -4655,7 +4655,7 @@ var Sv = { exports: {} };
       var r, a, s;
       return i(e) || i(n) || !ee(e) || e === H || n < 0 || n > 1 ? N(NaN) : n === 0 || e === 0 ? iu(0) : n === 1 ? iu(e) : (s = e * n, a = c(e * n * (1 - n)), r = 1 / a, function(u) {
         var p, k;
-        return i(u) || u < 0 || u > 1 ? NaN : u === 0 ? 0 : u === 1 ? e : (k = u < 0.5 ? -$e(2 * u) * Ve : $e(2 * (1 - u)) * Ve, p = jn(s + a * (k + r * (k * k - 1) / 6)), ti(p, e, n) >= u ? _s(p, u, e, n) : eu(p, u, e, n));
+        return i(u) || u < 0 || u > 1 ? NaN : u === 0 ? 0 : u === 1 ? e : (k = u < 0.5 ? -$e(2 * u) * Ve : $e(2 * (1 - u)) * Ve, p = jn(s + a * (k + r * (k * k - 1) / 6)), oi(p, e, n) >= u ? _s(p, u, e, n) : eu(p, u, e, n));
       });
     });
     var au = nu, tu = qs.isPrimitive, ou = ta.isPrimitive;
@@ -4693,7 +4693,7 @@ var Sv = { exports: {} };
     }), m(En.prototype, "variance", function() {
       return Ws(this.n, this.p);
     }), o(En.prototype, "cdf", function(e) {
-      return ti(e, this.n, this.p);
+      return oi(e, this.n, this.p);
     }), o(En.prototype, "logpmf", function(e) {
       return Ks(e, this.n, this.p);
     }), o(En.prototype, "mgf", function(e) {
@@ -4752,11 +4752,11 @@ var Sv = { exports: {} };
       };
     });
     var du = hu, gu = function(e, n, r) {
-      return i(e) || i(r) || i(n) || r <= 0 ? NaN : -(_r + M(r) + oe(C((e - n) / r, 2)));
+      return i(e) || i(r) || i(n) || r <= 0 ? NaN : -(ei + M(r) + oe(C((e - n) / r, 2)));
     };
     o(gu, "factory", function(e, n) {
       return i(n) || i(e) || n <= 0 ? N(NaN) : function(r) {
-        return i(r) ? NaN : -(_r + M(n) + oe(C((r - e) / n, 2)));
+        return i(r) ? NaN : -(ei + M(n) + oe(C((r - e) / n, 2)));
       };
     });
     var Nu = gu, yu = function(e, n, r) {
@@ -4841,22 +4841,22 @@ var Sv = { exports: {} };
     var Pu = Eu, Vu = function(e) {
       var n;
       return i(e) || e <= 0 ? NaN : Pe(n = e / 2) + 0.5 * (e - De - (e - 1) * Qn(n));
-    }, oi = function(e) {
+    }, si = function(e) {
       return i(e) || e < 0 ? NaN : Ve * me((e + 1) / 2) / me(e / 2);
     }, Ma = function(e) {
       var n;
-      return i(e) || e < 0 ? NaN : e - (n = oi(e)) * n;
+      return i(e) || e < 0 ? NaN : e - (n = si(e)) * n;
     }, Lt = function(e) {
       var n, r;
-      return i(e) || e <= 0 ? NaN : oi(e) / ((n = (r = c(Ma(e))) * r) * r) * (1 - 2 * n);
+      return i(e) || e <= 0 ? NaN : si(e) / ((n = (r = c(Ma(e))) * r) * r) * (1 - 2 * n);
     }, Cu = function(e) {
       var n, r;
-      return i(e) || e <= 0 ? NaN : (n = Ma(e), r = c(n), 2 / n * (1 - oi(e) * r * Lt(e) - n));
+      return i(e) || e <= 0 ? NaN : (n = Ma(e), r = c(n), 2 / n * (1 - si(e) * r * Lt(e) - n));
     }, Au = function(e) {
       return i(e) || e < 1 ? NaN : c(e - 1);
     }, Iu = function(e) {
       var n;
-      return i(e) || e < 0 ? NaN : (n = oi(e), c(e - n * n));
+      return i(e) || e < 0 ? NaN : (n = si(e), c(e - n * n));
     }, Bu = function(e, n) {
       var r, a;
       return i(e) || i(n) || n < 0 ? NaN : n === 0 ? e === 0 ? H : j : e < 0 || e === H ? j : (r = (1 - (a = n / 2)) * De + (n - 1) * M(e) - e * e / 2, r -= Pe(a));
@@ -4896,11 +4896,11 @@ var Sv = { exports: {} };
       });
     });
     var Ou = qu, Du = function(e, n, r) {
-      return i(n) || i(r) || i(e) || n < 0 || r <= 0 || e < 0 || e > 1 ? NaN : n === 0 ? 0 : 1 / r * ii(e, n);
+      return i(n) || i(r) || i(e) || n < 0 || r <= 0 || e < 0 || e > 1 ? NaN : n === 0 ? 0 : 1 / r * ai(e, n);
     }, gd = Sr.factory;
     o(Du, "factory", function(e, n) {
       return i(e) || i(n) || e < 0 || n <= 0 ? N(NaN) : e === 0 ? gd(0) : function(r) {
-        return i(r) || r < 0 || r > 1 ? NaN : 1 / n * ii(r, e);
+        return i(r) || r < 0 || r > 1 ? NaN : 1 / n * ai(r, e);
       };
     });
     var Ur = Du, Uu = function(e, n) {
@@ -4931,7 +4931,7 @@ var Sv = { exports: {} };
     }), m(qn.prototype, "kurtosis", function() {
       return Cu(this.k);
     }), m(qn.prototype, "mean", function() {
-      return oi(this.k);
+      return si(this.k);
     }), m(qn.prototype, "mode", function() {
       return Au(this.k);
     }), m(qn.prototype, "skewness", function() {
@@ -5006,9 +5006,9 @@ var Sv = { exports: {} };
         return i(r) ? NaN : r < 0 || r === H ? 0 : i1(e, r * n) * n;
       };
     });
-    var si = a1, t1 = function(e, n) {
-      return si(e, n / 2, 0.5);
-    }, kd = si.factory;
+    var ui = a1, t1 = function(e, n) {
+      return ui(e, n / 2, 0.5);
+    }, kd = ui.factory;
     o(t1, "factory", function(e) {
       return kd(e / 2, 0.5);
     });
@@ -5059,20 +5059,20 @@ var Sv = { exports: {} };
         return i(r) ? NaN : r < 0 || r === H ? j : M(r1(e, r * n)) + M(n);
       };
     });
-    var ui = u1, f1 = function(e, n) {
-      return ui(e, n / 2, 0.5);
-    }, Pd = ui.factory;
+    var fi = u1, f1 = function(e, n) {
+      return fi(e, n / 2, 0.5);
+    }, Pd = fi.factory;
     o(f1, "factory", function(e) {
       return Pd(e / 2, 0.5);
     });
     var Vd = f1, c1 = function(e, n, r) {
       var a;
-      return i(e) || i(n) || i(r) || r < 0 ? NaN : r === 0 ? e < n ? 0 : 1 : e < n - r ? 0 : e > n + r ? 1 : (1 + (a = (e - n) / r) + ei(a) / T) / 2;
+      return i(e) || i(n) || i(r) || r < 0 ? NaN : r === 0 ? e < n ? 0 : 1 : e < n - r ? 0 : e > n + r ? 1 : (1 + (a = (e - n) / r) + ni(a) / T) / 2;
     }, Cd = Mr.factory;
     o(c1, "factory", function(e, n) {
       return i(e) || i(n) || n < 0 ? N(NaN) : n === 0 ? Cd(e) : function(r) {
         var a;
-        return i(r) ? NaN : r < e - n ? 0 : r > e + n ? 1 : (1 + (a = (r - e) / n) + ei(a) / T) / 2;
+        return i(r) ? NaN : r < e - n ? 0 : r > e + n ? 1 : (1 + (a = (r - e) / n) + ni(a) / T) / 2;
       };
     });
     var Ft = c1, or = 9.869604401089358, l1 = function(e, n) {
@@ -5092,7 +5092,7 @@ var Sv = { exports: {} };
       return i(e) || i(n) || n <= 0 ? NaN : n * n * (1 / 3 - 2 / or);
     }, N1 = function(e, n, r) {
       var a;
-      return i(e) || i(n) || i(r) || r < 0 ? NaN : r === 0 ? e < n ? j : 0 : e < n - r ? j : e > n + r ? 0 : M((1 + (a = (e - n) / r) + ei(a) / T) / 2);
+      return i(e) || i(n) || i(r) || r < 0 ? NaN : r === 0 ? e < n ? j : 0 : e < n - r ? j : e > n + r ? 0 : M((1 + (a = (e - n) / r) + ni(a) / T) / 2);
     }, y1 = function(e, n) {
       return i(e) || i(n) ? NaN : e < n ? j : 0;
     };
@@ -5101,11 +5101,11 @@ var Sv = { exports: {} };
         return i(n) ? NaN : n < e ? j : 0;
       };
     });
-    var fi = y1, Ad = fi.factory;
+    var ci = y1, Ad = ci.factory;
     o(N1, "factory", function(e, n) {
       return i(e) || i(n) || n < 0 ? N(NaN) : n === 0 ? Ad(e) : function(r) {
         var a;
-        return i(r) ? NaN : r < e - n ? j : r > e + n ? 0 : M((1 + (a = (r - e) / n) + ei(a) / T) / 2);
+        return i(r) ? NaN : r < e - n ? j : r > e + n ? 0 : M((1 + (a = (r - e) / n) + ni(a) / T) / 2);
       };
     });
     var b1 = N1, w1 = 9007199254740991;
@@ -5256,7 +5256,7 @@ var Sv = { exports: {} };
     }), o(an.prototype, "cdf", function(e) {
       return Mr(e, this.mu);
     }), o(an.prototype, "logcdf", function(e) {
-      return fi(e, this.mu);
+      return ci(e, this.mu);
     }), o(an.prototype, "logpdf", function(e) {
       return Or(e, this.mu);
     }), o(an.prototype, "logpmf", function(e) {
@@ -5414,8 +5414,8 @@ var Sv = { exports: {} };
     }, hf = function(e, n) {
       return !$n(e) || i(n) || n <= 0 ? NaN : e / (n * n);
     }, df = function(e, n, r) {
-      return ee(n) ? ui(e, n, r) : NaN;
-    }, Kd = ui.factory;
+      return ee(n) ? fi(e, n, r) : NaN;
+    }, Kd = fi.factory;
     o(df, "factory", function(e, n) {
       return ee(e) ? Kd(e, n) : N(NaN);
     });
@@ -5428,8 +5428,8 @@ var Sv = { exports: {} };
       };
     });
     var yf = Nf, bf = function(e, n, r) {
-      return ee(n) ? si(e, n, r) : NaN;
-    }, Qd = si.factory;
+      return ee(n) ? ui(e, n, r) : NaN;
+    }, Qd = ui.factory;
     o(bf, "factory", function(e, n) {
       return ee(e) ? Qd(e, n) : N(NaN);
     });
@@ -5659,12 +5659,12 @@ var Sv = { exports: {} };
     });
     var i2 = r2, a2 = function(e, n, r) {
       var a;
-      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 || e < 0 || e > 1 ? NaN : r * (a = ai(n / 2, r / 2, e, 1 - e))[0] / (n * a[1]);
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 || e < 0 || e > 1 ? NaN : r * (a = ti(n / 2, r / 2, e, 1 - e))[0] / (n * a[1]);
     };
     o(a2, "factory", function(e, n) {
       return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
         var a;
-        return i(r) || r < 0 || r > 1 ? NaN : (a = ai(e / 2, n / 2, r, 1 - r), n * a[0] / (e * a[1]));
+        return i(r) || r < 0 || r > 1 ? NaN : (a = ti(e / 2, n / 2, r, 1 - r), n * a[0] / (e * a[1]));
       };
     });
     var t2 = a2, Pa = He.isPrimitive;
@@ -5842,7 +5842,7 @@ var Sv = { exports: {} };
       return e <= 0 || n <= 0 ? NaN : e / (n * n);
     }, A2 = function(e, n, r) {
       return M(kr(e, n, r));
-    }, ng = fi.factory;
+    }, ng = ci.factory;
     o(A2, "factory", function(e, n) {
       return i(e) || i(n) || e < 0 || n <= 0 ? N(NaN) : e === 0 ? ng(0) : function(r) {
         return r <= 0 ? j : r === H ? 0 : M(fr(r * n, e));
@@ -5895,11 +5895,11 @@ var Sv = { exports: {} };
     }), o(yn.prototype, "logcdf", function(e) {
       return I2(e, this.alpha, this.beta);
     }), o(yn.prototype, "logpdf", function(e) {
-      return ui(e, this.alpha, this.beta);
+      return fi(e, this.alpha, this.beta);
     }), o(yn.prototype, "mgf", function(e) {
       return R2(e, this.alpha, this.beta);
     }), o(yn.prototype, "pdf", function(e) {
-      return si(e, this.alpha, this.beta);
+      return ui(e, this.alpha, this.beta);
     }), o(yn.prototype, "quantile", function(e) {
       return Ur(e, this.alpha, this.beta);
     });
@@ -5928,7 +5928,7 @@ var Sv = { exports: {} };
     }, sg = 18014398509481984, H2 = 1.4426950407214463, ug = 16751713164886512e-26, fg = 1048575, cg = 2146435072, lg = 1048576, vg = 1072693248, pg = 2147483647, Dt = [0, 0], mg = function(e) {
       var n, r, a, s, u, p;
       if (i(e) || e < 0) return NaN;
-      if (Yr(Dt, e), r = Dt[0], a = Dt[1], p = 0, r < lg) {
+      if (_r(Dt, e), r = Dt[0], a = Dt[1], p = 0, r < lg) {
         if (!(r & pg | a)) return j;
         p -= 54, r = Ke(e *= sg);
       }
@@ -6247,31 +6247,31 @@ var Sv = { exports: {} };
         return s;
       };
     });
-    var Uc = Dc, ci = Cg.isPrimitive;
+    var Uc = Dc, li = Cg.isPrimitive;
     function Zn(e, n, r) {
       if (!(this instanceof Zn)) return new Zn(e, n, r);
-      if (!ci(e)) throw new TypeError("invalid argument. Population size `N` must be a nonnegative integer. Value: `" + e + "`");
-      if (!ci(n)) throw new TypeError("invalid argument. Subpopulation size `K` must be a nonnegative integer. Value: `" + n + "`");
-      if (!ci(r)) throw new TypeError("invalid argument. Number of draws `n` must be a nonnegative integer. Value: `" + r + "`");
+      if (!li(e)) throw new TypeError("invalid argument. Population size `N` must be a nonnegative integer. Value: `" + e + "`");
+      if (!li(n)) throw new TypeError("invalid argument. Subpopulation size `K` must be a nonnegative integer. Value: `" + n + "`");
+      if (!li(r)) throw new TypeError("invalid argument. Number of draws `n` must be a nonnegative integer. Value: `" + r + "`");
       if (n > e) throw new RangeError("invalid arguments. Subpopulation size `K` must be smaller than or equal to `N`.");
       if (r > e) throw new RangeError("invalid arguments. Number of draws `n` must be smaller than or equal to `N`.");
       return l(this, "N", { configurable: !1, enumerable: !0, get: function() {
         return e;
       }, set: function(a) {
-        if (!ci(a)) throw new TypeError("invalid value. Must be a nonnegative integer. Value: `" + a + "`");
+        if (!li(a)) throw new TypeError("invalid value. Must be a nonnegative integer. Value: `" + a + "`");
         if (n > a) throw new RangeError("invalid value. Must be larger than or equal to `K`. Value: `" + a + "`");
         if (r > a) throw new RangeError("invalid value. Must be larger than or equal to `n`. Value: `" + a + "`");
         e = a;
       } }), l(this, "K", { configurable: !1, enumerable: !0, get: function() {
         return n;
       }, set: function(a) {
-        if (!ci(a)) throw new TypeError("invalid value. Must be a nonnegative integer. Value: `" + a + "`");
+        if (!li(a)) throw new TypeError("invalid value. Must be a nonnegative integer. Value: `" + a + "`");
         if (a > e) throw new RangeError("invalid value. Must be smaller than or equal to `N`. Value: `" + a + "`");
         n = a;
       } }), l(this, "n", { configurable: !1, enumerable: !0, get: function() {
         return r;
       }, set: function(a) {
-        if (!ci(a)) throw new TypeError("invalid value. Must be a nonnegative integer. Value: `" + a + "`");
+        if (!li(a)) throw new TypeError("invalid value. Must be a nonnegative integer. Value: `" + a + "`");
         if (a > e) throw new RangeError("invalid value. Must be smaller than or equal to `N`. Value: `" + a + "`");
         r = a;
       } }), this;
@@ -6315,11 +6315,11 @@ var Sv = { exports: {} };
     }, Kc = function(e, n) {
       return e <= 0 || n <= 0 ? NaN : n / (e + 1);
     }, Qc = function(e, n, r) {
-      return i(n) || i(r) || i(e) || n <= 0 || r <= 0 || e < 0 || e > 1 ? NaN : r / ii(e, n, !0);
+      return i(n) || i(r) || i(e) || n <= 0 || r <= 0 || e < 0 || e > 1 ? NaN : r / ai(e, n, !0);
     };
     o(Qc, "factory", function(e, n) {
       return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
-        return i(r) || r < 0 || r > 1 ? NaN : n / ii(r, e, !0);
+        return i(r) || r < 0 || r > 1 ? NaN : n / ai(r, e, !0);
       };
     });
     var $c = Qc, Zc = function(e, n, r) {
@@ -6745,7 +6745,7 @@ var Sv = { exports: {} };
       return e <= 18 ? oe(R(e)) : e > 33.3 ? e : e + R(-e);
     }, h3 = function(e, n, r) {
       return i(e) || i(n) || i(r) || r < 0 ? NaN : r === 0 ? e < n ? j : 0 : -m3(-(e - n) / r);
-    }, Hg = fi.factory;
+    }, Hg = ci.factory;
     o(h3, "factory", function(e, n) {
       return i(e) || i(n) || n < 0 ? N(NaN) : n === 0 ? Hg(e) : function(r) {
         return i(r) ? NaN : -m3(-(r - e) / n);
@@ -6763,7 +6763,7 @@ var Sv = { exports: {} };
       });
     });
     var N3 = g3, y3 = function(e) {
-      return i(e) ? NaN : Yn(e) ? 0 : e === 0 ? 1 : ei(e) / (T * e);
+      return i(e) ? NaN : Yn(e) ? 0 : e === 0 ? 1 : ni(e) / (T * e);
     }, b3 = function(e, n, r) {
       var a;
       return i(a = r * e) || i(n) || r < 0 || J(a) > 1 ? NaN : R(n * e) / y3(a);
@@ -6851,12 +6851,12 @@ var Sv = { exports: {} };
         return i(a) ? NaN : 0.5 * Rr(-(a - e) / r);
       });
     });
-    var li = P3, V3 = function(e, n, r) {
-      return i(e) || i(n) || i(r) || r <= 0 ? NaN : e <= 0 ? 0 : li(M(e), n, r);
+    var vi = P3, V3 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || r <= 0 ? NaN : e <= 0 ? 0 : vi(M(e), n, r);
     };
     o(V3, "factory", function(e, n) {
       return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
-        return i(r) ? NaN : r <= 0 ? 0 : li(M(r), e, n);
+        return i(r) ? NaN : r <= 0 ? 0 : vi(M(r), e, n);
       };
     });
     var C3 = V3, A3 = function(e, n) {
@@ -6989,7 +6989,7 @@ var Sv = { exports: {} };
         return i(r) ? NaN : r < 0 ? 0 : r === H ? 1 : (a = ye(r + 1e-7), Qe(n, e, a + 1));
       };
     });
-    var vi = Z3, J3 = function(e, n) {
+    var pi = Z3, J3 = function(e, n) {
       return i(e) || i(n) || e <= 0 || n < 0 || n > 1 ? NaN : 6 / e + n * n / ((1 - n) * e);
     }, X3 = function(e, n) {
       return i(e) || i(n) ? NaN : e <= 0 || n < 0 || n > 1 ? NaN : (1 - n) * e / n;
@@ -7081,20 +7081,20 @@ var Sv = { exports: {} };
     });
     var f6 = u6, Oa = { left: function(e, n, r, a) {
       for (; ; ) {
-        if (e === 0 || vi(e - 1, r, a) < n) return e;
+        if (e === 0 || pi(e - 1, r, a) < n) return e;
         e -= 1;
       }
     }, right: function(e, n, r, a) {
-      for (; ; ) if (vi(e += 1, r, a) >= n) return e;
+      for (; ; ) if (pi(e += 1, r, a) >= n) return e;
     } }, c6 = function(e, n, r) {
       var a, s, u, p, k, b;
-      return i(n) || i(r) || i(e) || n <= 0 || r < 0 || r > 1 || e < 0 || e > 1 ? NaN : e === 0 ? 0 : e === 1 ? H : (p = n * (b = 1 - r) / r, a = 1 / (u = c(n * b) / r), k = e < 0.5 ? -$e(2 * e) * Ve : $e(2 * (1 - e)) * Ve, s = jn(p + u * (k + a * (k * k - 1) / 6)), vi(s, n, r) >= e ? Oa.left(s, e, n, r) : Oa.right(s, e, n, r));
+      return i(n) || i(r) || i(e) || n <= 0 || r < 0 || r > 1 || e < 0 || e > 1 ? NaN : e === 0 ? 0 : e === 1 ? H : (p = n * (b = 1 - r) / r, a = 1 / (u = c(n * b) / r), k = e < 0.5 ? -$e(2 * e) * Ve : $e(2 * (1 - e)) * Ve, s = jn(p + u * (k + a * (k * k - 1) / 6)), pi(s, n, r) >= e ? Oa.left(s, e, n, r) : Oa.right(s, e, n, r));
     };
     o(c6, "factory", function(e, n) {
       var r, a, s, u;
       return i(e) || i(n) || e <= 0 || n < 0 || n > 1 ? N(NaN) : (s = e * (u = 1 - n) / n, a = c(e * u) / n, r = (2 / n - 1) / a, function(p) {
         var k, b;
-        return i(p) || p < 0 || p > 1 ? NaN : p === 0 ? 0 : p === 1 ? H : (b = p < 0.5 ? -$e(2 * p) * Ve : $e(2 * (1 - p)) * Ve, k = jn(s + a * (b + r * (b * b - 1) / 6)), vi(k, e, n) >= p ? Oa.left(k, p, e, n) : Oa.right(k, p, e, n));
+        return i(p) || p < 0 || p > 1 ? NaN : p === 0 ? 0 : p === 1 ? H : (b = p < 0.5 ? -$e(2 * p) * Ve : $e(2 * (1 - p)) * Ve, k = jn(s + a * (b + r * (b * b - 1) / 6)), pi(k, e, n) >= p ? Oa.left(k, p, e, n) : Oa.right(k, p, e, n));
       });
     });
     var l6 = c6, v6 = ta.isPrimitive, p6 = He.isPrimitive;
@@ -7130,7 +7130,7 @@ var Sv = { exports: {} };
     }), m(Un.prototype, "variance", function() {
       return n6(this.r, this.p);
     }), o(Un.prototype, "cdf", function(e) {
-      return vi(e, this.r, this.p);
+      return pi(e, this.r, this.p);
     }), o(Un.prototype, "logpmf", function(e) {
       return a6(e, this.r, this.p);
     }), o(Un.prototype, "mgf", function(e) {
@@ -7221,7 +7221,7 @@ var Sv = { exports: {} };
     }), m(bn.prototype, "variance", function() {
       return w6(this.mu, this.sigma);
     }), o(bn.prototype, "cdf", function(e) {
-      return li(e, this.mu, this.sigma);
+      return vi(e, this.mu, this.sigma);
     }), o(bn.prototype, "logpdf", function(e) {
       return S6(e, this.mu, this.sigma);
     }), o(bn.prototype, "mgf", function(e) {
@@ -7346,7 +7346,7 @@ var Sv = { exports: {} };
         return i(n) ? NaN : n < 0 ? 0 : n === H ? 1 : fr(e, ye(n) + 1, !0, !0);
       };
     });
-    var pi = Q6, $6 = function(e) {
+    var mi = Q6, $6 = function(e) {
       var n, r;
       return i(e) || e < 0 ? NaN : e === 0 ? 0 : (n = function(a) {
         var s, u;
@@ -7396,20 +7396,20 @@ var Sv = { exports: {} };
     });
     var s5 = o5, Ua = { left: function(e, n, r) {
       for (; ; ) {
-        if (e === 0 || pi(e - 1, r) < n) return e;
+        if (e === 0 || mi(e - 1, r) < n) return e;
         e -= 1;
       }
     }, right: function(e, n, r) {
-      for (; ; ) if (pi(e += 1, r) >= n) return e;
+      for (; ; ) if (mi(e += 1, r) >= n) return e;
     } }, u5 = function(e, n) {
       var r, a, s, u;
-      return i(n) || n < 0 ? NaN : i(e) || e < 0 || e > 1 ? NaN : n === 0 || e === 0 ? 0 : e === 1 ? H : (r = 1 / (s = c(n)), u = e < 0.5 ? -$e(2 * e) * Ve : $e(2 * (1 - e)) * Ve, a = jn(n + s * (u + r * (u * u - 1) / 6)), pi(a, n) >= e ? Ua.left(a, e, n) : Ua.right(a, e, n));
+      return i(n) || n < 0 ? NaN : i(e) || e < 0 || e > 1 ? NaN : n === 0 || e === 0 ? 0 : e === 1 ? H : (r = 1 / (s = c(n)), u = e < 0.5 ? -$e(2 * e) * Ve : $e(2 * (1 - e)) * Ve, a = jn(n + s * (u + r * (u * u - 1) / 6)), mi(a, n) >= e ? Ua.left(a, e, n) : Ua.right(a, e, n));
     }, gN = Sr.factory;
     o(u5, "factory", function(e) {
       var n, r;
       return i(e) || e < 0 ? N(NaN) : e === 0 ? gN(0) : (r = c(e), n = 1 / r, function(a) {
         var s, u;
-        return i(a) || a < 0 || a > 1 ? NaN : a === 0 ? 0 : a === 1 ? H : (u = a < 0.5 ? -$e(2 * a) * Ve : $e(2 * (1 - a)) * Ve, s = jn(e + r * (u + n * (u * u - 1) / 6)), pi(s, e) >= a ? Ua.left(s, a, e) : Ua.right(s, a, e));
+        return i(a) || a < 0 || a > 1 ? NaN : a === 0 ? 0 : a === 1 ? H : (u = a < 0.5 ? -$e(2 * a) * Ve : $e(2 * (1 - a)) * Ve, s = jn(e + r * (u + n * (u * u - 1) / 6)), mi(s, e) >= a ? Ua.left(s, a, e) : Ua.right(s, a, e));
       });
     });
     var f5 = u5, c5 = He.isPrimitive;
@@ -7443,7 +7443,7 @@ var Sv = { exports: {} };
     }), m(wn.prototype, "variance", function() {
       return n5(this.lambda);
     }), o(wn.prototype, "cdf", function(e) {
-      return pi(e, this.lambda);
+      return mi(e, this.lambda);
     }), o(wn.prototype, "logpmf", function(e) {
       return i5(e, this.lambda);
     }), o(wn.prototype, "mgf", function(e) {
@@ -7482,7 +7482,7 @@ var Sv = { exports: {} };
     }, w5 = function(e, n) {
       var r, a;
       return i(e) || i(n) || n < 0 ? NaN : n === 0 ? e < 0 ? j : 0 : e < 0 ? j : (r = C(n, 2), (a = -C(e, 2) / (2 * r)) < pr ? oe(-R(a)) : M(-qe(a)));
-    }, MN = fi.factory;
+    }, MN = ci.factory;
     o(w5, "factory", function(e) {
       var n;
       return i(e) || e < 0 ? N(NaN) : e === 0 ? MN(0) : (n = C(e, 2), function(r) {
@@ -7575,7 +7575,7 @@ var Sv = { exports: {} };
     }), o(cn.prototype, "quantile", function(e) {
       return I5(e, this.sigma);
     });
-    var HN = cn, mi = function(e) {
+    var HN = cn, hi = function(e) {
       return e == e && e > j && e < H;
     }, WN = /./, R5 = function(e) {
       return typeof e == "boolean";
@@ -7652,7 +7652,7 @@ var Sv = { exports: {} };
       return n === 0 ? e === 0 ? 1 : 0 : (r = n * (n + 1) / 2, e < 0 || e > r ? 0 : (e > r / 2 && (e = r - e), Kt(e - n, n - 1) + Kt(e, n - 1)));
     }), W5 = function(e, n) {
       var r, a, s;
-      if (i(e) || !$n(n) || !mi(n)) return NaN;
+      if (i(e) || !$n(n) || !hi(n)) return NaN;
       if (e < 0) return 0;
       if ((e = jn(e)) >= n * (n + 1) / 2) return 1;
       for (r = R(-n * De), s = 0, a = 0; a <= e; a++) s += H5(a, n) * r;
@@ -7660,7 +7660,7 @@ var Sv = { exports: {} };
     };
     o(W5, "factory", function(e) {
       var n, r;
-      return $n(e) && mi(e) ? (r = R(-e * De), n = e * (e + 1) / 2, function(a) {
+      return $n(e) && hi(e) ? (r = R(-e * De), n = e * (e + 1) / 2, function(a) {
         var s, u;
         if (i(a)) return NaN;
         if (a < 0) return 0;
@@ -7673,11 +7673,11 @@ var Sv = { exports: {} };
       var r;
       return n === 0 ? e === 0 ? 1 : 0 : (r = n * (n + 1) / 2, e < 0 || e > r ? 0 : (e > r / 2 && (e = r - e), $t(e - n, n - 1) + $t(e, n - 1)));
     }), z5 = function(e, n) {
-      return !i(e) && $n(n) && mi(n) ? e < 0 || e > n * (n + 1) / 2 ? 0 : R(M(G5(e, n)) - n * De) : NaN;
+      return !i(e) && $n(n) && hi(n) ? e < 0 || e > n * (n + 1) / 2 ? 0 : R(M(G5(e, n)) - n * De) : NaN;
     };
     o(z5, "factory", function(e) {
       var n;
-      return $n(e) && mi(e) ? (n = e * (e + 1) / 2, function(r) {
+      return $n(e) && hi(e) ? (n = e * (e + 1) / 2, function(r) {
         return i(r) ? NaN : r < 0 || r > n ? 0 : R(M(G5(r, e)) - e * De);
       }) : N(NaN);
     });
@@ -7686,7 +7686,7 @@ var Sv = { exports: {} };
       return n === 0 ? e === 0 ? 1 : 0 : (r = n * (n + 1) / 2, e < 0 || e > r ? 0 : (e > r / 2 && (e = r - e), Zt(e - n, n - 1) + Zt(e, n - 1)));
     }), K5 = function(e, n) {
       var r, a, s;
-      if (i(n) || !$n(n) || !mi(n)) return NaN;
+      if (i(n) || !$n(n) || !hi(n)) return NaN;
       if (i(e) || e < 0 || e > 1) return NaN;
       if (e === 0) return 0;
       if (e === 1) return n * (n + 1) / 2;
@@ -7695,7 +7695,7 @@ var Sv = { exports: {} };
     };
     o(K5, "factory", function(e) {
       var n;
-      return !i(e) && $n(e) && mi(e) ? (n = R(-e * De), function(r) {
+      return !i(e) && $n(e) && hi(e) ? (n = R(-e * De), function(r) {
         var a, s;
         if (i(r) || r < 0 || r > 1) return NaN;
         if (r === 0) return 0;
@@ -7763,12 +7763,12 @@ var Sv = { exports: {} };
     });
     var u4 = s4, f4 = function(e, n) {
       var r, a;
-      return i(n) || i(e) || n <= 0 || e < 0 || e > 1 ? NaN : (a = ai(n / 2, 0.5, 2 * (r = e > 0.5 ? 1 - e : e), 1 - 2 * r), Nr(e - 0.5) * c(n * a[1] / a[0]));
+      return i(n) || i(e) || n <= 0 || e < 0 || e > 1 ? NaN : (a = ti(n / 2, 0.5, 2 * (r = e > 0.5 ? 1 - e : e), 1 - 2 * r), Nr(e - 0.5) * c(n * a[1] / a[0]));
     };
     o(f4, "factory", function(e) {
       return i(e) || e <= 0 ? N(NaN) : function(n) {
         var r, a;
-        return i(n) || n < 0 || n > 1 ? NaN : (a = ai(e / 2, 0.5, 2 * (r = n > 0.5 ? 1 - n : n), 1 - 2 * r), Nr(n - 0.5) * c(e * a[1] / a[0]));
+        return i(n) || n < 0 || n > 1 ? NaN : (a = ti(e / 2, 0.5, 2 * (r = n > 0.5 ? 1 - n : n), 1 - 2 * r), Nr(n - 0.5) * c(e * a[1] / a[0]));
       };
     });
     var c4 = f4, l4 = He.isPrimitive;
@@ -7889,32 +7889,32 @@ var Sv = { exports: {} };
         return i(p) || p < 0 || p > 1 ? NaN : p < a ? e + c(s * p) : p > a ? n - c(u * (1 - p)) : r;
       });
     });
-    var A4 = C4, hi = Ge.isPrimitive;
+    var A4 = C4, di = Ge.isPrimitive;
     function ln() {
       var e, n, r;
       if (!(this instanceof ln)) return arguments.length === 0 ? new ln() : new ln(arguments[0], arguments[1], arguments[2]);
       if (arguments.length) {
-        if (e = arguments[0], n = arguments[1], r = arguments[2], !hi(e) || i(e)) throw new TypeError("invalid argument. Minimum support `a` must be a number primitive. Value: `" + e + "`");
-        if (!hi(n) || i(n)) throw new TypeError("invalid argument. Maximum support `b` must be a number primitive. Value: `" + n + "`");
-        if (!hi(r) || i(r)) throw new TypeError("invalid argument. Mode `c` must be a number primitive. Value: `" + r + "`");
+        if (e = arguments[0], n = arguments[1], r = arguments[2], !di(e) || i(e)) throw new TypeError("invalid argument. Minimum support `a` must be a number primitive. Value: `" + e + "`");
+        if (!di(n) || i(n)) throw new TypeError("invalid argument. Maximum support `b` must be a number primitive. Value: `" + n + "`");
+        if (!di(r) || i(r)) throw new TypeError("invalid argument. Mode `c` must be a number primitive. Value: `" + r + "`");
         if (!(e <= r && r <= n)) throw new RangeError("invalid arguments. Parameters must satisfy `a <= c <= b`. Value: `" + e + "," + n + "," + r + "`");
       } else e = 0, n = 1, r = 0.5;
       return l(this, "a", { configurable: !1, enumerable: !0, get: function() {
         return e;
       }, set: function(a) {
-        if (!hi(a) || i(a)) throw new TypeError("invalid value. Must be a number primitive. Value: `" + a + "`");
+        if (!di(a) || i(a)) throw new TypeError("invalid value. Must be a number primitive. Value: `" + a + "`");
         if (a > n || a > r) throw new RangeError("invalid value. Must be smaller than or equal to `b` and `c`. Value: `" + a + "`");
         e = a;
       } }), l(this, "b", { configurable: !1, enumerable: !0, get: function() {
         return n;
       }, set: function(a) {
-        if (!hi(a) || i(a)) throw new TypeError("invalid value. Must be a number primitive. Value: `" + a + "`");
+        if (!di(a) || i(a)) throw new TypeError("invalid value. Must be a number primitive. Value: `" + a + "`");
         if (e > a || r > a) throw new RangeError("invalid value. Must be greater than or equal to `a` and `c`. Value: `" + a + "`");
         n = a;
       } }), l(this, "c", { configurable: !1, enumerable: !0, get: function() {
         return r;
       }, set: function(a) {
-        if (!hi(a) || i(a)) throw new TypeError("invalid value. Must be a number primitive. Value: `" + a + "`");
+        if (!di(a) || i(a)) throw new TypeError("invalid value. Must be a number primitive. Value: `" + a + "`");
         if (e > a || n < a) throw new RangeError("invalid value. Must be greater than or equal to `a` and smaller than or equal to `b`. Value: `" + a + "`");
         r = a;
       } }), this;
@@ -7948,10 +7948,10 @@ var Sv = { exports: {} };
     }), o(ln.prototype, "quantile", function(e) {
       return A4(e, this.a, this.b, this.c);
     });
-    var fy = ln, I4 = (0, li.factory)(0, 1), B4 = function(e, n, r, a, s) {
+    var fy = ln, I4 = (0, vi.factory)(0, 1), B4 = function(e, n, r, a, s) {
       var u, p, k, b;
       return i(e) || i(n) || i(r) || s <= 0 || n >= r ? NaN : e < n || e > r ? 0 : (u = 2 * C(s, 2), p = 1 / c(u * T), k = -1 / u, b = I4((r - a) / s) - I4((n - a) / s), p * R(k * C(e - a, 2)) / b);
-    }, R4 = (0, li.factory)(0, 1);
+    }, R4 = (0, vi.factory)(0, 1);
     o(B4, "factory", function(e, n, r, a) {
       var s, u, p, k;
       return i(e) || i(n) || i(r) || i(a) || a <= 0 || e >= n ? N(NaN) : (s = 2 * C(a, 2), u = 1 / c(s * T), p = -1 / s, k = R4((n - r) / a) - R4((e - r) / a), function(b) {
@@ -8209,46 +8209,47 @@ var Sv = { exports: {} };
       return gv(e, this.k, this.lambda);
     });
     var py = vn, v = {};
-    return t(v, "base", {}), t(v.base, "dists", {}), t(v.base.dists, "arcsine", {}), t(v.base.dists.arcsine, "cdf", G), t(v.base.dists.arcsine, "Arcsine", P8), t(v.base.dists.arcsine, "entropy", s0), t(v.base.dists.arcsine, "kurtosis", u0), t(v.base.dists.arcsine, "logcdf", A0), t(v.base.dists.arcsine, "logpdf", B0), t(v.base.dists.arcsine, "mean", f0), t(v.base.dists.arcsine, "median", c0), t(v.base.dists.arcsine, "mode", l0), t(v.base.dists.arcsine, "pdf", L0), t(v.base.dists.arcsine, "quantile", W0), t(v.base.dists.arcsine, "skewness", v0), t(v.base.dists.arcsine, "stdev", p0), t(v.base.dists.arcsine, "variance", V0), t(v.base.dists, "bernoulli", {}), t(v.base.dists.bernoulli, "cdf", z0), t(v.base.dists.bernoulli, "Bernoulli", O8), t(v.base.dists.bernoulli, "entropy", Q0), t(v.base.dists.bernoulli, "kurtosis", $0), t(v.base.dists.bernoulli, "mean", Z0), t(v.base.dists.bernoulli, "median", X0), t(v.base.dists.bernoulli, "mgf", io), t(v.base.dists.bernoulli, "mode", J0), t(v.base.dists.bernoulli, "pmf", to), t(v.base.dists.bernoulli, "quantile", so), t(v.base.dists.bernoulli, "skewness", Y0), t(v.base.dists.bernoulli, "stdev", _0), t(v.base.dists.bernoulli, "variance", eo), t(v.base.dists, "beta", {}), t(v.base.dists.beta, "cdf", la), t(v.base.dists.beta, "Beta", Gh), t(v.base.dists.beta, "entropy", Oo), t(v.base.dists.beta, "kurtosis", Do), t(v.base.dists.beta, "logcdf", da), t(v.base.dists.beta, "logpdf", ss), t(v.base.dists.beta, "mean", Uo), t(v.base.dists.beta, "median", es), t(v.base.dists.beta, "mgf", cs), t(v.base.dists.beta, "mode", ns), t(v.base.dists.beta, "pdf", vs), t(v.base.dists.beta, "quantile", ms), t(v.base.dists.beta, "skewness", rs), t(v.base.dists.beta, "stdev", is), t(v.base.dists.beta, "variance", as), t(v.base.dists, "betaprime", {}), t(v.base.dists.betaprime, "cdf", ds), t(v.base.dists.betaprime, "BetaPrime", Qh), t(v.base.dists.betaprime, "kurtosis", gs), t(v.base.dists.betaprime, "logcdf", Ms), t(v.base.dists.betaprime, "logpdf", Na), t(v.base.dists.betaprime, "mean", Ns), t(v.base.dists.betaprime, "mode", ys), t(v.base.dists.betaprime, "pdf", Es), t(v.base.dists.betaprime, "quantile", Vs), t(v.base.dists.betaprime, "skewness", bs), t(v.base.dists.betaprime, "stdev", ws), t(v.base.dists.betaprime, "variance", xs), t(v.base.dists, "binomial", {}), t(v.base.dists.binomial, "cdf", ti), t(v.base.dists.binomial, "Binomial", Yh), t(v.base.dists.binomial, "entropy", _h), t(v.base.dists.binomial, "kurtosis", Fs), t(v.base.dists.binomial, "logpmf", Ks), t(v.base.dists.binomial, "mean", Bt), t(v.base.dists.binomial, "median", Os), t(v.base.dists.binomial, "mgf", $s), t(v.base.dists.binomial, "mode", Ds), t(v.base.dists.binomial, "pmf", Ys), t(v.base.dists.binomial, "quantile", au), t(v.base.dists.binomial, "skewness", Us), t(v.base.dists.binomial, "stdev", Hs), t(v.base.dists.binomial, "variance", Ws), t(v.base.dists, "cauchy", {}), t(v.base.dists.cauchy, "cdf", fu), t(v.base.dists.cauchy, "Cauchy", ld), t(v.base.dists.cauchy, "entropy", vu), t(v.base.dists.cauchy, "logcdf", du), t(v.base.dists.cauchy, "logpdf", Nu), t(v.base.dists.cauchy, "median", pu), t(v.base.dists.cauchy, "mode", mu), t(v.base.dists.cauchy, "pdf", bu), t(v.base.dists.cauchy, "quantile", xu), t(v.base.dists, "chi", {}), t(v.base.dists.chi, "cdf", Pu), t(v.base.dists.chi, "Chi", yd), t(v.base.dists.chi, "entropy", Vu), t(v.base.dists.chi, "kurtosis", Cu), t(v.base.dists.chi, "logpdf", Lu), t(v.base.dists.chi, "mean", oi), t(v.base.dists.chi, "mode", Au), t(v.base.dists.chi, "pdf", Ou), t(v.base.dists.chi, "quantile", Hu), t(v.base.dists.chi, "skewness", Lt), t(v.base.dists.chi, "stdev", Iu), t(v.base.dists.chi, "variance", Ma), t(v.base.dists, "chisquare", {}), t(v.base.dists.chisquare, "cdf", zu), t(v.base.dists.chisquare, "ChiSquare", Td), t(v.base.dists.chisquare, "entropy", ju), t(v.base.dists.chisquare, "kurtosis", Ku), t(v.base.dists.chisquare, "logpdf", Vd), t(v.base.dists.chisquare, "mean", Qu), t(v.base.dists.chisquare, "median", Zu), t(v.base.dists.chisquare, "mgf", n1), t(v.base.dists.chisquare, "mode", Ju), t(v.base.dists.chisquare, "pdf", o1), t(v.base.dists.chisquare, "quantile", qt), t(v.base.dists.chisquare, "skewness", Xu), t(v.base.dists.chisquare, "stdev", Yu), t(v.base.dists.chisquare, "variance", _u), t(v.base.dists, "cosine", {}), t(v.base.dists.cosine, "cdf", Ft), t(v.base.dists.cosine, "Cosine", Hd), t(v.base.dists.cosine, "kurtosis", l1), t(v.base.dists.cosine, "logcdf", b1), t(v.base.dists.cosine, "logpdf", S1), t(v.base.dists.cosine, "mean", v1), t(v.base.dists.cosine, "median", p1), t(v.base.dists.cosine, "mgf", T1), t(v.base.dists.cosine, "mode", m1), t(v.base.dists.cosine, "pdf", P1), t(v.base.dists.cosine, "quantile", A1), t(v.base.dists.cosine, "skewness", h1), t(v.base.dists.cosine, "stdev", d1), t(v.base.dists.cosine, "variance", g1), t(v.base.dists, "degenerate", {}), t(v.base.dists.degenerate, "cdf", Mr), t(v.base.dists.degenerate, "Degenerate", Wd), t(v.base.dists.degenerate, "entropy", R1), t(v.base.dists.degenerate, "logcdf", fi), t(v.base.dists.degenerate, "logpdf", Or), t(v.base.dists.degenerate, "logpmf", wa), t(v.base.dists.degenerate, "mean", L1), t(v.base.dists.degenerate, "median", F1), t(v.base.dists.degenerate, "mgf", Ot), t(v.base.dists.degenerate, "mode", q1), t(v.base.dists.degenerate, "pdf", Dr), t(v.base.dists.degenerate, "pmf", xa), t(v.base.dists.degenerate, "quantile", Sr), t(v.base.dists.degenerate, "stdev", O1), t(v.base.dists.degenerate, "variance", D1), t(v.base.dists, "discreteUniform", {}), t(v.base.dists.discreteUniform, "cdf", W1), t(v.base.dists.discreteUniform, "DiscreteUniform", zd), t(v, "entropy", G1), t(v.base.dists.discreteUniform, "kurtosis", z1), t(v.base.dists.discreteUniform, "logcdf", X1), t(v.base.dists.discreteUniform, "logpmf", _1), t(v.base.dists.discreteUniform, "mean", j1), t(v.base.dists.discreteUniform, "median", K1), t(v.base.dists.discreteUniform, "mgf", nf), t(v.base.dists.discreteUniform, "pmf", af), t(v.base.dists.discreteUniform, "quantile", of), t(v.base.dists.discreteUniform, "skewness", Q1), t(v.base.dists.discreteUniform, "stdev", $1), t(v.base.dists.discreteUniform, "variance", Z1), t(v.base.dists, "erlang", {}), t(v.base.dists.erlang, "cdf", uf), t(v.base.dists.erlang, "Erlang", Zd), t(v.base.dists.erlang, "entropy", ff), t(v.base.dists.erlang, "kurtosis", cf), t(v.base.dists.erlang, "logpdf", gf), t(v.base.dists.erlang, "mean", lf), t(v.base.dists.erlang, "mgf", yf), t(v.base.dists.erlang, "mode", vf), t(v.base.dists.erlang, "pdf", wf), t(v.base.dists.erlang, "quantile", Sf), t(v.base.dists.erlang, "skewness", pf), t(v.base.dists.erlang, "stdev", mf), t(v.base.dists.erlang, "variance", hf), t(v.base.dists, "exponential", {}), t(v.base.dists.exponential, "cdf", Ef), t(v.base.dists.exponential, "Exponential", Jd), t(v.base.dists.exponential, "entropy", Pf), t(v.base.dists.exponential, "kurtosis", Vf), t(v.base.dists.exponential, "logcdf", Ff), t(v.base.dists.exponential, "logpdf", Df), t(v.base.dists.exponential, "mean", Cf), t(v.base.dists.exponential, "median", Af), t(v.base.dists.exponential, "mgf", Hf), t(v.base.dists.exponential, "mode", If), t(v.base.dists.exponential, "pdf", Gf), t(v.base.dists.exponential, "quantile", jf), t(v.base.dists.exponential, "skewness", Bf), t(v.base.dists.exponential, "stdev", Rf), t(v.base.dists.exponential, "variance", Lf), t(v.base.dists, "f", {}), t(v.base.dists.f, "cdf", $f), t(v.base.dists.f, "F", Yd), t(v.base.dists.f, "entropy", Zf), t(v.base.dists.f, "kurtosis", Jf), t(v.base.dists.f, "mean", Xf), t(v.base.dists.f, "mode", Yf), t(v.base.dists.f, "pdf", i2), t(v.base.dists.f, "quantile", t2), t(v.base.dists.f, "skewness", _f), t(v.base.dists.f, "stdev", e2), t(v.base.dists.f, "variance", n2), t(v.base.dists, "frechet", {}), t(v.base.dists.frechet, "cdf", s2), t(v.base.dists.frechet, "Frechet", eg), t(v.base.dists.frechet, "entropy", u2), t(v.base.dists.frechet, "kurtosis", f2), t(v.base.dists.frechet, "logcdf", g2), t(v.base.dists.frechet, "logpdf", Va), t(v.base.dists.frechet, "mean", c2), t(v.base.dists.frechet, "median", l2), t(v.base.dists.frechet, "mode", v2), t(v.base.dists.frechet, "pdf", b2), t(v.base.dists.frechet, "quantile", x2), t(v.base.dists.frechet, "skewness", p2), t(v.base.dists.frechet, "stdev", m2), t(v.base.dists.frechet, "variance", h2), t(v.base.dists, "gamma", {}), t(v.base.dists.gamma, "cdf", kr), t(v.base.dists.gamma, "Gamma", rg), t(v.base.dists.gamma, "entropy", M2), t(v.base.dists.gamma, "kurtosis", k2), t(v.base.dists.gamma, "logcdf", I2), t(v.base.dists.gamma, "logpdf", ui), t(v.base.dists.gamma, "mean", T2), t(v.base.dists.gamma, "mgf", R2), t(v.base.dists.gamma, "mode", E2), t(v.base.dists.gamma, "pdf", si), t(v.base.dists.gamma, "quantile", Ur), t(v.base.dists.gamma, "skewness", P2), t(v.base.dists.gamma, "stdev", V2), t(v.base.dists.gamma, "variance", C2), t(v.base.dists, "geometric", {}), t(v.base.dists.geometric, "cdf", q2), t(v.base.dists.geometric, "Geometric", hg), t(v.base.dists.geometric, "entropy", F2), t(v.base.dists.geometric, "kurtosis", O2), t(v.base.dists.geometric, "logcdf", $2), t(v.base.dists.geometric, "logpmf", J2), t(v.base.dists.geometric, "mean", D2), t(v.base.dists.geometric, "median", W2), t(v.base.dists.geometric, "mgf", Y2), t(v.base.dists.geometric, "mode", G2), t(v.base.dists.geometric, "pmf", ec), t(v.base.dists.geometric, "quantile", rc), t(v.base.dists.geometric, "skewness", z2), t(v.base.dists.geometric, "stdev", j2), t(v.base.dists.geometric, "variance", K2), t(v.base.dists, "gumbel", {}), t(v.base.dists.gumbel, "cdf", tc), t(v.base.dists.gumbel, "Gumbel", Tg), t(v.base.dists.gumbel, "entropy", oc), t(v.base.dists.gumbel, "kurtosis", sc), t(v.base.dists.gumbel, "logcdf", hc), t(v.base.dists.gumbel, "logpdf", gc), t(v.base.dists.gumbel, "mean", uc), t(v.base.dists.gumbel, "median", fc), t(v.base.dists.gumbel, "mgf", yc), t(v.base.dists.gumbel, "mode", cc), t(v.base.dists.gumbel, "pdf", wc), t(v.base.dists.gumbel, "quantile", Sc), t(v.base.dists.gumbel, "skewness", lc), t(v.base.dists.gumbel, "stdev", vc), t(v.base.dists.gumbel, "variance", pc), t(v.base.dists, "hypergeometric", {}), t(v.base.dists.hypergeometric, "cdf", Ba), t(v.base.dists.hypergeometric, "Hypergeometric", Ag), t(v.base.dists.hypergeometric, "kurtosis", Ac), t(v.base.dists.hypergeometric, "logpmf", Oc), t(v.base.dists.hypergeometric, "mean", Ic), t(v.base.dists.hypergeometric, "mode", Bc), t(v.base.dists.hypergeometric, "pmf", Ia), t(v.base.dists.hypergeometric, "quantile", Uc), t(v.base.dists.hypergeometric, "skewness", Rc), t(v.base.dists.hypergeometric, "stdev", Lc), t(v.base.dists.hypergeometric, "variance", qc), t(v.base.dists, "invgamma", {}), t(v.base.dists.invgamma, "cdf", Wc), t(v.base.dists.invgamma, "InvGamma", Ig), t(v.base.dists.invgamma, "entropy", Gc), t(v.base.dists.invgamma, "kurtosis", zc), t(v.base.dists.invgamma, "logpdf", Jc), t(v.base.dists.invgamma, "mean", jc), t(v.base.dists.invgamma, "mode", Kc), t(v.base.dists.invgamma, "pdf", nl), t(v.base.dists.invgamma, "quantile", $c), t(v.base.dists.invgamma, "skewness", Xc), t(v.base.dists.invgamma, "stdev", Yc), t(v.base.dists.invgamma, "variance", _c), t(v.base.dists, "kumaraswamy", {}), t(v.base.dists.kumaraswamy, "cdf", il), t(v.base.dists.kumaraswamy, "Kumaraswamy", Bg), t(v.base.dists.kumaraswamy, "kurtosis", al), t(v.base.dists.kumaraswamy, "logcdf", ll), t(v.base.dists.kumaraswamy, "logpdf", pl), t(v.base.dists.kumaraswamy, "mean", tl), t(v.base.dists.kumaraswamy, "median", Rg), t(v.base.dists.kumaraswamy, "mode", ol), t(v.base.dists.kumaraswamy, "pdf", hl), t(v.base.dists.kumaraswamy, "quantile", gl), t(v.base.dists.kumaraswamy, "skewness", sl), t(v.base.dists.kumaraswamy, "stdev", ul), t(v.base.dists.kumaraswamy, "variance", fl), t(v.base.dists, "laplace", {}), t(v.base.dists.laplace, "cdf", yl), t(v.base.dists.laplace, "Laplace", Lg), t(v.base.dists.laplace, "entropy", bl), t(v.base.dists.laplace, "kurtosis", wl), t(v.base.dists.laplace, "logcdf", Vl), t(v.base.dists.laplace, "logpdf", Al), t(v.base.dists.laplace, "mean", xl), t(v.base.dists.laplace, "median", Sl), t(v.base.dists.laplace, "mgf", Bl), t(v.base.dists.laplace, "mode", Ml), t(v.base.dists.laplace, "pdf", Ll), t(v.base.dists.laplace, "quantile", Fl), t(v.base.dists.laplace, "skewness", kl), t(v.base.dists.laplace, "stdev", Tl), t(v.base.dists.laplace, "variance", El), t(v.base.dists, "levy", {}), t(v.base.dists.levy, "cdf", Hl), t(v.base.dists.levy, "Levy", Og), t(v.base.dists.levy, "entropy", Wl), t(v.base.dists.levy, "logcdf", Zl), t(v.base.dists.levy, "logpdf", Xl), t(v.base.dists.levy, "mean", Gl), t(v.base.dists.levy, "median", zl), t(v.base.dists.levy, "mode", jl), t(v.base.dists.levy, "pdf", _l), t(v.base.dists.levy, "quantile", n3), t(v.base.dists.levy, "stdev", Kl), t(v.base.dists.levy, "variance", Ql), t(v.base.dists, "logistic", {}), t(v.base.dists.logistic, "cdf", t3), t(v.base.dists.logistic, "Logistic", Kg), t(v.base.dists.logistic, "entropy", o3), t(v.base.dists.logistic, "kurtosis", s3), t(v.base.dists.logistic, "logcdf", d3), t(v.base.dists.logistic, "logpdf", N3), t(v.base.dists.logistic, "mean", u3), t(v.base.dists.logistic, "median", f3), t(v.base.dists.logistic, "mgf", w3), t(v.base.dists.logistic, "mode", c3), t(v.base.dists.logistic, "pdf", S3), t(v.base.dists.logistic, "quantile", k3), t(v.base.dists.logistic, "skewness", l3), t(v.base.dists.logistic, "stdev", v3), t(v.base.dists.logistic, "variance", p3), t(v.base.dists, "lognormal", {}), t(v.base.dists.lognormal, "cdf", C3), t(v.base.dists.lognormal, "LogNormal", tN), t(v.base.dists.lognormal, "entropy", A3), t(v.base.dists.lognormal, "kurtosis", I3), t(v.base.dists.lognormal, "logpdf", U3), t(v.base.dists.lognormal, "mean", B3), t(v.base.dists.lognormal, "median", R3), t(v.base.dists.lognormal, "mode", L3), t(v.base.dists.lognormal, "pdf", W3), t(v.base.dists.lognormal, "quantile", K3), t(v.base.dists.lognormal, "skewness", q3), t(v.base.dists.lognormal, "stdev", F3), t(v.base.dists.lognormal, "variance", O3), t(v.base.dists, "negativeBinomial", {}), t(v.base.dists.negativeBinomial, "cdf", vi), t(v.base.dists.negativeBinomial, "NegativeBinomial", uN), t(v.base.dists.negativeBinomial, "kurtosis", J3), t(v.base.dists.negativeBinomial, "logpmf", a6), t(v.base.dists.negativeBinomial, "mean", X3), t(v.base.dists.negativeBinomial, "mgf", o6), t(v.base.dists.negativeBinomial, "mode", Y3), t(v.base.dists.negativeBinomial, "pmf", f6), t(v.base.dists.negativeBinomial, "quantile", l6), t(v.base.dists.negativeBinomial, "skewness", _3), t(v.base.dists.negativeBinomial, "stdev", e6), t(v.base.dists.negativeBinomial, "variance", n6), t(v.base.dists, "normal", {}), t(v.base.dists.normal, "cdf", li), t(v.base.dists.normal, "Normal", lN), t(v.base.dists.normal, "entropy", m6), t(v.base.dists.normal, "kurtosis", h6), t(v.base.dists.normal, "logpdf", S6), t(v.base.dists.normal, "mean", d6), t(v.base.dists.normal, "median", g6), t(v.base.dists.normal, "mgf", k6), t(v.base.dists.normal, "mode", N6), t(v.base.dists.normal, "pdf", E6), t(v.base.dists.normal, "quantile", Fa), t(v.base.dists.normal, "skewness", y6), t(v.base.dists.normal, "stdev", b6), t(v.base.dists.normal, "variance", w6), t(v.base.dists, "pareto1", {}), t(v.base.dists.pareto1, "cdf", A6), t(v.base.dists.pareto1, "Pareto1", vN), t(v.base.dists.pareto1, "entropy", I6), t(v.base.dists.pareto1, "kurtosis", B6), t(v.base.dists.pareto1, "logcdf", U6), t(v.base.dists.pareto1, "logpdf", W6), t(v.base.dists.pareto1, "mean", R6), t(v.base.dists.pareto1, "median", L6), t(v.base.dists.pareto1, "mode", q6), t(v.base.dists.pareto1, "pdf", z6), t(v.base.dists.pareto1, "quantile", K6), t(v.base.dists.pareto1, "skewness", F6), t(v.base.dists.pareto1, "stdev", pN), t(v.base.dists.pareto1, "variance", O6), t(v.base.dists, "poisson", {}), t(v.base.dists.poisson, "cdf", pi), t(v.base.dists.poisson, "Poisson", NN), t(v.base.dists.poisson, "entropy", $6), t(v.base.dists.poisson, "kurtosis", Z6), t(v.base.dists.poisson, "logpmf", i5), t(v.base.dists.poisson, "mean", J6), t(v.base.dists.poisson, "median", X6), t(v.base.dists.poisson, "mgf", t5), t(v.base.dists.poisson, "mode", Y6), t(v.base.dists.poisson, "pmf", s5), t(v.base.dists.poisson, "quantile", f5), t(v.base.dists.poisson, "skewness", _6), t(v.base.dists.poisson, "stdev", e5), t(v.base.dists.poisson, "variance", n5), t(v.base.dists, "rayleigh", {}), t(v.base.dists.rayleigh, "cdf", v5), t(v.base.dists.rayleigh, "Rayleigh", HN), t(v.base.dists.rayleigh, "entropy", p5), t(v.base.dists.rayleigh, "kurtosis", m5), t(v.base.dists.rayleigh, "logcdf", x5), t(v.base.dists.rayleigh, "logpdf", M5), t(v.base.dists.rayleigh, "mean", h5), t(v.base.dists.rayleigh, "median", d5), t(v.base.dists.rayleigh, "mgf", P5), t(v.base.dists.rayleigh, "mode", g5), t(v.base.dists.rayleigh, "pdf", C5), t(v.base.dists.rayleigh, "quantile", I5), t(v.base.dists.rayleigh, "skewness", N5), t(v.base.dists.rayleigh, "stdev", y5), t(v.base.dists.rayleigh, "variance", b5), t(v.base.dists, "signrank", {}), t(v.base.dists.signrank, "cdf", ty), t(v.base.dists.signrank, "pdf", oy), t(v.base.dists.signrank, "quantile", sy), t(v.base.dists, "t", {}), t(v.base.dists.t, "cdf", $5), t(v.base.dists.t, "T", uy), t(v.base.dists.t, "entropy", Z5), t(v.base.dists.t, "kurtosis", J5), t(v, "logcdf", a4), t(v, "logpdf", o4), t(v.base.dists.t, "mean", X5), t(v.base.dists.t, "median", Y5), t(v.base.dists.t, "mode", _5), t(v.base.dists.t, "pdf", u4), t(v.base.dists.t, "quantile", c4), t(v.base.dists.t, "skewness", e4), t(v.base.dists.t, "stdev", n4), t(v.base.dists.t, "variance", r4), t(v.base.dists, "triangular", {}), t(v.base.dists.triangular, "cdf", p4), t(v.base.dists.triangular, "Triangular", fy), t(v.base.dists.triangular, "entropy", m4), t(v.base.dists.triangular, "kurtosis", h4), t(v.base.dists.triangular, "logcdf", S4), t(v.base.dists.triangular, "logpdf", k4), t(v.base.dists.triangular, "mean", d4), t(v.base.dists.triangular, "median", g4), t(v.base.dists.triangular, "mgf", E4), t(v.base.dists.triangular, "mode", N4), t(v.base.dists.triangular, "pdf", V4), t(v.base.dists.triangular, "quantile", A4), t(v.base.dists.triangular, "skewness", y4), t(v.base.dists.triangular, "stdev", b4), t(v.base.dists.triangular, "variance", w4), t(v, "pdf", cy), t(v.base.dists, "uniform", {}), t(v.base.dists.uniform, "cdf", q4), t(v.base.dists.uniform, "Uniform", vy), t(v.base.dists.uniform, "entropy", F4), t(v.base.dists.uniform, "kurtosis", O4), t(v.base.dists.uniform, "logcdf", j4), t(v.base.dists.uniform, "logpdf", Q4), t(v.base.dists.uniform, "mean", D4), t(v.base.dists.uniform, "median", U4), t(v.base.dists.uniform, "mgf", Z4), t(v.base.dists.uniform, "pdf", X4), t(v.base.dists.uniform, "quantile", _4), t(v.base.dists.uniform, "skewness", H4), t(v.base.dists.uniform, "stdev", W4), t(v.base.dists.uniform, "variance", G4), t(v.base.dists, "weibull", {}), t(v.base.dists.weibull, "cdf", nv), t(v.base.dists.weibull, "Weibull", py), t(v.base.dists.weibull, "entropy", rv), t(v.base.dists.weibull, "kurtosis", iv), t(v.base.dists.weibull, "logcdf", fv), t(v.base.dists.weibull, "logpdf", lv), t(v.base.dists.weibull, "mean", Wa), t(v.base.dists.weibull, "median", av), t(v.base.dists.weibull, "mgf", pv), t(v.base.dists.weibull, "mode", tv), t(v.base.dists.weibull, "pdf", hv), t(v.base.dists.weibull, "quantile", gv), t(v.base.dists.weibull, "skewness", ov), t(v.base.dists.weibull, "stdev", sv), t(v.base.dists.weibull, "variance", Jt), v;
+    return t(v, "base", {}), t(v.base, "dists", {}), t(v.base.dists, "arcsine", {}), t(v.base.dists.arcsine, "cdf", G), t(v.base.dists.arcsine, "Arcsine", P8), t(v.base.dists.arcsine, "entropy", s0), t(v.base.dists.arcsine, "kurtosis", u0), t(v.base.dists.arcsine, "logcdf", A0), t(v.base.dists.arcsine, "logpdf", B0), t(v.base.dists.arcsine, "mean", f0), t(v.base.dists.arcsine, "median", c0), t(v.base.dists.arcsine, "mode", l0), t(v.base.dists.arcsine, "pdf", L0), t(v.base.dists.arcsine, "quantile", W0), t(v.base.dists.arcsine, "skewness", v0), t(v.base.dists.arcsine, "stdev", p0), t(v.base.dists.arcsine, "variance", V0), t(v.base.dists, "bernoulli", {}), t(v.base.dists.bernoulli, "cdf", z0), t(v.base.dists.bernoulli, "Bernoulli", O8), t(v.base.dists.bernoulli, "entropy", Q0), t(v.base.dists.bernoulli, "kurtosis", $0), t(v.base.dists.bernoulli, "mean", Z0), t(v.base.dists.bernoulli, "median", X0), t(v.base.dists.bernoulli, "mgf", io), t(v.base.dists.bernoulli, "mode", J0), t(v.base.dists.bernoulli, "pmf", to), t(v.base.dists.bernoulli, "quantile", so), t(v.base.dists.bernoulli, "skewness", Y0), t(v.base.dists.bernoulli, "stdev", _0), t(v.base.dists.bernoulli, "variance", eo), t(v.base.dists, "beta", {}), t(v.base.dists.beta, "cdf", la), t(v.base.dists.beta, "Beta", Gh), t(v.base.dists.beta, "entropy", Oo), t(v.base.dists.beta, "kurtosis", Do), t(v.base.dists.beta, "logcdf", da), t(v.base.dists.beta, "logpdf", ss), t(v.base.dists.beta, "mean", Uo), t(v.base.dists.beta, "median", es), t(v.base.dists.beta, "mgf", cs), t(v.base.dists.beta, "mode", ns), t(v.base.dists.beta, "pdf", vs), t(v.base.dists.beta, "quantile", ms), t(v.base.dists.beta, "skewness", rs), t(v.base.dists.beta, "stdev", is), t(v.base.dists.beta, "variance", as), t(v.base.dists, "betaprime", {}), t(v.base.dists.betaprime, "cdf", ds), t(v.base.dists.betaprime, "BetaPrime", Qh), t(v.base.dists.betaprime, "kurtosis", gs), t(v.base.dists.betaprime, "logcdf", Ms), t(v.base.dists.betaprime, "logpdf", Na), t(v.base.dists.betaprime, "mean", Ns), t(v.base.dists.betaprime, "mode", ys), t(v.base.dists.betaprime, "pdf", Es), t(v.base.dists.betaprime, "quantile", Vs), t(v.base.dists.betaprime, "skewness", bs), t(v.base.dists.betaprime, "stdev", ws), t(v.base.dists.betaprime, "variance", xs), t(v.base.dists, "binomial", {}), t(v.base.dists.binomial, "cdf", oi), t(v.base.dists.binomial, "Binomial", Yh), t(v.base.dists.binomial, "entropy", _h), t(v.base.dists.binomial, "kurtosis", Fs), t(v.base.dists.binomial, "logpmf", Ks), t(v.base.dists.binomial, "mean", Bt), t(v.base.dists.binomial, "median", Os), t(v.base.dists.binomial, "mgf", $s), t(v.base.dists.binomial, "mode", Ds), t(v.base.dists.binomial, "pmf", Ys), t(v.base.dists.binomial, "quantile", au), t(v.base.dists.binomial, "skewness", Us), t(v.base.dists.binomial, "stdev", Hs), t(v.base.dists.binomial, "variance", Ws), t(v.base.dists, "cauchy", {}), t(v.base.dists.cauchy, "cdf", fu), t(v.base.dists.cauchy, "Cauchy", ld), t(v.base.dists.cauchy, "entropy", vu), t(v.base.dists.cauchy, "logcdf", du), t(v.base.dists.cauchy, "logpdf", Nu), t(v.base.dists.cauchy, "median", pu), t(v.base.dists.cauchy, "mode", mu), t(v.base.dists.cauchy, "pdf", bu), t(v.base.dists.cauchy, "quantile", xu), t(v.base.dists, "chi", {}), t(v.base.dists.chi, "cdf", Pu), t(v.base.dists.chi, "Chi", yd), t(v.base.dists.chi, "entropy", Vu), t(v.base.dists.chi, "kurtosis", Cu), t(v.base.dists.chi, "logpdf", Lu), t(v.base.dists.chi, "mean", si), t(v.base.dists.chi, "mode", Au), t(v.base.dists.chi, "pdf", Ou), t(v.base.dists.chi, "quantile", Hu), t(v.base.dists.chi, "skewness", Lt), t(v.base.dists.chi, "stdev", Iu), t(v.base.dists.chi, "variance", Ma), t(v.base.dists, "chisquare", {}), t(v.base.dists.chisquare, "cdf", zu), t(v.base.dists.chisquare, "ChiSquare", Td), t(v.base.dists.chisquare, "entropy", ju), t(v.base.dists.chisquare, "kurtosis", Ku), t(v.base.dists.chisquare, "logpdf", Vd), t(v.base.dists.chisquare, "mean", Qu), t(v.base.dists.chisquare, "median", Zu), t(v.base.dists.chisquare, "mgf", n1), t(v.base.dists.chisquare, "mode", Ju), t(v.base.dists.chisquare, "pdf", o1), t(v.base.dists.chisquare, "quantile", qt), t(v.base.dists.chisquare, "skewness", Xu), t(v.base.dists.chisquare, "stdev", Yu), t(v.base.dists.chisquare, "variance", _u), t(v.base.dists, "cosine", {}), t(v.base.dists.cosine, "cdf", Ft), t(v.base.dists.cosine, "Cosine", Hd), t(v.base.dists.cosine, "kurtosis", l1), t(v.base.dists.cosine, "logcdf", b1), t(v.base.dists.cosine, "logpdf", S1), t(v.base.dists.cosine, "mean", v1), t(v.base.dists.cosine, "median", p1), t(v.base.dists.cosine, "mgf", T1), t(v.base.dists.cosine, "mode", m1), t(v.base.dists.cosine, "pdf", P1), t(v.base.dists.cosine, "quantile", A1), t(v.base.dists.cosine, "skewness", h1), t(v.base.dists.cosine, "stdev", d1), t(v.base.dists.cosine, "variance", g1), t(v.base.dists, "degenerate", {}), t(v.base.dists.degenerate, "cdf", Mr), t(v.base.dists.degenerate, "Degenerate", Wd), t(v.base.dists.degenerate, "entropy", R1), t(v.base.dists.degenerate, "logcdf", ci), t(v.base.dists.degenerate, "logpdf", Or), t(v.base.dists.degenerate, "logpmf", wa), t(v.base.dists.degenerate, "mean", L1), t(v.base.dists.degenerate, "median", F1), t(v.base.dists.degenerate, "mgf", Ot), t(v.base.dists.degenerate, "mode", q1), t(v.base.dists.degenerate, "pdf", Dr), t(v.base.dists.degenerate, "pmf", xa), t(v.base.dists.degenerate, "quantile", Sr), t(v.base.dists.degenerate, "stdev", O1), t(v.base.dists.degenerate, "variance", D1), t(v.base.dists, "discreteUniform", {}), t(v.base.dists.discreteUniform, "cdf", W1), t(v.base.dists.discreteUniform, "DiscreteUniform", zd), t(v, "entropy", G1), t(v.base.dists.discreteUniform, "kurtosis", z1), t(v.base.dists.discreteUniform, "logcdf", X1), t(v.base.dists.discreteUniform, "logpmf", _1), t(v.base.dists.discreteUniform, "mean", j1), t(v.base.dists.discreteUniform, "median", K1), t(v.base.dists.discreteUniform, "mgf", nf), t(v.base.dists.discreteUniform, "pmf", af), t(v.base.dists.discreteUniform, "quantile", of), t(v.base.dists.discreteUniform, "skewness", Q1), t(v.base.dists.discreteUniform, "stdev", $1), t(v.base.dists.discreteUniform, "variance", Z1), t(v.base.dists, "erlang", {}), t(v.base.dists.erlang, "cdf", uf), t(v.base.dists.erlang, "Erlang", Zd), t(v.base.dists.erlang, "entropy", ff), t(v.base.dists.erlang, "kurtosis", cf), t(v.base.dists.erlang, "logpdf", gf), t(v.base.dists.erlang, "mean", lf), t(v.base.dists.erlang, "mgf", yf), t(v.base.dists.erlang, "mode", vf), t(v.base.dists.erlang, "pdf", wf), t(v.base.dists.erlang, "quantile", Sf), t(v.base.dists.erlang, "skewness", pf), t(v.base.dists.erlang, "stdev", mf), t(v.base.dists.erlang, "variance", hf), t(v.base.dists, "exponential", {}), t(v.base.dists.exponential, "cdf", Ef), t(v.base.dists.exponential, "Exponential", Jd), t(v.base.dists.exponential, "entropy", Pf), t(v.base.dists.exponential, "kurtosis", Vf), t(v.base.dists.exponential, "logcdf", Ff), t(v.base.dists.exponential, "logpdf", Df), t(v.base.dists.exponential, "mean", Cf), t(v.base.dists.exponential, "median", Af), t(v.base.dists.exponential, "mgf", Hf), t(v.base.dists.exponential, "mode", If), t(v.base.dists.exponential, "pdf", Gf), t(v.base.dists.exponential, "quantile", jf), t(v.base.dists.exponential, "skewness", Bf), t(v.base.dists.exponential, "stdev", Rf), t(v.base.dists.exponential, "variance", Lf), t(v.base.dists, "f", {}), t(v.base.dists.f, "cdf", $f), t(v.base.dists.f, "F", Yd), t(v.base.dists.f, "entropy", Zf), t(v.base.dists.f, "kurtosis", Jf), t(v.base.dists.f, "mean", Xf), t(v.base.dists.f, "mode", Yf), t(v.base.dists.f, "pdf", i2), t(v.base.dists.f, "quantile", t2), t(v.base.dists.f, "skewness", _f), t(v.base.dists.f, "stdev", e2), t(v.base.dists.f, "variance", n2), t(v.base.dists, "frechet", {}), t(v.base.dists.frechet, "cdf", s2), t(v.base.dists.frechet, "Frechet", eg), t(v.base.dists.frechet, "entropy", u2), t(v.base.dists.frechet, "kurtosis", f2), t(v.base.dists.frechet, "logcdf", g2), t(v.base.dists.frechet, "logpdf", Va), t(v.base.dists.frechet, "mean", c2), t(v.base.dists.frechet, "median", l2), t(v.base.dists.frechet, "mode", v2), t(v.base.dists.frechet, "pdf", b2), t(v.base.dists.frechet, "quantile", x2), t(v.base.dists.frechet, "skewness", p2), t(v.base.dists.frechet, "stdev", m2), t(v.base.dists.frechet, "variance", h2), t(v.base.dists, "gamma", {}), t(v.base.dists.gamma, "cdf", kr), t(v.base.dists.gamma, "Gamma", rg), t(v.base.dists.gamma, "entropy", M2), t(v.base.dists.gamma, "kurtosis", k2), t(v.base.dists.gamma, "logcdf", I2), t(v.base.dists.gamma, "logpdf", fi), t(v.base.dists.gamma, "mean", T2), t(v.base.dists.gamma, "mgf", R2), t(v.base.dists.gamma, "mode", E2), t(v.base.dists.gamma, "pdf", ui), t(v.base.dists.gamma, "quantile", Ur), t(v.base.dists.gamma, "skewness", P2), t(v.base.dists.gamma, "stdev", V2), t(v.base.dists.gamma, "variance", C2), t(v.base.dists, "geometric", {}), t(v.base.dists.geometric, "cdf", q2), t(v.base.dists.geometric, "Geometric", hg), t(v.base.dists.geometric, "entropy", F2), t(v.base.dists.geometric, "kurtosis", O2), t(v.base.dists.geometric, "logcdf", $2), t(v.base.dists.geometric, "logpmf", J2), t(v.base.dists.geometric, "mean", D2), t(v.base.dists.geometric, "median", W2), t(v.base.dists.geometric, "mgf", Y2), t(v.base.dists.geometric, "mode", G2), t(v.base.dists.geometric, "pmf", ec), t(v.base.dists.geometric, "quantile", rc), t(v.base.dists.geometric, "skewness", z2), t(v.base.dists.geometric, "stdev", j2), t(v.base.dists.geometric, "variance", K2), t(v.base.dists, "gumbel", {}), t(v.base.dists.gumbel, "cdf", tc), t(v.base.dists.gumbel, "Gumbel", Tg), t(v.base.dists.gumbel, "entropy", oc), t(v.base.dists.gumbel, "kurtosis", sc), t(v.base.dists.gumbel, "logcdf", hc), t(v.base.dists.gumbel, "logpdf", gc), t(v.base.dists.gumbel, "mean", uc), t(v.base.dists.gumbel, "median", fc), t(v.base.dists.gumbel, "mgf", yc), t(v.base.dists.gumbel, "mode", cc), t(v.base.dists.gumbel, "pdf", wc), t(v.base.dists.gumbel, "quantile", Sc), t(v.base.dists.gumbel, "skewness", lc), t(v.base.dists.gumbel, "stdev", vc), t(v.base.dists.gumbel, "variance", pc), t(v.base.dists, "hypergeometric", {}), t(v.base.dists.hypergeometric, "cdf", Ba), t(v.base.dists.hypergeometric, "Hypergeometric", Ag), t(v.base.dists.hypergeometric, "kurtosis", Ac), t(v.base.dists.hypergeometric, "logpmf", Oc), t(v.base.dists.hypergeometric, "mean", Ic), t(v.base.dists.hypergeometric, "mode", Bc), t(v.base.dists.hypergeometric, "pmf", Ia), t(v.base.dists.hypergeometric, "quantile", Uc), t(v.base.dists.hypergeometric, "skewness", Rc), t(v.base.dists.hypergeometric, "stdev", Lc), t(v.base.dists.hypergeometric, "variance", qc), t(v.base.dists, "invgamma", {}), t(v.base.dists.invgamma, "cdf", Wc), t(v.base.dists.invgamma, "InvGamma", Ig), t(v.base.dists.invgamma, "entropy", Gc), t(v.base.dists.invgamma, "kurtosis", zc), t(v.base.dists.invgamma, "logpdf", Jc), t(v.base.dists.invgamma, "mean", jc), t(v.base.dists.invgamma, "mode", Kc), t(v.base.dists.invgamma, "pdf", nl), t(v.base.dists.invgamma, "quantile", $c), t(v.base.dists.invgamma, "skewness", Xc), t(v.base.dists.invgamma, "stdev", Yc), t(v.base.dists.invgamma, "variance", _c), t(v.base.dists, "kumaraswamy", {}), t(v.base.dists.kumaraswamy, "cdf", il), t(v.base.dists.kumaraswamy, "Kumaraswamy", Bg), t(v.base.dists.kumaraswamy, "kurtosis", al), t(v.base.dists.kumaraswamy, "logcdf", ll), t(v.base.dists.kumaraswamy, "logpdf", pl), t(v.base.dists.kumaraswamy, "mean", tl), t(v.base.dists.kumaraswamy, "median", Rg), t(v.base.dists.kumaraswamy, "mode", ol), t(v.base.dists.kumaraswamy, "pdf", hl), t(v.base.dists.kumaraswamy, "quantile", gl), t(v.base.dists.kumaraswamy, "skewness", sl), t(v.base.dists.kumaraswamy, "stdev", ul), t(v.base.dists.kumaraswamy, "variance", fl), t(v.base.dists, "laplace", {}), t(v.base.dists.laplace, "cdf", yl), t(v.base.dists.laplace, "Laplace", Lg), t(v.base.dists.laplace, "entropy", bl), t(v.base.dists.laplace, "kurtosis", wl), t(v.base.dists.laplace, "logcdf", Vl), t(v.base.dists.laplace, "logpdf", Al), t(v.base.dists.laplace, "mean", xl), t(v.base.dists.laplace, "median", Sl), t(v.base.dists.laplace, "mgf", Bl), t(v.base.dists.laplace, "mode", Ml), t(v.base.dists.laplace, "pdf", Ll), t(v.base.dists.laplace, "quantile", Fl), t(v.base.dists.laplace, "skewness", kl), t(v.base.dists.laplace, "stdev", Tl), t(v.base.dists.laplace, "variance", El), t(v.base.dists, "levy", {}), t(v.base.dists.levy, "cdf", Hl), t(v.base.dists.levy, "Levy", Og), t(v.base.dists.levy, "entropy", Wl), t(v.base.dists.levy, "logcdf", Zl), t(v.base.dists.levy, "logpdf", Xl), t(v.base.dists.levy, "mean", Gl), t(v.base.dists.levy, "median", zl), t(v.base.dists.levy, "mode", jl), t(v.base.dists.levy, "pdf", _l), t(v.base.dists.levy, "quantile", n3), t(v.base.dists.levy, "stdev", Kl), t(v.base.dists.levy, "variance", Ql), t(v.base.dists, "logistic", {}), t(v.base.dists.logistic, "cdf", t3), t(v.base.dists.logistic, "Logistic", Kg), t(v.base.dists.logistic, "entropy", o3), t(v.base.dists.logistic, "kurtosis", s3), t(v.base.dists.logistic, "logcdf", d3), t(v.base.dists.logistic, "logpdf", N3), t(v.base.dists.logistic, "mean", u3), t(v.base.dists.logistic, "median", f3), t(v.base.dists.logistic, "mgf", w3), t(v.base.dists.logistic, "mode", c3), t(v.base.dists.logistic, "pdf", S3), t(v.base.dists.logistic, "quantile", k3), t(v.base.dists.logistic, "skewness", l3), t(v.base.dists.logistic, "stdev", v3), t(v.base.dists.logistic, "variance", p3), t(v.base.dists, "lognormal", {}), t(v.base.dists.lognormal, "cdf", C3), t(v.base.dists.lognormal, "LogNormal", tN), t(v.base.dists.lognormal, "entropy", A3), t(v.base.dists.lognormal, "kurtosis", I3), t(v.base.dists.lognormal, "logpdf", U3), t(v.base.dists.lognormal, "mean", B3), t(v.base.dists.lognormal, "median", R3), t(v.base.dists.lognormal, "mode", L3), t(v.base.dists.lognormal, "pdf", W3), t(v.base.dists.lognormal, "quantile", K3), t(v.base.dists.lognormal, "skewness", q3), t(v.base.dists.lognormal, "stdev", F3), t(v.base.dists.lognormal, "variance", O3), t(v.base.dists, "negativeBinomial", {}), t(v.base.dists.negativeBinomial, "cdf", pi), t(v.base.dists.negativeBinomial, "NegativeBinomial", uN), t(v.base.dists.negativeBinomial, "kurtosis", J3), t(v.base.dists.negativeBinomial, "logpmf", a6), t(v.base.dists.negativeBinomial, "mean", X3), t(v.base.dists.negativeBinomial, "mgf", o6), t(v.base.dists.negativeBinomial, "mode", Y3), t(v.base.dists.negativeBinomial, "pmf", f6), t(v.base.dists.negativeBinomial, "quantile", l6), t(v.base.dists.negativeBinomial, "skewness", _3), t(v.base.dists.negativeBinomial, "stdev", e6), t(v.base.dists.negativeBinomial, "variance", n6), t(v.base.dists, "normal", {}), t(v.base.dists.normal, "cdf", vi), t(v.base.dists.normal, "Normal", lN), t(v.base.dists.normal, "entropy", m6), t(v.base.dists.normal, "kurtosis", h6), t(v.base.dists.normal, "logpdf", S6), t(v.base.dists.normal, "mean", d6), t(v.base.dists.normal, "median", g6), t(v.base.dists.normal, "mgf", k6), t(v.base.dists.normal, "mode", N6), t(v.base.dists.normal, "pdf", E6), t(v.base.dists.normal, "quantile", Fa), t(v.base.dists.normal, "skewness", y6), t(v.base.dists.normal, "stdev", b6), t(v.base.dists.normal, "variance", w6), t(v.base.dists, "pareto1", {}), t(v.base.dists.pareto1, "cdf", A6), t(v.base.dists.pareto1, "Pareto1", vN), t(v.base.dists.pareto1, "entropy", I6), t(v.base.dists.pareto1, "kurtosis", B6), t(v.base.dists.pareto1, "logcdf", U6), t(v.base.dists.pareto1, "logpdf", W6), t(v.base.dists.pareto1, "mean", R6), t(v.base.dists.pareto1, "median", L6), t(v.base.dists.pareto1, "mode", q6), t(v.base.dists.pareto1, "pdf", z6), t(v.base.dists.pareto1, "quantile", K6), t(v.base.dists.pareto1, "skewness", F6), t(v.base.dists.pareto1, "stdev", pN), t(v.base.dists.pareto1, "variance", O6), t(v.base.dists, "poisson", {}), t(v.base.dists.poisson, "cdf", mi), t(v.base.dists.poisson, "Poisson", NN), t(v.base.dists.poisson, "entropy", $6), t(v.base.dists.poisson, "kurtosis", Z6), t(v.base.dists.poisson, "logpmf", i5), t(v.base.dists.poisson, "mean", J6), t(v.base.dists.poisson, "median", X6), t(v.base.dists.poisson, "mgf", t5), t(v.base.dists.poisson, "mode", Y6), t(v.base.dists.poisson, "pmf", s5), t(v.base.dists.poisson, "quantile", f5), t(v.base.dists.poisson, "skewness", _6), t(v.base.dists.poisson, "stdev", e5), t(v.base.dists.poisson, "variance", n5), t(v.base.dists, "rayleigh", {}), t(v.base.dists.rayleigh, "cdf", v5), t(v.base.dists.rayleigh, "Rayleigh", HN), t(v.base.dists.rayleigh, "entropy", p5), t(v.base.dists.rayleigh, "kurtosis", m5), t(v.base.dists.rayleigh, "logcdf", x5), t(v.base.dists.rayleigh, "logpdf", M5), t(v.base.dists.rayleigh, "mean", h5), t(v.base.dists.rayleigh, "median", d5), t(v.base.dists.rayleigh, "mgf", P5), t(v.base.dists.rayleigh, "mode", g5), t(v.base.dists.rayleigh, "pdf", C5), t(v.base.dists.rayleigh, "quantile", I5), t(v.base.dists.rayleigh, "skewness", N5), t(v.base.dists.rayleigh, "stdev", y5), t(v.base.dists.rayleigh, "variance", b5), t(v.base.dists, "signrank", {}), t(v.base.dists.signrank, "cdf", ty), t(v.base.dists.signrank, "pdf", oy), t(v.base.dists.signrank, "quantile", sy), t(v.base.dists, "t", {}), t(v.base.dists.t, "cdf", $5), t(v.base.dists.t, "T", uy), t(v.base.dists.t, "entropy", Z5), t(v.base.dists.t, "kurtosis", J5), t(v, "logcdf", a4), t(v, "logpdf", o4), t(v.base.dists.t, "mean", X5), t(v.base.dists.t, "median", Y5), t(v.base.dists.t, "mode", _5), t(v.base.dists.t, "pdf", u4), t(v.base.dists.t, "quantile", c4), t(v.base.dists.t, "skewness", e4), t(v.base.dists.t, "stdev", n4), t(v.base.dists.t, "variance", r4), t(v.base.dists, "triangular", {}), t(v.base.dists.triangular, "cdf", p4), t(v.base.dists.triangular, "Triangular", fy), t(v.base.dists.triangular, "entropy", m4), t(v.base.dists.triangular, "kurtosis", h4), t(v.base.dists.triangular, "logcdf", S4), t(v.base.dists.triangular, "logpdf", k4), t(v.base.dists.triangular, "mean", d4), t(v.base.dists.triangular, "median", g4), t(v.base.dists.triangular, "mgf", E4), t(v.base.dists.triangular, "mode", N4), t(v.base.dists.triangular, "pdf", V4), t(v.base.dists.triangular, "quantile", A4), t(v.base.dists.triangular, "skewness", y4), t(v.base.dists.triangular, "stdev", b4), t(v.base.dists.triangular, "variance", w4), t(v, "pdf", cy), t(v.base.dists, "uniform", {}), t(v.base.dists.uniform, "cdf", q4), t(v.base.dists.uniform, "Uniform", vy), t(v.base.dists.uniform, "entropy", F4), t(v.base.dists.uniform, "kurtosis", O4), t(v.base.dists.uniform, "logcdf", j4), t(v.base.dists.uniform, "logpdf", Q4), t(v.base.dists.uniform, "mean", D4), t(v.base.dists.uniform, "median", U4), t(v.base.dists.uniform, "mgf", Z4), t(v.base.dists.uniform, "pdf", X4), t(v.base.dists.uniform, "quantile", _4), t(v.base.dists.uniform, "skewness", H4), t(v.base.dists.uniform, "stdev", W4), t(v.base.dists.uniform, "variance", G4), t(v.base.dists, "weibull", {}), t(v.base.dists.weibull, "cdf", nv), t(v.base.dists.weibull, "Weibull", py), t(v.base.dists.weibull, "entropy", rv), t(v.base.dists.weibull, "kurtosis", iv), t(v.base.dists.weibull, "logcdf", fv), t(v.base.dists.weibull, "logpdf", lv), t(v.base.dists.weibull, "mean", Wa), t(v.base.dists.weibull, "median", av), t(v.base.dists.weibull, "mgf", pv), t(v.base.dists.weibull, "mode", tv), t(v.base.dists.weibull, "pdf", hv), t(v.base.dists.weibull, "quantile", gv), t(v.base.dists.weibull, "skewness", ov), t(v.base.dists.weibull, "stdev", sv), t(v.base.dists.weibull, "variance", Jt), v;
   });
 })(Sv);
 var hy = Sv.exports;
-const dy = /* @__PURE__ */ wv(hy), di = dy.base.dists, bv = di.normal.cdf;
-function gy(Se, Le, _, ge, E, f) {
-  let y = bv(Se, Le, _), g = bv(Se, ge, E);
+const dy = /* @__PURE__ */ wv(hy), $r = dy.base.dists, bv = $r.normal.cdf;
+function gy(xe, Ce, _, ge, E, f) {
+  let y = bv(xe, Ce, _), g = bv(xe, ge, E);
   return f * y + (1 - f) * g;
 }
-function Ny(Se, Le) {
-  const _ = Math.floor(Se);
-  return _ < 0 ? 0 : 1 - Math.pow(1 - Le, _ + 1);
+function Ny(xe, Ce) {
+  const _ = Math.floor(xe);
+  return _ < 0 ? 0 : 1 - Math.pow(1 - Ce, _ + 1);
 }
 const yy = {
-  uniform: (Se, Le = 0, _ = 1) => di.uniform.cdf(Se, Le, _),
-  normal: (Se, Le = 0, _ = 1) => di.normal.cdf(Se, Le, _),
-  laplace: (Se, Le = 0, _ = 1) => di.laplace.cdf(Se, Le, _),
-  logistic: (Se, Le = 0, _ = 1) => di.logistic.cdf(Se, Le, _),
-  cauchy: (Se, Le = 0, _ = 1) => di.cauchy.cdf(Se, Le, _),
-  bimodal: (Se, Le = -3, _ = 0.6, ge = 3, E = 1.3, f = 0.5) => gy(Se, Le, _, ge, E, f),
-  geometric: (Se, Le = 1 / 3) => Ny(Se, Le)
-}, by = (Se, Le, _) => Array.from(
-  { length: (Le - Se) / _ + 1 },
-  (ge, E) => Se + E * _
+  uniform: (xe, Ce = -5, _ = 5) => $r.uniform.cdf(xe, Ce, _),
+  normal: (xe, Ce = 0, _ = 1) => $r.normal.cdf(xe, Ce, _),
+  exponential: (xe, Ce = 0.5) => $r.exponential.cdf(xe + 4, Ce),
+  laplace: (xe, Ce = 0, _ = 1) => $r.laplace.cdf(xe, Ce, _),
+  logistic: (xe, Ce = 0, _ = 1) => $r.logistic.cdf(xe, Ce, _),
+  cauchy: (xe, Ce = 0, _ = 1) => $r.cauchy.cdf(xe, Ce, _),
+  bimodal: (xe, Ce = -3, _ = 0.6, ge = 3, E = 1.3, f = 0.5) => gy(xe, Ce, _, ge, E, f),
+  geometric: (xe, Ce = 1 / 3) => Ny((xe + 5) * 2, Ce)
+}, by = (xe, Ce, _) => Array.from(
+  { length: (Ce - xe) / _ + 1 },
+  (ge, E) => xe + E * _
 );
 by(-5, 5, 0.01);
-function wy(Se, Le) {
-  for (var _ = Le[0], ge = Math.abs(Se - _), E = 0; E < Le.length; E++) {
-    var f = Math.abs(Se - Le[E]);
-    f < ge && (ge = f, _ = Le[E]);
+function wy(xe, Ce) {
+  for (var _ = Ce[0], ge = Math.abs(xe - _), E = 0; E < Ce.length; E++) {
+    var f = Math.abs(xe - Ce[E]);
+    f < ge && (ge = f, _ = Ce[E]);
   }
   return _;
 }
-function xy(Se, Le) {
+function xy(xe, Ce) {
   let _ = Pr.Engine, ge = Pr.Render, E = Pr.Runner, f = Pr.Events, y = Pr.Body, g = Pr.World, h = Pr.Bodies, S = _.create({
     enableSleeping: !1
   }), d = S.world;
   const w = 500, l = 500;
   let t = ge.create({
-    element: Se,
+    element: xe,
     engine: S,
     options: {
       background: "#FFFFFF",
@@ -8266,9 +8267,9 @@ function xy(Se, Le) {
   });
   E.run(o, S);
   const i = 20, c = l / 2, P = c - i, q = 4;
-  let D = 1e3;
+  let D = Ce === "geometric" ? 200 : 1e3;
   const U = 14, x = (Z, ie, Y) => {
-    g.add(d, h.rectangle(Z, ie, 1, 1, {
+    g.add(d, h.rectangle(Z, ie, 3, 3, {
       isStatic: !0,
       render: {
         fillStyle: "#000000",
@@ -8280,21 +8281,21 @@ function xy(Se, Le) {
       }
     }));
   };
-  function T(Z, ie, Y, ue, Ne, be, Ce, ve) {
-    const Ae = Math.abs(ve - be) > Math.abs(Ce - Ne);
-    Ae && ([Ne, be] = [be, Ne], [Ce, ve] = [ve, Ce]), Ne > Ce && ([Ne, Ce] = [Ce, Ne], [be, ve] = [ve, be]);
-    const je = Ce - Ne, We = (ve - be) / je;
+  function T(Z, ie, Y, ue, Ne, be, Ae, ve) {
+    const Ie = Math.abs(ve - be) > Math.abs(Ae - Ne);
+    Ie && ([Ne, be] = [be, Ne], [Ae, ve] = [ve, Ae]), Ne > Ae && ([Ne, Ae] = [Ae, Ne], [be, ve] = [ve, be]);
+    const je = Ae - Ne, We = (ve - be) / je;
     let Ze = be + ue(Ne) * We;
-    for (let Je = Z(Ne) + 1; Je < ie(Ce); Je++)
-      Ae ? (x(Z(Ze), Je, ue(Ze)), x(Z(Ze) + 1, Je, Y(Ze))) : (x(Je, Z(Ze), ue(Ze)), x(Je, Z(Ze) + 1, Y(Ze))), Ze += We;
+    for (let Je = Z(Ne) + 1; Je < ie(Ae); Je++)
+      Ie ? (x(Z(Ze), Je, ue(Ze)), x(Z(Ze) + 1, Je, Y(Ze))) : (x(Je, Z(Ze), ue(Ze)), x(Je, Z(Ze) + 1, Y(Ze))), Ze += We;
   }
   function L(Z, ie, Y, ue) {
-    const Ne = Math.floor, be = Math.round, Ce = (Ae) => Ae - Math.floor(Ae), ve = (Ae) => 1 - Ce(Ae);
-    T(Ne, be, Ce, ve, Z, ie, Y, ue), T(Ne, be, Ce, ve, Y, ue, Z, ie), x(Z, ie, 1), x(Y, ue, 1);
+    const Ne = Math.floor, be = Math.round, Ae = (Ie) => Ie - Math.floor(Ie), ve = (Ie) => 1 - Ae(Ie);
+    T(Ne, be, Ae, ve, Z, ie, Y, ue), T(Ne, be, Ae, ve, Y, ue, Z, ie), x(Z, ie, 1), x(Y, ue, 1);
   }
   S.gravity.y = 0;
   let I = {}, N = {}, F = [], G = 1 / 0, m = 0;
-  const X = yy[Le];
+  const X = yy[Ce];
   for (let Z = 0; Z < w / q; Z++) {
     const ie = Z * q, Y = X((ie - w / 2) / 40);
     let ue = c - Y * P;
@@ -8363,7 +8364,7 @@ function xy(Se, Le) {
 }
 export {
   yy as cdfDict,
-  di as dists,
+  $r as dists,
   xy as galton
 };
 //# sourceMappingURL=invcdfboard.js.map

@@ -14,18 +14,19 @@ function bimodalCDF(x,mu1,sigma1,mu2,sigma2,p) {
 // Geometric CDF helper
 function geometricCDF(x, p) {
     const k = Math.floor(x);
-    return k < 0 ? 0 : 1 - Math.pow(1 - p, k + 1);
+    return k < 0 ? 0 : 1 - Math.pow(1 - p, k+1);
 }
 
 // dictionary of functions for the cdf with default parameters (mu = 0, sigma = 1) except for the bimodal distribution
 export const cdfDict = {
-    uniform: (x, mu = 0, sigma = 1) => dists.uniform.cdf(x, mu, sigma),
+    uniform: (x, mu = -5, sigma = 5) => dists.uniform.cdf(x, mu, sigma),
     normal: (x, mu = 0, sigma = 1) => dists.normal.cdf(x, mu, sigma),
+    exponential: (x, mu = 0.5) => dists.exponential.cdf(x+4, mu),
     laplace: (x, mu = 0, sigma = 1) => dists.laplace.cdf(x, mu, sigma),
     logistic: (x, mu = 0, sigma = 1) => dists.logistic.cdf(x, mu, sigma),
     cauchy: (x, mu = 0, sigma = 1) => dists.cauchy.cdf(x, mu, sigma),
     bimodal: (x, mu1 = -3, sigma1 = 0.6, mu2 = 3, sigma2 = 1.3, p = 0.5) => bimodalCDF(x, mu1, sigma1, mu2, sigma2, p),
-    geometric: (x, p = 1.0/10) => geometricCDF(x - 4, p)
+    geometric: (x, p = 1.0/3) => geometricCDF((x + 5) * 2., p)
 
 }
 
@@ -63,7 +64,7 @@ export function galton(canvas,distname) {
     // create engine
     let engine = Engine.create({
         enableSleeping: false,
-        
+
     }),
     world = engine.world;
     const width = 500;
@@ -93,17 +94,15 @@ export function galton(canvas,distname) {
     const shootheight = shootheightmin - shootheightmax;
 
     const size = 4; // size of the particles
-    let total = 1000; // number of particles
+    let total = distname === 'geometric' ? 200 : 1000; // number of particles
     const speed = 14; // speed of the particles
 
-    // const size = 20;
-    // let total = 20;
-    // const speed = 5;
 
-    //// Functions for antilaizing the cdf curve
+
+    //// Functions for anti-aliasing the cdf curve
     // plot a pixel with brightness
     const plotPixel = (x, y, brightness) => {
-        World.add(world, Bodies.rectangle(x,y,1,1, {
+        World.add(world, Bodies.rectangle(x,y,3,3, {
             isStatic: true,
             render: {
                 fillStyle: "#000000",
@@ -118,7 +117,7 @@ export function galton(canvas,distname) {
 
     // plot a line with antialiasing, Xiaolin Wu's line algorithm
     function plot(ipart, round, fpart, rfpart, x, y, x2, y2) {
-    
+
         const steep = Math.abs(y2 - y) > Math.abs(x2 - x);
         if (steep) {
             [x, y] = [y, x];
@@ -128,11 +127,11 @@ export function galton(canvas,distname) {
             [x, x2] = [x2, x];
             [y, y2] = [y2, y];
         }
-    
+
         const dx = x2 - x;
         const dy = y2 - y;
         const gradient = dy / dx;
-    
+
         let intery = y + rfpart(x) * gradient;
         for (let xi = ipart(x) + 1; xi < round(x2); xi++) {
             if (steep) {
@@ -145,14 +144,14 @@ export function galton(canvas,distname) {
             intery += gradient;
         }
     }
-    
+
     // draw a line with antialiasing
     function drawLine(x1, y1, x2, y2) {
         const ipart = Math.floor;
         const round = Math.round;
         const fpart = x => x - Math.floor(x);
         const rfpart = x => 1 - fpart(x);
-    
+
         plot(ipart, round, fpart, rfpart, x1, y1, x2, y2);
         plot(ipart, round, fpart, rfpart, x2, y2, x1, y1);
         // Tweaking the brightness of the endpoints to make them more visible
@@ -161,7 +160,7 @@ export function galton(canvas,distname) {
     }
 
     engine.gravity.y = 0; // no gravity
-    
+
     let pegxf = {}; // dictionary of x positions of the pegs
     let pegx = {}; // dictionary of x positions of the pegs
     let pegy = []; // array of y positions of the pegs
@@ -212,7 +211,7 @@ export function galton(canvas,distname) {
             drawLine(pegx[pegy[i-1]], pegy[i-1], pegx[pegy[i]], pegy[i]);
         }
     }
-    
+
     let shoots = {}; // dictionary of the x position of the closest peg for each shoot
 
     // Main loop, executed at each tick
@@ -240,7 +239,7 @@ export function galton(canvas,distname) {
                 if ((pegxf[x] && (y >= height - pegxf[x] - size/2)) || y >= (height - size/2)) {
                     if (!pegxf[x]) {
                         pegxf[x] = size / 2;
-                    } 
+                    }
                     Body.setPosition(body, { x: x, y: height - pegxf[x]});
                     Body.setStatic(body, true);
                     pegxf[x] += size;
