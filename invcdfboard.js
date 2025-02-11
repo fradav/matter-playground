@@ -8814,7 +8814,7 @@ const Vy = {
   logistic: (Se, Le = 0, _ = 1) => di.logistic.cdf(Se, Le, _),
   cauchy: (Se, Le = 0, _ = 1) => di.cauchy.cdf(Se, Le, _),
   bimodal: (Se, Le = -3, _ = 0.6, ge = 3, E = 1.3, f = 0.5) => Ey(Se, Le, _, ge, E, f),
-  geometric: (Se, Le = 0.5) => Py(Se, Le)
+  geometric: (Se, Le = 1 / 3) => Py(Se, Le)
 }, Cy = (Se, Le, _) => Array.from(
   { length: (Le - Se) / _ + 1 },
   (ge, E) => Se + E * _
