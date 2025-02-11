@@ -20,7 +20,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^5.0.0"
+    "vite": "^5.4.14"
   },
   "dependencies": {
     "@stdlib/dist-stats-base-dists-flat": "^0.0.96",
